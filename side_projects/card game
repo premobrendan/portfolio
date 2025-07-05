@@ -1,0 +1,349 @@
+import random
+
+def card_selector(list, draw, draw_number):
+    #this function returns a draw of any number of cards equal to "draw_number" without repeating cards from a deck. draw_number=52 yields a fully shuffled deck of cards
+    x = len(draw)
+    while x < draw_number:
+        card_index = random.randint(0,51)
+        if list[card_index] in draw:
+            x-=1
+        else:
+            draw.append(list[card_index])
+        x+=1
+    return draw
+
+def section_maker(shuffled_list):
+    #this function returns, from a deck of 52 cards, a parsed deck with thirteen sections of four cards each.
+    sectioned_deck = []
+    x = 0
+    while x < 13:
+
+        temp_list = []
+        section_parser = x*4
+        temp_list.append(shuffled_list[section_parser])
+        temp_list.append(shuffled_list[section_parser+1])
+        temp_list.append(shuffled_list[section_parser+2])
+        temp_list.append(shuffled_list[section_parser+3])
+        sectioned_deck.append(temp_list)
+        x+=1
+
+    return sectioned_deck
+
+def get_cards(card_list, max_cards):
+    return_list = []
+    print("Enter a card via the following formula [(TYPE)(SUIT), Ace=A, King=K, ..., Ten=T, Nine=9, Eight=8, ..., Two=2] OR type 'DONE' when done picking cards.")
+    pick_a_card = input()
+
+    while pick_a_card != 'DONE' or len(return_list) == 13:
+        if pick_a_card not in card_list:
+            return card_selector (card_list, max_cards)
+        return_list.append(pick_a_card)
+        print("Enter another card OR type 'DONE' when done picking cards.")
+        pick_a_card = input()
+    return return_list
+
+
+
+def get_percent(data, n):
+    return (100*data)/n
+
+def twopair_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a two pair is possible within the thirteen cards.
+    value_list = []
+
+    for x in shuffled_list:
+        value_list.append(x[0])
+
+    x = "two pair: "
+
+    while len(value_list) > 0:
+
+        temp_value = value_list[0]
+        value_list.remove(temp_value)
+        if temp_value in value_list:
+            value_list.remove(temp_value)
+            if len(x) == 12:
+                return 1
+            else:
+                x+=temp_value + "s"
+    return 0
+
+
+def threeofakind_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a three-of-a-kind is possible within the thirteen cards.
+    value_list = []
+
+    for x in shuffled_list:
+        value_list.append(x[0])
+
+    x = "three-of-a-kind: "
+
+    while len(value_list) > 0:
+
+        temp_value = value_list[0]
+        value_list.remove(temp_value)
+        if temp_value in value_list:
+            value_list.remove(temp_value)
+            if temp_value in value_list:
+                #rewrite here for analysis
+                return 1
+
+    return 0
+
+
+def straight_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a straight is possible within the thirteen cards.
+    value_list = []
+    sample_list = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
+
+    for x in shuffled_list:
+        value_list.append(x[0])
+
+    x = "straight: "
+    runner = 0
+    while runner < 10:
+        if sample_list[runner] in value_list:
+            if sample_list[runner+1] in value_list:
+                if sample_list[runner+2] in value_list:
+                    if sample_list[runner+3] in value_list:
+                        if sample_list[runner+4] in value_list:
+                            #rewrite here for analysis
+                            return 1
+
+
+        runner+=1
+
+    return 0
+
+
+def flush_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a flush is possible within the thirteen cards.
+    suit_list = []
+
+    for x in shuffled_list:
+        suit_list.append(x[1])
+
+    x = "flush: "
+
+    while len(suit_list) > 0:
+        temp_suit = suit_list[0]
+        counter = 0
+        while temp_suit in suit_list:
+            suit_list.remove(temp_suit)
+            counter+=1
+            if counter == 5:
+                #rewrite here for analysis
+                return 1
+
+    return 0
+
+
+def fullhouse_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a flush is possible within the thirteen cards.
+    value_list = []
+    value_list_again = []
+
+    for x in shuffled_list:
+        value_list.append(x[0])
+        value_list_again.append(x[0])
+
+    x = "full house: "
+
+    while len(value_list) > 0:
+
+        temp_value = value_list[0]
+        value_list.remove(temp_value)
+        if temp_value in value_list:
+            value_list.remove(temp_value)
+            if temp_value in value_list:
+                x+= temp_value + "s full of "
+                value_list_again.remove(temp_value)
+                value_list_again.remove(temp_value)
+                value_list_again.remove(temp_value)
+
+                while len(value_list_again) > 0:
+                    temp_value = value_list_again[0]
+                    value_list_again.remove(temp_value)
+                    if temp_value in value_list_again:
+                        #rewrite here for analysis
+                        return 1
+
+    return 0
+
+
+def fourofakind_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a four-of-a-kind is possible within the thirteen cards.
+    value_list = []
+
+    for x in shuffled_list:
+        value_list.append(x[0])
+
+    x = "four-of-a-kind: "
+
+    while len(value_list) > 0:
+
+        temp_value = value_list[0]
+        value_list.remove(temp_value)
+        if temp_value in value_list:
+            value_list.remove(temp_value)
+            if temp_value in value_list:
+                value_list.remove(temp_value)
+                if temp_value in value_list:
+                    #rewrite here for analysis
+                    return 1
+
+    return 0
+
+def straight_determiner(cards, binary):
+    #this function works only with the straightflush_counter and royalflush_counter functions, specifically to determine what, if any, straights exist from the suit-specific list given
+    value_list = []
+    sample_list = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"]
+
+    for x in cards:
+        value_list.append(x[0])
+
+    runner = 0
+
+    if binary == 0:
+        while runner < 9:
+
+            if sample_list[runner] in value_list:
+                if sample_list[runner+1] in value_list:
+                    if sample_list[runner+2] in value_list:
+                        if sample_list[runner+3] in value_list:
+                            if sample_list[runner+4] in value_list:
+                                return [1, sample_list[runner] + " " + sample_list[runner+1] + " " + sample_list[runner+2] + " " + sample_list[runner+3] + " " + sample_list[runner+4]]
+            runner+=1
+
+    elif binary == 1:
+        if sample_list[9] in value_list:
+            if sample_list[10] in value_list:
+                if sample_list[11] in value_list:
+                    if sample_list[12] in value_list:
+                        if sample_list[13] in value_list:
+                            return 1
+
+
+    return [0, "no"]
+
+
+def straightflush_counter(shuffled_list):
+    #this function will say, from a thirteen card hand, if a straight flush is possible within the thirteen cards.
+
+    x = "straight flush: "
+
+    spades = []
+    hearts = []
+    clubs = []
+    diamonds = []
+
+    for a in shuffled_list:
+        if a[1] == "S":
+            spades.append(a)
+        elif a[1] == "H":
+            hearts.append(a)
+        elif a[1] == "C":
+            clubs.append(a)
+        elif a[1] == "D":
+            diamonds.append(a)
+
+    if len(spades) > 4:
+        temp = straight_determiner(spades, 0)
+        if temp[0] == 1:
+            return 1
+    if len(hearts) > 4:
+        temp = straight_determiner(hearts, 0)
+        if temp[0] == 1:
+            return 1
+    if len(clubs) > 4:
+        temp = straight_determiner(clubs, 0)
+        if temp[0] == 1:
+            return 1
+    if len(diamonds) > 4:
+        temp = straight_determiner(diamonds, 0)
+        if temp[0] == 1:
+            return 1
+    return 0
+
+
+def royalflush_counter(shuffled_list):
+
+        x = "royal flush in "
+
+        spades = []
+        hearts = []
+        clubs = []
+        diamonds = []
+
+        for a in shuffled_list:
+            if a[1] == "S":
+                spades.append(a)
+            elif a[1] == "H":
+                hearts.append(a)
+            elif a[1] == "C":
+                clubs.append(a)
+            elif a[1] == "D":
+                diamonds.append(a)
+
+        if len(spades) > 4:
+            if straight_determiner(spades, 1) == 1:
+                x += "Spades"
+                return 1
+        if len(hearts) > 4:
+            if straight_determiner(hearts, 1) == 1:
+                x += "Hearts"
+                return 1
+        if len(clubs) > 4:
+            if straight_determiner(clubs, 1) == 1:
+                x += "Clubs"
+                return 1
+        if len(diamonds) > 4:
+            if straight_determiner(diamonds, 1) == 1:
+                x += "Diamonds"
+                return 1
+
+        return 0
+
+list_of_cards = ["AS","KS","QS","JS","TS","9S","8S","7S","6S","5S","4S","3S","2S","AH","KH","QH","JH","TH","9H","8H","7H","6H","5H","4H","3H","2H","AC","KC","QC","JC","TC","9C","8C","7C","6C","5C","4C","3C","2C","AD","KD","QD","JD","TD","9D","8D","7D","6D","5D","4D","3D","2D"]
+
+print(card_selector(list_of_cards, ['AS', 'AH', 'AC', 'AD'], 13))
+
+#Simulation Controls
+
+number_of_simulations = 100000
+cards_per_draw = 7
+
+sim_number = 0
+number_of_twopair = 0
+number_of_threeofakind = 0
+number_of_straight = 0
+number_of_flush = 0
+number_of_fullhouse = 0
+number_of_fourofakind = 0
+number_of_straightflush = 0
+number_of_royalflush = 0
+
+while sim_number < number_of_simulations:
+    temp_list = list_of_cards
+    hand = card_selector(temp_list, cards_per_draw)
+    number_of_twopair += twopair_counter(hand)
+    number_of_threeofakind += threeofakind_counter(hand)
+    number_of_straight += straight_counter(hand)
+    number_of_flush += flush_counter(hand)
+    number_of_fullhouse += fullhouse_counter(hand)
+    number_of_fourofakind += fourofakind_counter(hand)
+    number_of_straightflush += straightflush_counter(hand)
+    number_of_royalflush += royalflush_counter(hand)
+    sim_number += 1
+
+
+print(f"Generating Simulation of {number_of_simulations} {cards_per_draw}-card hands...\n"
+f"Two Pairs: {number_of_twopair}, {get_percent(number_of_twopair, number_of_simulations)}%\n"
+f"Three of a Kinds: {number_of_threeofakind}, {get_percent(number_of_threeofakind, number_of_simulations)}%\n"
+f"Straights: {number_of_straight}, {get_percent(number_of_straight, number_of_simulations)}%\n"
+f"Flushes: {number_of_flush}, {get_percent(number_of_flush, number_of_simulations)}%\n"
+f"Full Houses: {number_of_fullhouse}, {get_percent(number_of_fullhouse, number_of_simulations)}%\n"
+f"Four of a Kinds: {number_of_fourofakind}, {get_percent(number_of_fourofakind, number_of_simulations)}%\n"
+f"Straight Flushes: {number_of_straightflush}, {get_percent(number_of_straightflush, number_of_simulations)}%\n"
+f"Royal Flushes: {number_of_royalflush}, {get_percent(number_of_royalflush, number_of_simulations)}%\n"
+)

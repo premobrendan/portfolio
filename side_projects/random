@@ -1,0 +1,58 @@
+import math
+
+def calculation(row_length, initial_endpost_spacing, initial_space_between_vines):
+    # Initial adjustments
+    endpost_spacing = initial_endpost_spacing
+    space_between_vines = initial_space_between_vines
+
+    # Adjustments to orignial rowlength and spacebetweenvines
+    if row_length <= 55:
+        endpost_spacing /= 2
+    elif row_length >= 120:
+        endpost_spacing = 1.5
+
+    if row_length <= 50:
+         space_between_vines= 2
+    elif row_length >= 125:
+         space_between_vines /= 2
+
+    # Formula to calculate the number of vines
+    number_of_grapevines = (row_length - (2 * endpost_spacing)) / space_between_vines
+
+    # Output
+    print(f"A row of {row_length} ft with {initial_endpost_spacing} ft end-posts and vines {initial_space_between_vines} ft apart has been adjusted to {endpost_spacing} ft end-posts, {space_between_vines} ft apart, and requires {number_of_grapevines} vines.")
+
+    return number_of_grapevines
+
+def visual(int_grapevines):
+    #Assign the variable "E" with row_visual
+    row_visual = "E"
+
+    # For loop that adds "V" to row_visual
+    for x in range(truncated_grapevines):
+        row_visual += "V"
+
+    # Adds E at the end of row_visual
+    row_visual += "E"
+
+    # Output the row layout
+    print()
+    print(row_visual)
+    print()
+
+
+
+run_again = 'y'
+while run_again == 'y':
+    # User input
+    row_length = float(input("Enter the length of the row in feet: "))
+    initial_endpost_spacing = float(input("Enter the space used by the end-post assembly in feet: "))
+    initial_space_between_vines = float(input("Enter the space between the vines in feet: "))
+
+    truncation = calculation(row_length, initial_endpost_spacing, initial_space_between_vines)
+
+    # Added int to truncate numbers for visual output
+    visual(math.trunc(truncation))
+
+    # Ask the user if they would like to run the program again
+    run_again = input("Would you like to run the program again? (y/n): ")

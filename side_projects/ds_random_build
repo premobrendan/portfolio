@@ -1,0 +1,10 @@
+with open('builds.txt', 'r') as file:
+    builds = file.readlines()
+
+builds = [build.strip() for build in builds if build.strip()]
+
+print("Your Random Build:")
+
+import random
+build = random.choice(builds)
+print(build)

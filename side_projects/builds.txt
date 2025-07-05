@@ -1,0 +1,10 @@
+strength
+dexterity
+sorcerer
+pyromancer
+priest
+quality
+buffer
+tank
+specific weapon
+sl1

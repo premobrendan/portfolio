@@ -1,0 +1,153 @@
+def round(team, score, begin):
+    if begin == 0:
+        sum = int(input("Total score: "))
+
+    elif begin == 1:
+        x1 = int(input("First dart score: "))
+        x2 = int(input("Second dart score: "))
+        x3 = int(input("Third dart score: "))
+        sum = x1+x2+x3
+
+    new_score = score-sum
+
+    if new_score<0:
+        print("Bust! Returning", team, "to", score, "points.")
+        return score
+    elif new_score==0:
+        return 0
+    else:
+        print(team, "scored", sum, "points, leaving you with", new_score, "points.")
+        return new_score
+
+# score played to
+x = 1
+overall = input("What score would you like to play to (enter a positive integer)?: ")
+y = overall.isdigit()
+intoverall =  0
+while y == False or intoverall < 1:
+
+    y = overall.isdigit()
+    if y == True:
+        intoverall = int(overall)
+
+    if y == True and int(overall) >= 1:
+        overall = int(overall)
+    elif x == 1:
+        overall = input("Please enter a POSITIVE INTEGER: ")
+        x+=1
+    elif x == 2:
+        overall = input("Pretty please?: ")
+        x+=1
+    elif x == 3:
+        overall = input("You are wasting your time. Just enter a valid number please: ")
+        x+=1
+    elif x == 4:
+        overall = input("End my suffering: ")
+        x+=1
+    elif x == 5:
+        overall = input("You are ruining my life: ")
+        x+=1
+    elif x == 6:
+        overall = input("I'm done talking to you: ")
+        x+=1
+    elif x <10:
+        overall = input(": ")
+        x+=1
+    elif x == 10:
+        overall = input("JUST ENTER AN INTEGER ALREADY: ")
+        x+=1
+    elif x < 13:
+        overall = input(": ")
+        x+=1
+    elif x == 13:
+        overall = input("Okay, this is the last line of dialogue just enter an integer please: ")
+        x+=1
+    else:
+        overall = input(": ")
+        x+=1
+
+# sum or individual darts
+begin = input("Would you like to input round sums (0) or individual dart scores (1)?: ")
+if begin == "1" or begin == "0":
+    begin = int(begin)
+else:
+    begin = input("Please try again. Input round sums (0) or individual dart scores (1): ")
+    if begin == "1" or begin == "0":
+        begin = int(begin)
+    else:
+        begin = input("Seriously, just input 0 for sums or 1 for individual darts: ")
+        if begin == "1" or begin == "0":
+            begin = int(begin)
+        else:
+            begin = input("We will be here forever if you do not input a 0 or a 1: ")
+            if begin == "1" or begin == "0":
+                begin = int(begin)
+            else:
+                x=1
+                while x != 0:
+                    begin = input("Try again: ")
+                    if begin == "1" or begin == "0":
+                        begin = int(begin)
+                        x=0
+
+# team names
+team1 = input("Team 1 enter a name: ")
+team2 = input("Team 2 enter a name: ")
+
+# initialization block
+t1 = [team1, overall]
+t2 = [team2, overall]
+
+round_count = 0
+x = 0
+
+print()
+print("Game of", overall, "with", t1[0], "versus", t2[2])
+print("GLHF!")
+print()
+
+# primary loop
+while x==0:
+    round_count+=1
+    print("Round", round_count)
+    print()
+
+    # round for team 1
+    print(t1[0], "time to throw. Points left:", t1[1])
+    temp = round(t1[0], t1[1], begin)
+    print()
+
+    # redemption block
+    if temp == 0:
+        print("Redemption for", t2[0], "must score", t2[1], "to wash.")
+        temp2 = round(t2[0], t2[1], begin)
+
+        if temp2 == 0:
+            print("Wash!")
+            print()
+        else:
+            print()
+            print(t1[0], "Wins!")
+            t1[1] == temp
+            x=1
+
+    # round for team 2
+    else:
+        t1[1] = temp
+        print(t2[0], "time to throw. Points left:", t2[1])
+        temp = round(t2[0], t2[1], begin)
+
+        if temp == 0:
+            print(t2[0], "wins!")
+            t2[1] = temp
+            x=1
+
+    # round end block
+    if x == 1:
+        print("GG")
+    else:
+        print()
+        print("Score after round", round_count, "is:")
+        print(t1[0], "with", t1[1])
+        print(t2[0], "with", t2[1])
+        print()
