@@ -1,0 +1,5 @@
+# Large data files (exceed GitHub 100MB limit)
+working/data/faces.csv
+working/data/house_sales.ftr
+working/data/house_sales.csv
+working/data/data/cifar-10-python.tar.gz
