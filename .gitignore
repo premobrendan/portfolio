@@ -1,2 +1,5 @@
 # Data files (large, kept local)
 working/data/
+
+# Cow catalog (kept local)
+side_projects/cow-catalog/
