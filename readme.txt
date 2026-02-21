@@ -42,9 +42,11 @@ as most of my work was done on the cloud-based platform Google Colab, as well as
 If the project/problem was older with a correct solution, I've left my old work as a comparison to a newer implimentation that I feel is more in line with
 what I would produce as a data analyst/scientist.
 
-Along with adapting my current workbase and applying for positions in the data analytics field, I've continued to work for my father as both a farmhand and
-contractor and am working towards a CDL to do more advanced work for this business RAM Excavation. In my current capacity, I help with clearing and grading 
-for his commericial projects, being a courier for equipment and materials that are not requiring of a CDL and the occasional use of heavy machinery.
+In the Summer of 2025, I got the opportunity to work at a pre-seed startup called Soria Analytics as a data analyst, working in a BI tool called Sigma 
+Computing. During this time, I was taught how to use the BI tool for analysis and data cleaning, as well as some mild software development scraping data
+from API sources, doing analysis in Python and SQL, and learning as much as I could about the healthcare space. You can find the work that I've done 
+during my time in the soria_work folder. Most of the scripts will not work due to them being off the codebase, but the analysis I did for the Star Ratings
+is fully functional and has some enrollment mapping from another CMS source towards the end. 
 
 
 School Projects:
