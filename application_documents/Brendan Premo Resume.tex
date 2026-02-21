@@ -1,0 +1,122 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Packages
+\usepackage[margin=0.5in]{geometry} % Narrower margins to fit everything on 1 page
+\usepackage{titlesec} % For section formatting
+\usepackage{enumitem} % For list formatting
+\usepackage{hyperref} % For links
+\usepackage{xcolor}   % For link colors
+
+% Formatting Settings
+\pagestyle{empty} % Removes page numbers
+\urlstyle{same} % Makes URLs look like normal text
+
+% Section Formatting
+\titleformat{\section}
+  {\large\bfseries\uppercase} % Format: Large, Bold, Uppercase
+  {}
+  {0em}
+  {}[\titlerule] % Adds a horizontal line after the section title
+
+\titlespacing{\section}{0pt}{10pt}{5pt} % Spacing around sections
+
+% List Formatting
+\setlist[itemize]{leftmargin=*}
+
+\begin{document}
+
+%---------------------------------------------------
+%   HEADER
+%---------------------------------------------------
+\begin{center}
+    {\Huge \textbf{Brendan Premo}} \\ \vspace{4pt}
+    Troy, NY \ $|$ \ (518) 588-0855 \ $|$ \ \href{mailto:premobrendan@gmail.com}{premobrendan@gmail.com} \\
+    \href{https://www.linkedin.com/in/brendan-premo-837927129/}{Linkedin Profile} $|$ 
+    \href{https://github.com/premobrendan/portfolio}{GitHub Portfolio}
+\end{center}
+
+%---------------------------------------------------
+%   EDUCATION
+%---------------------------------------------------
+\section*{Education}
+
+\noindent \textbf{University at Albany} \hfill Albany, NY \\
+\textit{Master of Science in Data Science} \hfill \textit{Fall 2023 -- Spring 2025}\\
+\textit{Master of Arts in Mathematics} \hfill \textit{Fall 2022 -- Fall 2024}
+
+\vspace{4pt}
+
+\noindent \textbf{Rensselaer Polytechnic Institute (RPI)} \hfill Troy, NY \\
+\textit{Bachelor of Science in Applied Mathematics} \hfill \textit{Fall 2016 -- Fall 2020}
+
+%---------------------------------------------------
+%   TECHNICAL SKILLS
+%---------------------------------------------------
+\section*{Technical Skills}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Languages:} Python, SQL, R, Java, \LaTeX
+    \item \textbf{Libraries \& Tools:} PyTorch, Scikit-Learn, Pandas, GitHub, AutoGluon
+    \item \textbf{Machine Learning:} Convolutional Neural Networks (CNN), Gradient Descent, Transfer Learning, Random Forest, Feature Engineering, Alternating Least Squares (ALS)
+    \item \textbf{Mathematics:} Topological Data Analysis (TDA), Markov Chains, Monte Carlo Simulations, Time Series Regression, Principal Component Analysis (PCA), k-Rank SVD
+\end{itemize}
+
+%---------------------------------------------------
+%   PROFESSIONAL EXPERIENCE
+%---------------------------------------------------
+\section*{Professional Experience}
+
+\noindent \textbf{Soria Research} \hfill \textit{Data Analyst} \\
+\textit{June 2025 -- Present} \hfill
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Spearheaded the visual architecture of the product, personally designing or refining over 75\% of all client-facing analytical materials, specifically within the Healthcare sector.
+    \item Orchestrated end-to-end data pipelines, managing data acquisition, cleaning, and complex analysis for future use in the product.
+    \item On-boarded and trained new analysts on internal systems and data best practices.
+\end{itemize}
+
+\vspace{6pt}
+
+\noindent \textbf{K\&R Premo Enterprises} \hfill \textit{Farm Hand} \\
+\textit{Oct 2019 -- June 2025} \hfill
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Managed daily operations for a family business, ensuring the welfare of livestock and efficient processing of materials in a high-labor environment.
+\end{itemize}
+
+\vspace{6pt}
+
+\noindent \textbf{Adirondack Hotel} \hfill \textit{Bartender} \\
+\textit{May 2020 -- March 2021} \hfill Long Lake, NY
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Provided high-volume service in a fast-paced environment, including managing bar operations for large-scale onsite events.
+\end{itemize}
+
+%---------------------------------------------------
+%   KEY PROJECTS
+%---------------------------------------------------
+\section*{Key Technical Projects}
+
+\noindent \textbf{Biomechanics Topological Data Analysis (Data Science Thesis)} \hfill \textit{Spring 2025}
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Analyzed movement patterns in sports video data to distinguish between optimal and suboptimal form.
+    \item Transformed dynamic video into grayscale pixel data to perform Persistent Homology using Python, successfully mapping movement topology.
+    \item Delivered a professional technical report and presentation summarizing complex topological findings for stakeholders.
+\end{itemize}
+
+\vspace{1pt}
+
+\noindent \textbf{Riemann Spectrum \& Analytic Continuation (Mathematics Thesis)} \hfill \textit{Spring 2024}
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item Conducted extensive research on the history and formulations of the Riemann Hypothesis, focusing on analytic continuation.
+    \item Developed and delivered a four-part lecture series to graduate students and professors, synthesizing complex theoretical mathematics into accessible presentations.
+\end{itemize}
+
+\vspace{1pt}
+
+\noindent \textbf{Machine Learning Projects: Predictive Modeling \& Systems} \hfill \textit{Spring 2025}
+\begin{itemize}[noitemsep, topsep=2pt]
+    \item \textbf{Housing Price Prediction:} Engineered a predictive model achieving a Root Mean Square Error (RMSE) of .07 by utilizing AutoGluon’s Tabular Predictor; performed extensive data cleaning and feature engineering.
+    \item \textbf{Recommendation System:} Developed a movie/music recommendation engine from scratch, implementing Alternating Least Squares (ALS), Stochastic Gradient Descent (SGD), and Projected Gradient algorithms without relying on pre-built libraries.
+    \item \textbf{Image Classification (CNN):} Achieved 85\% classification accuracy on the CIFAR-10 dataset by implementing Convolutional Neural Networks; utilized transfer learning with AlexNet to demonstrate incremental network improvements.
+    \item \textbf{Time Series Regression:} Conducted analysis on environmental factors, identifying a correlation where higher temperatures and lower precipitation serve as markers for higher Air Quality Index (AQI) levels.
+\end{itemize}
+
+\end{document}
