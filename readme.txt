@@ -1,10 +1,19 @@
 Introduction:
 
-My name is Brendan Premo. I was born October 21, 1998 and am a passionate nerd who loves working on projects. This folder is my work during my time as a 
-dual graduate student in Mathematics and Data Sicence at SUNY Albany, along with some side projects I've worked on during the past decade or so. My 
+My name is Brendan Premo. I was born October 21, 1998 and am a passionate nerd who loves working on data projects. This folder is my work during my time 
+as a dual graduate student in Mathematics and Data Sicence at SUNY Albany, along with some side projects I've worked on during the past decade or so. My 
 current project is updating my workbase as a student to be corrected of any mistakes and published on Github as a compentent portfolio.
 
-If you are reading this and have any questions or are interested in my portfolio, you can reach me at premobrendan@gmail.com or (518) 588-0855.
+I am currently employed as a Data Analyst at Soria Analytics, working with the BI tool Sigma Computing and doing some software development on the internal
+codebase. Some of the analysis work I've done is also in this portfolio.
+
+If you are reading this and have any questions or are interested in the work I've compiled here, you can reach me at premobrendan@gmail.com or (518) 588-0855.
+
+**PLEASE NOTE** This portfolio is a work in progress, and as such some documents may be less polished than others. If you would like to look at my polished
+content, please see:
+  - soria_work/scripts/star ratings
+  - soria_work/sigma_dashboards
+  - school_work/stochastic_processes_f23
 
 
 Background:
