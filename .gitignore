@@ -1,8 +1,28 @@
 # macOS folder metadata (ignore everywhere)
 .DS_Store
 
+# Cache files
+__pycache__/
+
 # Data files (large, kept local)
 working/data/
+soria_work/scripts/star ratings/data/
+soria_work/scripts/naic/data/
+soria_work/scripts/naic/clean_naic_data/
+soria_work/scripts/hospital_stuff/hhco
+soria_work/scripts/hospital_stuff/hospital_linkage
+soria_work/scripts/hospital_stuff/nh
+soria_work/scripts/sec_data/pdf_comparison_test/
+soria_work/scripts/sec_data/sec_audit/
+soria_work/scripts/sec_data/sec_filings/
+soria_work/scripts/sec_data/sec_survey/
+soria_work/scripts/sec_data/ten_q_test/
+
+# Output files
+soria_work/scripts/star ratings/output/
+soria_work/scripts/naic/clean_naic_data/
+soria_work/scripts/premiums/output/
 
 # Cow catalog (kept local)
 side_projects/cow-catalog/
+
