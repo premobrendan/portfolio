@@ -1,0 +1,5192 @@
+{
+  "name": "Countries of the World",
+  "description": "Learn about countries, their capitals, flags, and key facts",
+  "cards": [
+    {
+      "id": "canada",
+      "name": "Canada",
+      "capital": "Ottawa",
+      "flag": "🇨🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": [
+            "Alberta", "British Columbia", "Manitoba", "New Brunswick",
+            "Newfoundland and Labrador", "Nova Scotia", "Ontario",
+            "Prince Edward Island", "Quebec", "Saskatchewan"
+          ]
+        },
+        {
+          "label": "Territories",
+          "show_all": false,
+          "list": ["Northwest Territories", "Nunavut", "Yukon"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa"],
+        "primary_exports": ["Crude petroleum", "Cars", "Gold", "Natural gas", "Wood"],
+        "landmarks": ["CN Tower", "Niagara Falls", "Banff National Park", "Parliament Hill"],
+        "continent": "North America",
+        "population": "38 million",
+        "languages": ["English", "French"],
+        "currency": "Canadian Dollar (CAD)"
+      }
+    },
+    {
+      "id": "usa",
+      "name": "United States",
+      "capital": "Washington, D.C.",
+      "flag": "🇺🇸",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
+            "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
+            "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
+            "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
+            "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+            "New Hampshire", "New Jersey", "New Mexico", "New York",
+            "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
+            "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
+            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
+            "West Virginia", "Wisconsin", "Wyoming"
+          ]
+        },
+        {
+          "label": "Territories",
+          "show_all": false,
+          "list": ["Puerto Rico", "Guam", "U.S. Virgin Islands", "American Samoa", "Northern Mariana Islands"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["New York City", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia"],
+        "primary_exports": ["Refined petroleum", "Aircraft", "Cars", "Integrated circuits", "Medical equipment"],
+        "landmarks": ["Statue of Liberty", "Grand Canyon", "Golden Gate Bridge", "Mount Rushmore"],
+        "continent": "North America",
+        "population": "331 million",
+        "languages": ["English"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "capital": "Mexico City",
+      "flag": "🇲🇽",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Aguascalientes", "Baja California", "Baja California Sur", "Campeche",
+            "Chiapas", "Chihuahua", "Coahuila", "Colima", "Durango", "Guanajuato",
+            "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos",
+            "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo",
+            "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas",
+            "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Mexico City", "Guadalajara", "Monterrey", "Puebla", "Tijuana", "León"],
+        "primary_exports": ["Cars", "Vehicle parts", "Computers", "Crude petroleum", "Electrical equipment"],
+        "landmarks": ["Chichen Itza", "Teotihuacan", "Cancun", "Copper Canyon"],
+        "continent": "North America",
+        "population": "128 million",
+        "languages": ["Spanish"],
+        "currency": "Mexican Peso (MXN)"
+      }
+    },
+    {
+      "id": "guatemala",
+      "name": "Guatemala",
+      "capital": "Guatemala City",
+      "flag": "🇬🇹",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Alta Verapaz", "Baja Verapaz", "Chimaltenango", "Chiquimula", "El Progreso",
+            "Escuintla", "Guatemala", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa",
+            "Petén", "Quetzaltenango", "Quiché", "Retalhuleu", "Sacatepéquez",
+            "San Marcos", "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Guatemala City", "Mixco", "Villa Nueva", "Quetzaltenango", "San Miguel Petapa"],
+        "primary_exports": ["Bananas", "Coffee", "Sugar", "Palm oil", "Cardamom"],
+        "landmarks": ["Tikal", "Lake Atitlán", "Antigua Guatemala", "Semuc Champey"],
+        "continent": "North America",
+        "population": "17 million",
+        "languages": ["Spanish"],
+        "currency": "Guatemalan Quetzal (GTQ)"
+      }
+    },
+    {
+      "id": "belize",
+      "name": "Belize",
+      "capital": "Belmopan",
+      "flag": "🇧🇿",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": ["Belize", "Cayo", "Corozal", "Orange Walk", "Stann Creek", "Toledo"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Belize City", "San Ignacio", "Orange Walk Town", "Belmopan", "Dangriga"],
+        "primary_exports": ["Crude petroleum", "Sugar", "Bananas", "Orange juice", "Lobster"],
+        "landmarks": ["Great Blue Hole", "Belize Barrier Reef", "Caracol", "Actun Tunichil Muknal"],
+        "continent": "North America",
+        "population": "400,000",
+        "languages": ["English"],
+        "currency": "Belize Dollar (BZD)"
+      }
+    },
+    {
+      "id": "honduras",
+      "name": "Honduras",
+      "capital": "Tegucigalpa",
+      "flag": "🇭🇳",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Atlántida", "Choluteca", "Colón", "Comayagua", "Copán", "Cortés",
+            "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá",
+            "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho",
+            "Santa Bárbara", "Valle", "Yoro"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tegucigalpa", "San Pedro Sula", "Choloma", "La Ceiba", "El Progreso"],
+        "primary_exports": ["Coffee", "Knit sweaters", "Bananas", "Palm oil", "Insulated wire"],
+        "landmarks": ["Copán Ruins", "Roatán", "Lake Yojoa", "Pico Bonito National Park"],
+        "continent": "North America",
+        "population": "10 million",
+        "languages": ["Spanish"],
+        "currency": "Honduran Lempira (HNL)"
+      }
+    },
+    {
+      "id": "el_salvador",
+      "name": "El Salvador",
+      "capital": "San Salvador",
+      "flag": "🇸🇻",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Ahuachapán", "Cabañas", "Chalatenango", "Cuscatlán", "La Libertad",
+            "La Paz", "La Unión", "Morazán", "San Miguel", "San Salvador",
+            "San Vicente", "Santa Ana", "Sonsonate", "Usulután"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["San Salvador", "Santa Ana", "San Miguel", "Mejicanos", "Soyapango"],
+        "primary_exports": ["Knit t-shirts", "Coffee", "Insulated wire", "Sugarcane", "Iron"],
+        "landmarks": ["El Imposible National Park", "Joya de Cerén", "Santa Ana Volcano", "Ruta de las Flores"],
+        "continent": "North America",
+        "population": "6.5 million",
+        "languages": ["Spanish"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "nicaragua",
+      "name": "Nicaragua",
+      "capital": "Managua",
+      "flag": "🇳🇮",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Boaco", "Carazo", "Chinandega", "Chontales", "Estelí", "Granada",
+            "Jinotega", "León", "Madriz", "Managua", "Masaya", "Matagalpa",
+            "Nueva Segovia", "Río San Juan", "Rivas"
+          ]
+        },
+        {
+          "label": "Autonomous Regions",
+          "show_all": true,
+          "list": ["North Caribbean Coast", "South Caribbean Coast"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Managua", "León", "Masaya", "Matagalpa", "Chinandega"],
+        "primary_exports": ["Knit t-shirts", "Coffee", "Gold", "Insulated wire", "Beef"],
+        "landmarks": ["Granada", "Ometepe Island", "León Cathedral", "Corn Islands"],
+        "continent": "North America",
+        "population": "6.8 million",
+        "languages": ["Spanish"],
+        "currency": "Nicaraguan Córdoba (NIO)"
+      }
+    },
+    {
+      "id": "costa_rica",
+      "name": "Costa Rica",
+      "capital": "San José",
+      "flag": "🇨🇷",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["San José", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limón"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["San José", "Alajuela", "Cartago", "Heredia", "Liberia"],
+        "primary_exports": ["Medical instruments", "Bananas", "Tropical fruits", "Integrated circuits", "Orthopedic appliances"],
+        "landmarks": ["Arenal Volcano", "Monteverde Cloud Forest", "Manuel Antonio National Park", "Tortuguero"],
+        "continent": "North America",
+        "population": "5 million",
+        "languages": ["Spanish"],
+        "currency": "Costa Rican Colón (CRC)"
+      }
+    },
+    {
+      "id": "panama",
+      "name": "Panama",
+      "capital": "Panama City",
+      "flag": "🇵🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Bocas del Toro", "Chiriquí", "Coclé", "Colón", "Darién", "Herrera",
+            "Los Santos", "Panamá", "Panamá Oeste", "Veraguas"
+          ]
+        },
+        {
+          "label": "Indigenous Regions",
+          "show_all": true,
+          "list": ["Emberá-Wounaan", "Guna Yala", "Ngäbe-Buglé", "Naso Tjër Di", "Guna de Madugandí", "Guna de Wargandí"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Panama City", "San Miguelito", "Tocumen", "David", "Colón"],
+        "primary_exports": ["Copper ore", "Bananas", "Fish", "Gold", "Refined petroleum"],
+        "landmarks": ["Panama Canal", "San Blas Islands", "Casco Viejo", "Bocas del Toro"],
+        "continent": "North America",
+        "population": "4.3 million",
+        "languages": ["Spanish"],
+        "currency": "US Dollar (USD) / Panamanian Balboa (PAB)"
+      }
+    },
+    {
+      "id": "cuba",
+      "name": "Cuba",
+      "capital": "Havana",
+      "flag": "🇨🇺",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Pinar del Río", "Artemisa", "La Habana", "Mayabeque", "Matanzas",
+            "Cienfuegos", "Villa Clara", "Sancti Spíritus", "Ciego de Ávila",
+            "Camagüey", "Las Tunas", "Holguín", "Granma", "Santiago de Cuba", "Guantánamo"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Havana", "Santiago de Cuba", "Camagüey", "Holguín", "Santa Clara"],
+        "primary_exports": ["Cigars", "Raw sugar", "Nickel", "Rum", "Zinc ore"],
+        "landmarks": ["Old Havana", "Varadero Beach", "Viñales Valley", "Trinidad"],
+        "continent": "North America",
+        "population": "11 million",
+        "languages": ["Spanish"],
+        "currency": "Cuban Peso (CUP)"
+      }
+    },
+    {
+      "id": "jamaica",
+      "name": "Jamaica",
+      "capital": "Kingston",
+      "flag": "🇯🇲",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": false,
+          "list": [
+            "Kingston", "St. Andrew", "St. Thomas", "Portland", "St. Mary",
+            "St. Ann", "Trelawny", "St. James", "Hanover", "Westmoreland",
+            "St. Elizabeth", "Manchester", "Clarendon", "St. Catherine"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kingston", "Montego Bay", "Spanish Town", "Portmore", "Mandeville"],
+        "primary_exports": ["Aluminum ore", "Rum", "Refined petroleum", "Coffee", "Raw sugar"],
+        "landmarks": ["Dunn's River Falls", "Blue Mountains", "Negril Beach", "Bob Marley Museum"],
+        "continent": "North America",
+        "population": "3 million",
+        "languages": ["English"],
+        "currency": "Jamaican Dollar (JMD)"
+      }
+    },
+    {
+      "id": "haiti",
+      "name": "Haiti",
+      "capital": "Port-au-Prince",
+      "flag": "🇭🇹",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Artibonite", "Centre", "Grand'Anse", "Nippes", "Nord",
+            "Nord-Est", "Nord-Ouest", "Ouest", "Sud", "Sud-Est"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Port-au-Prince", "Cap-Haïtien", "Gonaïves", "Les Cayes", "Pétion-Ville"],
+        "primary_exports": ["T-shirts", "Knit sweaters", "Essential oils", "Cocoa beans", "Mangoes"],
+        "landmarks": ["Citadelle Laferrière", "Sans-Souci Palace", "Labadee", "Bassin Bleu"],
+        "continent": "North America",
+        "population": "11.5 million",
+        "languages": ["French", "Haitian Creole"],
+        "currency": "Haitian Gourde (HTG)"
+      }
+    },
+    {
+      "id": "dominican_republic",
+      "name": "Dominican Republic",
+      "capital": "Santo Domingo",
+      "flag": "🇩🇴",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Azua", "Bahoruco", "Barahona", "Dajabón", "Distrito Nacional", "Duarte",
+            "El Seibo", "Elías Piña", "Espaillat", "Hato Mayor", "Hermanas Mirabal",
+            "Independencia", "La Altagracia", "La Romana", "La Vega", "María Trinidad Sánchez",
+            "Monseñor Nouel", "Monte Cristi", "Monte Plata", "Pedernales", "Peravia",
+            "Puerto Plata", "Samaná", "San Cristóbal", "San José de Ocoa", "San Juan",
+            "San Pedro de Macorís", "Sánchez Ramírez", "Santiago", "Santiago Rodríguez",
+            "Santo Domingo", "Valverde"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Santo Domingo", "Santiago", "Santo Domingo Este", "Santo Domingo Norte", "San Pedro de Macorís"],
+        "primary_exports": ["Gold", "Cigars", "Medical instruments", "Bananas", "Ferroalloys"],
+        "landmarks": ["Punta Cana", "Colonial Zone Santo Domingo", "Samaná Peninsula", "Los Haitises"],
+        "continent": "North America",
+        "population": "10.8 million",
+        "languages": ["Spanish"],
+        "currency": "Dominican Peso (DOP)"
+      }
+    },
+    {
+      "id": "bahamas",
+      "name": "Bahamas",
+      "capital": "Nassau",
+      "flag": "🇧🇸",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Acklins", "Berry Islands", "Bimini", "Black Point", "Cat Island",
+            "Central Abaco", "Central Andros", "Central Eleuthera", "City of Freeport",
+            "Crooked Island and Long Cay", "East Grand Bahama", "Exuma", "Grand Cay",
+            "Harbour Island", "Hope Town", "Inagua", "Long Island", "Mangrove Cay",
+            "Mayaguana", "Moore's Island", "New Providence", "North Abaco", "North Andros",
+            "North Eleuthera", "Ragged Island", "Rum Cay", "San Salvador", "South Abaco",
+            "South Andros", "South Eleuthera", "Spanish Wells", "West Grand Bahama"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Nassau", "Freeport", "West End", "Coopers Town", "Marsh Harbour"],
+        "primary_exports": ["Refined petroleum", "Crustaceans", "Ships", "Polystyrene", "Fish"],
+        "landmarks": ["Atlantis Paradise Island", "Exuma Cays", "Pink Sands Beach", "Swimming Pigs"],
+        "continent": "North America",
+        "population": "400,000",
+        "languages": ["English"],
+        "currency": "Bahamian Dollar (BSD)"
+      }
+    },
+    {
+      "id": "trinidad_and_tobago",
+      "name": "Trinidad and Tobago",
+      "capital": "Port of Spain",
+      "flag": "🇹🇹",
+      "divisions": [
+        {
+          "label": "Regions & Municipalities",
+          "show_all": false,
+          "list": [
+            "Arima", "Chaguanas", "Couva-Tabaquite-Talparo", "Diego Martin",
+            "Mayaro-Rio Claro", "Penal-Debe", "Point Fortin", "Port of Spain",
+            "Princes Town", "San Fernando", "San Juan-Laventille", "Sangre Grande",
+            "Siparia", "Tobago", "Tunapuna-Piarco"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Port of Spain", "San Fernando", "Chaguanas", "Arima", "Scarborough"],
+        "primary_exports": ["Petroleum gas", "Ammonia", "Crude petroleum", "Alcohols", "Iron"],
+        "landmarks": ["Maracas Beach", "Pitch Lake", "Caroni Bird Sanctuary", "Nylon Pool"],
+        "continent": "North America",
+        "population": "1.4 million",
+        "languages": ["English"],
+        "currency": "Trinidad and Tobago Dollar (TTD)"
+      }
+    },
+    {
+      "id": "barbados",
+      "name": "Barbados",
+      "capital": "Bridgetown",
+      "flag": "🇧🇧",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Christ Church", "Saint Andrew", "Saint George", "Saint James",
+            "Saint John", "Saint Joseph", "Saint Lucy", "Saint Michael",
+            "Saint Peter", "Saint Philip", "Saint Thomas"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bridgetown", "Speightstown", "Oistins", "Holetown", "Bathsheba"],
+        "primary_exports": ["Rum", "Hard liquor", "Ships", "Packaged medicines", "Electrical transformers"],
+        "landmarks": ["Harrison's Cave", "Crane Beach", "Bridgetown Historic District", "Bathsheba"],
+        "continent": "North America",
+        "population": "287,000",
+        "languages": ["English"],
+        "currency": "Barbadian Dollar (BBD)"
+      }
+    },
+    {
+      "id": "saint_lucia",
+      "name": "Saint Lucia",
+      "capital": "Castries",
+      "flag": "🇱🇨",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": [
+            "Anse la Raye", "Canaries", "Castries", "Choiseul", "Dennery",
+            "Gros Islet", "Laborie", "Micoud", "Soufrière", "Vieux Fort"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Castries", "Vieux Fort", "Micoud", "Soufrière", "Gros Islet"],
+        "primary_exports": ["Bananas", "Beer", "Electrical equipment", "Paper products", "Vegetables"],
+        "landmarks": ["The Pitons", "Sulphur Springs", "Marigot Bay", "Diamond Falls"],
+        "continent": "North America",
+        "population": "180,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "grenada",
+      "name": "Grenada",
+      "capital": "St. George's",
+      "flag": "🇬🇩",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Saint Andrew", "Saint David", "Saint George", "Saint John",
+            "Saint Mark", "Saint Patrick", "Carriacou and Petite Martinique"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["St. George's", "Gouyave", "Grenville", "Victoria", "Sauteurs"],
+        "primary_exports": ["Nutmeg", "Fish", "Cocoa beans", "Flour", "Spices"],
+        "landmarks": ["Grand Anse Beach", "Fort George", "Underwater Sculpture Park", "Grand Etang Lake"],
+        "continent": "North America",
+        "population": "113,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "saint_vincent",
+      "name": "Saint Vincent and the Grenadines",
+      "capital": "Kingstown",
+      "flag": "🇻🇨",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Charlotte", "Grenadines", "Saint Andrew", "Saint David",
+            "Saint George", "Saint Patrick"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kingstown", "Georgetown", "Byera Village", "Biabou", "Port Elizabeth"],
+        "primary_exports": ["Fish", "Wheat flour", "Rice", "Bananas", "Arrowroot"],
+        "landmarks": ["La Soufrière Volcano", "Tobago Cays", "Bequia", "Botanical Gardens"],
+        "continent": "North America",
+        "population": "110,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "antigua_and_barbuda",
+      "name": "Antigua and Barbuda",
+      "capital": "St. John's",
+      "flag": "🇦🇬",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Saint George", "Saint John", "Saint Mary", "Saint Paul",
+            "Saint Peter", "Saint Philip", "Barbuda", "Redonda"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["St. John's", "All Saints", "Liberta", "Potter's Village", "Codrington"],
+        "primary_exports": ["Ships", "Refined petroleum", "Scrap copper", "Rum", "Grain"],
+        "landmarks": ["365 Beaches", "Nelson's Dockyard", "Shirley Heights", "Devil's Bridge"],
+        "continent": "North America",
+        "population": "98,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "dominica",
+      "name": "Dominica",
+      "capital": "Roseau",
+      "flag": "🇩🇲",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Saint Andrew", "Saint David", "Saint George", "Saint John",
+            "Saint Joseph", "Saint Luke", "Saint Mark", "Saint Patrick",
+            "Saint Paul", "Saint Peter"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Roseau", "Portsmouth", "Marigot", "Berekua", "Mahaut"],
+        "primary_exports": ["Bananas", "Soap", "Coconut oil", "Essential oils", "Vegetables"],
+        "landmarks": ["Boiling Lake", "Morne Trois Pitons", "Trafalgar Falls", "Champagne Reef"],
+        "continent": "North America",
+        "population": "72,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "saint_kitts_and_nevis",
+      "name": "Saint Kitts and Nevis",
+      "capital": "Basseterre",
+      "flag": "🇰🇳",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": [
+            "Christ Church Nichola Town", "Saint Anne Sandy Point", "Saint George Basseterre",
+            "Saint George Gingerland", "Saint James Windward", "Saint John Capisterre",
+            "Saint John Figtree", "Saint Mary Cayon", "Saint Paul Capisterre",
+            "Saint Paul Charlestown", "Saint Peter Basseterre", "Saint Thomas Lowland",
+            "Saint Thomas Middle Island", "Trinity Palmetto Point"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Basseterre", "Charlestown", "Sandy Point Town", "Dieppe Bay Town", "Old Road Town"],
+        "primary_exports": ["Electrical equipment", "Electrical transformers", "Measuring instruments", "Beer", "Jewelry"],
+        "landmarks": ["Brimstone Hill Fortress", "Mount Liamuiga", "Basseterre", "Nevis Peak"],
+        "continent": "North America",
+        "population": "53,000",
+        "languages": ["English"],
+        "currency": "East Caribbean Dollar (XCD)"
+      }
+    },
+    {
+      "id": "denmark",
+      "name": "Denmark",
+      "capital": "Copenhagen",
+      "flag": "🇩🇰",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Capital Region", "Central Denmark", "North Denmark", "Region Zealand", "Southern Denmark"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Copenhagen", "Aarhus", "Odense", "Aalborg", "Esbjerg", "Randers"],
+        "primary_exports": ["Packaged medicines", "Pork", "Wind turbines", "Refined petroleum", "Medical instruments"],
+        "landmarks": ["Tivoli Gardens", "Nyhavn", "The Little Mermaid", "Kronborg Castle"],
+        "continent": "Europe",
+        "population": "5.9 million",
+        "languages": ["Danish"],
+        "currency": "Danish Krone (DKK)"
+      }
+    },
+    {
+      "id": "finland",
+      "name": "Finland",
+      "capital": "Helsinki",
+      "flag": "🇫🇮",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Uusimaa", "Southwest Finland", "Satakunta", "Kanta-Häme", "Pirkanmaa",
+            "Päijät-Häme", "Kymenlaakso", "South Karelia", "South Savo", "North Savo",
+            "North Karelia", "Central Finland", "South Ostrobothnia", "Ostrobothnia",
+            "Central Ostrobothnia", "North Ostrobothnia", "Kainuu", "Lapland", "Åland"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Helsinki", "Espoo", "Tampere", "Vantaa", "Oulu", "Turku"],
+        "primary_exports": ["Refined petroleum", "Paper", "Kaolin-coated paper", "Stainless steel", "Sawn wood"],
+        "landmarks": ["Helsinki Cathedral", "Suomenlinna", "Santa Claus Village", "Northern Lights"],
+        "continent": "Europe",
+        "population": "5.5 million",
+        "languages": ["Finnish", "Swedish"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "capital": "Oslo",
+      "flag": "🇳🇴",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Agder", "Innlandet", "Møre og Romsdal", "Nordland", "Oslo",
+            "Rogaland", "Troms og Finnmark", "Trøndelag", "Vestfold og Telemark",
+            "Vestland", "Viken"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Oslo", "Bergen", "Trondheim", "Stavanger", "Drammen", "Tromsø"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Fish", "Refined petroleum", "Aluminum"],
+        "landmarks": ["Geirangerfjord", "Northern Lights", "Bryggen", "Vigeland Sculpture Park"],
+        "continent": "Europe",
+        "population": "5.4 million",
+        "languages": ["Norwegian"],
+        "currency": "Norwegian Krone (NOK)"
+      }
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "capital": "Stockholm",
+      "flag": "🇸🇪",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Stockholm", "Uppsala", "Södermanland", "Östergötland", "Jönköping",
+            "Kronoberg", "Kalmar", "Gotland", "Blekinge", "Skåne", "Halland",
+            "Västra Götaland", "Värmland", "Örebro", "Västmanland", "Dalarna",
+            "Gävleborg", "Västernorrland", "Jämtland", "Västerbotten", "Norrbotten"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Stockholm", "Gothenburg", "Malmö", "Uppsala", "Västerås", "Örebro"],
+        "primary_exports": ["Refined petroleum", "Cars", "Packaged medicines", "Vehicle parts", "Electrical equipment"],
+        "landmarks": ["Vasa Museum", "Gamla Stan", "Icehotel", "ABBA The Museum"],
+        "continent": "Europe",
+        "population": "10.4 million",
+        "languages": ["Swedish"],
+        "currency": "Swedish Krona (SEK)"
+      }
+    },
+    {
+      "id": "ukraine",
+      "name": "Ukraine",
+      "capital": "Kyiv",
+      "flag": "🇺🇦",
+      "divisions": [
+        {
+          "label": "Oblasts",
+          "show_all": false,
+          "list": [
+            "Cherkasy", "Chernihiv", "Chernivtsi", "Dnipropetrovsk", "Donetsk",
+            "Ivano-Frankivsk", "Kharkiv", "Kherson", "Khmelnytskyi", "Kyiv",
+            "Kirovohrad", "Luhansk", "Lviv", "Mykolaiv", "Odesa", "Poltava",
+            "Rivne", "Sumy", "Ternopil", "Vinnytsia", "Volyn", "Zakarpattia",
+            "Zaporizhzhia", "Zhytomyr"
+          ]
+        },
+        {
+          "label": "Special Status",
+          "show_all": true,
+          "list": ["Kyiv (city)", "Crimea"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kyiv", "Kharkiv", "Odesa", "Dnipro", "Donetsk", "Lviv"],
+        "primary_exports": ["Corn", "Sunflower oil", "Wheat", "Iron ore", "Rapeseed"],
+        "landmarks": ["Saint Sophia Cathedral", "Kyiv Pechersk Lavra", "Chernobyl", "Carpathian Mountains"],
+        "continent": "Europe",
+        "population": "41 million",
+        "languages": ["Ukrainian"],
+        "currency": "Ukrainian Hryvnia (UAH)"
+      }
+    },
+    {
+      "id": "angola",
+      "name": "Angola",
+      "capital": "Luanda",
+      "flag": "🇦🇴",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Bengo", "Benguela", "Bié", "Cabinda", "Cuando Cubango", "Cuanza Norte",
+            "Cuanza Sul", "Cunene", "Huambo", "Huíla", "Luanda", "Lunda Norte",
+            "Lunda Sul", "Malanje", "Moxico", "Namibe", "Uíge", "Zaire"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Luanda", "Huambo", "Lobito", "Benguela", "Lubango", "Cabinda"],
+        "primary_exports": ["Crude petroleum", "Diamonds", "Refined petroleum", "Natural gas", "Coffee"],
+        "landmarks": ["Kalandula Falls", "Tundavala Gap", "Kissama National Park", "Fortress of São Miguel"],
+        "continent": "Africa",
+        "population": "34 million",
+        "languages": ["Portuguese"],
+        "currency": "Angolan Kwanza (AOA)"
+      }
+    },
+    {
+      "id": "botswana",
+      "name": "Botswana",
+      "capital": "Gaborone",
+      "flag": "🇧🇼",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Central", "Chobe", "Ghanzi", "Kgalagadi", "Kgatleng", "Kweneng",
+            "North-East", "North-West", "South-East", "Southern"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Gaborone", "Francistown", "Molepolole", "Serowe", "Maun", "Kanye"],
+        "primary_exports": ["Diamonds", "Copper ore", "Insulated wire", "Gold", "Beef"],
+        "landmarks": ["Okavango Delta", "Chobe National Park", "Makgadikgadi Pans", "Tsodilo Hills"],
+        "continent": "Africa",
+        "population": "2.4 million",
+        "languages": ["English", "Setswana"],
+        "currency": "Botswana Pula (BWP)"
+      }
+    },
+    {
+      "id": "namibia",
+      "name": "Namibia",
+      "capital": "Windhoek",
+      "flag": "🇳🇦",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Erongo", "Hardap", "Karas", "Kavango East", "Kavango West", "Khomas",
+            "Kunene", "Ohangwena", "Omaheke", "Omusati", "Oshana", "Oshikoto",
+            "Otjozondjupa", "Zambezi"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Windhoek", "Walvis Bay", "Swakopmund", "Rundu", "Oshakati", "Katima Mulilo"],
+        "primary_exports": ["Diamonds", "Uranium", "Zinc ore", "Fish", "Gold"],
+        "landmarks": ["Sossusvlei", "Etosha National Park", "Fish River Canyon", "Skeleton Coast"],
+        "continent": "Africa",
+        "population": "2.6 million",
+        "languages": ["English", "Afrikaans", "German"],
+        "currency": "Namibian Dollar (NAD)"
+      }
+    },
+    {
+      "id": "south_africa",
+      "name": "South Africa",
+      "capital": "Pretoria",
+      "flag": "🇿🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": [
+            "Eastern Cape", "Free State", "Gauteng", "KwaZulu-Natal", "Limpopo",
+            "Mpumalanga", "North West", "Northern Cape", "Western Cape"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Johannesburg", "Cape Town", "Durban", "Pretoria", "Port Elizabeth", "Bloemfontein"],
+        "primary_exports": ["Gold", "Diamonds", "Platinum", "Iron ore", "Cars"],
+        "landmarks": ["Table Mountain", "Kruger National Park", "Robben Island", "Garden Route"],
+        "continent": "Africa",
+        "population": "60 million",
+        "languages": ["Zulu", "Xhosa", "Afrikaans", "English"],
+        "currency": "South African Rand (ZAR)"
+      }
+    },
+    {
+      "id": "south_sudan",
+      "name": "South Sudan",
+      "capital": "Juba",
+      "flag": "🇸🇸",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Central Equatoria", "Eastern Equatoria", "Jonglei", "Lakes", "Northern Bahr el Ghazal",
+            "Unity", "Upper Nile", "Warrap", "Western Bahr el Ghazal", "Western Equatoria"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Juba", "Wau", "Malakal", "Yei", "Rumbek", "Bentiu"],
+        "primary_exports": ["Crude petroleum", "Gold", "Wood", "Gum arabic", "Livestock"],
+        "landmarks": ["Sudd Wetlands", "Boma National Park", "Nimule National Park", "White Nile"],
+        "continent": "Africa",
+        "population": "11 million",
+        "languages": ["English", "Arabic"],
+        "currency": "South Sudanese Pound (SSP)"
+      }
+    },
+    {
+      "id": "sudan",
+      "name": "Sudan",
+      "capital": "Khartoum",
+      "flag": "🇸🇩",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Blue Nile", "Central Darfur", "East Darfur", "Gedaref", "Gezira",
+            "Kassala", "Khartoum", "North Darfur", "North Kordofan", "Northern",
+            "Red Sea", "River Nile", "Sennar", "South Darfur", "South Kordofan",
+            "West Darfur", "West Kordofan", "White Nile"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Khartoum", "Omdurman", "Nyala", "Port Sudan", "Kassala", "El Obeid"],
+        "primary_exports": ["Gold", "Crude petroleum", "Sesame seeds", "Sheep", "Cotton"],
+        "landmarks": ["Pyramids of Meroë", "Dinder National Park", "Sanganeb Marine Park", "Jebel Barkal"],
+        "continent": "Africa",
+        "population": "46 million",
+        "languages": ["Arabic", "English"],
+        "currency": "Sudanese Pound (SDG)"
+      }
+    },
+    {
+      "id": "tanzania",
+      "name": "Tanzania",
+      "capital": "Dodoma",
+      "flag": "🇹🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Arusha", "Dar es Salaam", "Dodoma", "Geita", "Iringa", "Kagera",
+            "Katavi", "Kigoma", "Kilimanjaro", "Lindi", "Manyara", "Mara",
+            "Mbeya", "Morogoro", "Mtwara", "Mwanza", "Njombe", "Pemba North",
+            "Pemba South", "Pwani", "Rukwa", "Ruvuma", "Shinyanga", "Simiyu",
+            "Singida", "Songwe", "Tabora", "Tanga", "Unguja North", "Unguja South"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dar es Salaam", "Mwanza", "Dodoma", "Arusha", "Mbeya", "Zanzibar City"],
+        "primary_exports": ["Gold", "Tobacco", "Cashews", "Coffee", "Sesame seeds"],
+        "landmarks": ["Mount Kilimanjaro", "Serengeti National Park", "Zanzibar", "Ngorongoro Crater"],
+        "continent": "Africa",
+        "population": "63 million",
+        "languages": ["Swahili", "English"],
+        "currency": "Tanzanian Shilling (TZS)"
+      }
+    },
+    {
+      "id": "uganda",
+      "name": "Uganda",
+      "capital": "Kampala",
+      "flag": "🇺🇬",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Central", "Eastern", "Northern", "Western"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kampala", "Gulu", "Lira", "Mbarara", "Jinja", "Entebbe"],
+        "primary_exports": ["Coffee", "Gold", "Fish", "Tea", "Tobacco"],
+        "landmarks": ["Bwindi Impenetrable Forest", "Lake Victoria", "Murchison Falls", "Source of the Nile"],
+        "continent": "Africa",
+        "population": "47 million",
+        "languages": ["English", "Swahili"],
+        "currency": "Ugandan Shilling (UGX)"
+      }
+    },
+    {
+      "id": "zambia",
+      "name": "Zambia",
+      "capital": "Lusaka",
+      "flag": "🇿🇲",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Central", "Copperbelt", "Eastern", "Luapula", "Lusaka",
+            "Muchinga", "Northern", "North-Western", "Southern", "Western"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lusaka", "Kitwe", "Ndola", "Kabwe", "Chingola", "Livingstone"],
+        "primary_exports": ["Copper", "Cobalt", "Gold", "Gemstones", "Tobacco"],
+        "landmarks": ["Victoria Falls", "South Luangwa National Park", "Lower Zambezi", "Lake Kariba"],
+        "continent": "Africa",
+        "population": "20 million",
+        "languages": ["English"],
+        "currency": "Zambian Kwacha (ZMW)"
+      }
+    },
+    {
+      "id": "zimbabwe",
+      "name": "Zimbabwe",
+      "capital": "Harare",
+      "flag": "🇿🇼",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Bulawayo", "Harare", "Manicaland", "Mashonaland Central",
+            "Mashonaland East", "Mashonaland West", "Masvingo", "Matabeleland North",
+            "Matabeleland South", "Midlands"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Harare", "Bulawayo", "Chitungwiza", "Mutare", "Gweru", "Kwekwe"],
+        "primary_exports": ["Gold", "Tobacco", "Diamonds", "Ferroalloys", "Nickel"],
+        "landmarks": ["Victoria Falls", "Great Zimbabwe", "Hwange National Park", "Matobo Hills"],
+        "continent": "Africa",
+        "population": "16 million",
+        "languages": ["English", "Shona", "Ndebele"],
+        "currency": "Zimbabwean Dollar (ZWL)"
+      }
+    },
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "capital": "Buenos Aires",
+      "flag": "🇦🇷",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes",
+            "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza",
+            "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "San Luis",
+            "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego",
+            "Tucumán"
+          ]
+        },
+        {
+          "label": "Autonomous City",
+          "show_all": true,
+          "list": ["Buenos Aires (CABA)"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Buenos Aires", "Córdoba", "Rosario", "Mendoza", "La Plata", "San Miguel de Tucumán"],
+        "primary_exports": ["Soybean meal", "Corn", "Soybean oil", "Wheat", "Vehicles"],
+        "landmarks": ["Iguazu Falls", "Perito Moreno Glacier", "Aconcagua", "La Boca"],
+        "continent": "South America",
+        "population": "45 million",
+        "languages": ["Spanish"],
+        "currency": "Argentine Peso (ARS)"
+      }
+    },
+    {
+      "id": "bolivia",
+      "name": "Bolivia",
+      "capital": "Sucre",
+      "flag": "🇧🇴",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": true,
+          "list": [
+            "Beni", "Chuquisaca", "Cochabamba", "La Paz", "Oruro",
+            "Pando", "Potosí", "Santa Cruz", "Tarija"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Santa Cruz de la Sierra", "La Paz", "El Alto", "Cochabamba", "Sucre", "Oruro"],
+        "primary_exports": ["Natural gas", "Gold", "Zinc ore", "Soybean meal", "Silver ore"],
+        "landmarks": ["Salar de Uyuni", "Lake Titicaca", "Tiwanaku", "Death Road"],
+        "continent": "South America",
+        "population": "12 million",
+        "languages": ["Spanish", "Quechua", "Aymara"],
+        "currency": "Bolivian Boliviano (BOB)"
+      }
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "capital": "Brasília",
+      "flag": "🇧🇷",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
+            "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
+            "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
+            "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
+            "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+          ]
+        },
+        {
+          "label": "Federal District",
+          "show_all": true,
+          "list": ["Distrito Federal"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador", "Fortaleza", "Belo Horizonte"],
+        "primary_exports": ["Soybeans", "Iron ore", "Crude petroleum", "Sugar", "Poultry meat"],
+        "landmarks": ["Christ the Redeemer", "Amazon Rainforest", "Iguazu Falls", "Sugarloaf Mountain"],
+        "continent": "South America",
+        "population": "214 million",
+        "languages": ["Portuguese"],
+        "currency": "Brazilian Real (BRL)"
+      }
+    },
+    {
+      "id": "chile",
+      "name": "Chile",
+      "capital": "Santiago",
+      "flag": "🇨🇱",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Arica y Parinacota", "Tarapacá", "Antofagasta", "Atacama", "Coquimbo",
+            "Valparaíso", "Metropolitana de Santiago", "O'Higgins", "Maule", "Ñuble",
+            "Biobío", "La Araucanía", "Los Ríos", "Los Lagos", "Aysén", "Magallanes"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Santiago", "Valparaíso", "Concepción", "La Serena", "Antofagasta", "Temuco"],
+        "primary_exports": ["Copper ore", "Refined copper", "Fish", "Grapes", "Wood pulp"],
+        "landmarks": ["Torres del Paine", "Easter Island", "Atacama Desert", "Valle de la Luna"],
+        "continent": "South America",
+        "population": "19 million",
+        "languages": ["Spanish"],
+        "currency": "Chilean Peso (CLP)"
+      }
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "capital": "Bogotá",
+      "flag": "🇨🇴",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Amazonas", "Antioquia", "Arauca", "Atlántico", "Bolívar", "Boyacá",
+            "Caldas", "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba",
+            "Cundinamarca", "Guainía", "Guaviare", "Huila", "La Guajira", "Magdalena",
+            "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindío", "Risaralda",
+            "San Andrés y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca",
+            "Vaupés", "Vichada"
+          ]
+        },
+        {
+          "label": "Capital District",
+          "show_all": true,
+          "list": ["Bogotá D.C."]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bogotá", "Medellín", "Cali", "Barranquilla", "Cartagena", "Cúcuta"],
+        "primary_exports": ["Crude petroleum", "Coal", "Coffee", "Gold", "Cut flowers"],
+        "landmarks": ["Cartagena Old City", "Tayrona National Park", "Salt Cathedral of Zipaquirá", "Cocora Valley"],
+        "continent": "South America",
+        "population": "51 million",
+        "languages": ["Spanish"],
+        "currency": "Colombian Peso (COP)"
+      }
+    },
+    {
+      "id": "ecuador",
+      "name": "Ecuador",
+      "capital": "Quito",
+      "flag": "🇪🇨",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Azuay", "Bolívar", "Cañar", "Carchi", "Chimborazo", "Cotopaxi",
+            "El Oro", "Esmeraldas", "Galápagos", "Guayas", "Imbabura", "Loja",
+            "Los Ríos", "Manabí", "Morona Santiago", "Napo", "Orellana", "Pastaza",
+            "Pichincha", "Santa Elena", "Santo Domingo de los Tsáchilas", "Sucumbíos",
+            "Tungurahua", "Zamora Chinchipe"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Guayaquil", "Quito", "Cuenca", "Santo Domingo", "Machala", "Manta"],
+        "primary_exports": ["Crude petroleum", "Bananas", "Shrimp", "Cut flowers", "Cocoa beans"],
+        "landmarks": ["Galápagos Islands", "Quito Historic Center", "Cotopaxi Volcano", "Mitad del Mundo"],
+        "continent": "South America",
+        "population": "18 million",
+        "languages": ["Spanish"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "guyana",
+      "name": "Guyana",
+      "capital": "Georgetown",
+      "flag": "🇬🇾",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": [
+            "Barima-Waini", "Cuyuni-Mazaruni", "Demerara-Mahaica", "East Berbice-Corentyne",
+            "Essequibo Islands-West Demerara", "Mahaica-Berbice", "Pomeroon-Supenaam",
+            "Potaro-Siparuni", "Upper Demerara-Berbice", "Upper Takutu-Upper Essequibo"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Georgetown", "Linden", "New Amsterdam", "Anna Regina", "Bartica"],
+        "primary_exports": ["Crude petroleum", "Gold", "Rice", "Bauxite", "Sugar"],
+        "landmarks": ["Kaieteur Falls", "Iwokrama Rainforest", "St. George's Cathedral", "Shell Beach"],
+        "continent": "South America",
+        "population": "800,000",
+        "languages": ["English"],
+        "currency": "Guyanese Dollar (GYD)"
+      }
+    },
+    {
+      "id": "paraguay",
+      "name": "Paraguay",
+      "capital": "Asunción",
+      "flag": "🇵🇾",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Alto Paraguay", "Alto Paraná", "Amambay", "Boquerón", "Caaguazú",
+            "Caazapá", "Canindeyú", "Central", "Concepción", "Cordillera", "Guairá",
+            "Itapúa", "Misiones", "Ñeembucú", "Paraguarí", "Presidente Hayes", "San Pedro"
+          ]
+        },
+        {
+          "label": "Capital District",
+          "show_all": true,
+          "list": ["Asunción"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Asunción", "Ciudad del Este", "San Lorenzo", "Luque", "Capiatá", "Lambaré"],
+        "primary_exports": ["Soybeans", "Soybean meal", "Electricity", "Beef", "Corn"],
+        "landmarks": ["Itaipu Dam", "Jesuit Missions", "Ybycuí National Park", "Cerro Corá National Park"],
+        "continent": "South America",
+        "population": "7 million",
+        "languages": ["Spanish", "Guaraní"],
+        "currency": "Paraguayan Guaraní (PYG)"
+      }
+    },
+    {
+      "id": "peru",
+      "name": "Peru",
+      "capital": "Lima",
+      "flag": "🇵🇪",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Amazonas", "Áncash", "Apurímac", "Arequipa", "Ayacucho", "Cajamarca",
+            "Callao", "Cusco", "Huancavelica", "Huánuco", "Ica", "Junín",
+            "La Libertad", "Lambayeque", "Lima", "Loreto", "Madre de Dios", "Moquegua",
+            "Pasco", "Piura", "Puno", "San Martín", "Tacna", "Tumbes", "Ucayali"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lima", "Arequipa", "Trujillo", "Chiclayo", "Piura", "Cusco"],
+        "primary_exports": ["Copper ore", "Gold", "Refined copper", "Zinc ore", "Natural gas"],
+        "landmarks": ["Machu Picchu", "Nazca Lines", "Lake Titicaca", "Colca Canyon"],
+        "continent": "South America",
+        "population": "33 million",
+        "languages": ["Spanish", "Quechua", "Aymara"],
+        "currency": "Peruvian Sol (PEN)"
+      }
+    },
+    {
+      "id": "suriname",
+      "name": "Suriname",
+      "capital": "Paramaribo",
+      "flag": "🇸🇷",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": [
+            "Brokopondo", "Commewijne", "Coronie", "Marowijne", "Nickerie",
+            "Para", "Paramaribo", "Saramacca", "Sipaliwini", "Wanica"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Paramaribo", "Lelydorp", "Nieuw Nickerie", "Moengo", "Nieuw Amsterdam"],
+        "primary_exports": ["Gold", "Crude petroleum", "Bananas", "Fish", "Rice"],
+        "landmarks": ["Paramaribo Historic Inner City", "Central Suriname Nature Reserve", "Brownsberg Nature Park", "Galibi Nature Reserve"],
+        "continent": "South America",
+        "population": "600,000",
+        "languages": ["Dutch"],
+        "currency": "Surinamese Dollar (SRD)"
+      }
+    },
+    {
+      "id": "uruguay",
+      "name": "Uruguay",
+      "capital": "Montevideo",
+      "flag": "🇺🇾",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Artigas", "Canelones", "Cerro Largo", "Colonia", "Durazno", "Flores",
+            "Florida", "Lavalleja", "Maldonado", "Montevideo", "Paysandú", "Río Negro",
+            "Rivera", "Rocha", "Salto", "San José", "Soriano", "Tacuarembó", "Treinta y Tres"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Montevideo", "Salto", "Paysandú", "Las Piedras", "Rivera", "Maldonado"],
+        "primary_exports": ["Beef", "Soybeans", "Wood pulp", "Rice", "Dairy products"],
+        "landmarks": ["Colonia del Sacramento", "Punta del Este", "Montevideo Old Town", "Cabo Polonio"],
+        "continent": "South America",
+        "population": "3.5 million",
+        "languages": ["Spanish"],
+        "currency": "Uruguayan Peso (UYU)"
+      }
+    },
+    {
+      "id": "venezuela",
+      "name": "Venezuela",
+      "capital": "Caracas",
+      "flag": "🇻🇪",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Amazonas", "Anzoátegui", "Apure", "Aragua", "Barinas", "Bolívar",
+            "Carabobo", "Cojedes", "Delta Amacuro", "Falcón", "Guárico", "Lara",
+            "Mérida", "Miranda", "Monagas", "Nueva Esparta", "Portuguesa", "Sucre",
+            "Táchira", "Trujillo", "Vargas", "Yaracuy", "Zulia"
+          ]
+        },
+        {
+          "label": "Capital District",
+          "show_all": true,
+          "list": ["Distrito Capital"]
+        },
+        {
+          "label": "Federal Dependencies",
+          "show_all": true,
+          "list": ["Dependencias Federales"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Caracas", "Maracaibo", "Valencia", "Barquisimeto", "Maracay", "Ciudad Guayana"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Gold", "Iron ore", "Acyclic alcohols"],
+        "landmarks": ["Angel Falls", "Los Roques Archipelago", "Mount Roraima", "Mochima National Park"],
+        "continent": "South America",
+        "population": "28 million",
+        "languages": ["Spanish"],
+        "currency": "Venezuelan Bolívar (VES)"
+      }
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "capital": "Canberra",
+      "flag": "🇦🇺",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": true,
+          "list": [
+            "New South Wales", "Queensland", "South Australia", "Tasmania",
+            "Victoria", "Western Australia"
+          ]
+        },
+        {
+          "label": "Territories",
+          "show_all": true,
+          "list": ["Australian Capital Territory", "Northern Territory"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"],
+        "primary_exports": ["Iron ore", "Coal", "Natural gas", "Gold", "Aluminum ore"],
+        "landmarks": ["Sydney Opera House", "Great Barrier Reef", "Uluru", "Twelve Apostles"],
+        "continent": "Oceania",
+        "population": "26 million",
+        "languages": ["English"],
+        "currency": "Australian Dollar (AUD)"
+      }
+    },
+    {
+      "id": "fiji",
+      "name": "Fiji",
+      "capital": "Suva",
+      "flag": "🇫🇯",
+      "divisions": [
+        {
+          "label": "Divisions",
+          "show_all": true,
+          "list": ["Central", "Eastern", "Northern", "Western"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Suva", "Nausori", "Lautoka", "Nadi", "Labasa"],
+        "primary_exports": ["Bottled water", "Raw sugar", "Fish", "Gold", "Wood"],
+        "landmarks": ["Mamanuca Islands", "Garden of the Sleeping Giant", "Bouma National Heritage Park", "Sigatoka Sand Dunes"],
+        "continent": "Oceania",
+        "population": "900,000",
+        "languages": ["English", "Fijian", "Fiji Hindi"],
+        "currency": "Fijian Dollar (FJD)"
+      }
+    },
+    {
+      "id": "kiribati",
+      "name": "Kiribati",
+      "capital": "South Tarawa",
+      "flag": "🇰🇮",
+      "divisions": [
+        {
+          "label": "Island Groups",
+          "show_all": true,
+          "list": ["Gilbert Islands", "Line Islands", "Phoenix Islands"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["South Tarawa", "Betio", "Bikenibeu", "Bairiki", "Teaoraereke"],
+        "primary_exports": ["Fish", "Coconut oil", "Copra", "Seaweed", "Pet fish"],
+        "landmarks": ["Christmas Island", "Phoenix Islands Protected Area", "Tarawa Atoll", "Millennium Island"],
+        "continent": "Oceania",
+        "population": "120,000",
+        "languages": ["English", "Gilbertese"],
+        "currency": "Australian Dollar (AUD)"
+      }
+    },
+    {
+      "id": "marshall_islands",
+      "name": "Marshall Islands",
+      "capital": "Majuro",
+      "flag": "🇲🇭",
+      "divisions": [
+        {
+          "label": "Chains",
+          "show_all": true,
+          "list": ["Ralik Chain", "Ratak Chain"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Majuro", "Ebeye", "Arno", "Jabor", "Wotje"],
+        "primary_exports": ["Fish", "Coconut oil", "Copra", "Handicrafts", "Trochus shells"],
+        "landmarks": ["Bikini Atoll", "Majuro Atoll", "Arno Atoll", "Laura Beach"],
+        "continent": "Oceania",
+        "population": "60,000",
+        "languages": ["English", "Marshallese"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "micronesia",
+      "name": "Micronesia",
+      "capital": "Palikir",
+      "flag": "🇫🇲",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": true,
+          "list": ["Chuuk", "Kosrae", "Pohnpei", "Yap"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Palikir", "Weno", "Kolonia", "Tofol", "Colonia"],
+        "primary_exports": ["Fish", "Garments", "Bananas", "Black pepper", "Sakau"],
+        "landmarks": ["Nan Madol", "Chuuk Lagoon", "Kepirohi Waterfall", "Lelu Ruins"],
+        "continent": "Oceania",
+        "population": "115,000",
+        "languages": ["English"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "nauru",
+      "name": "Nauru",
+      "capital": "Yaren",
+      "flag": "🇳🇷",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Aiwo", "Anabar", "Anetan", "Anibare", "Baiti", "Boe", "Buada",
+            "Denigomodu", "Ewa", "Ijuw", "Meneng", "Nibok", "Uaboe", "Yaren"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Yaren", "Denigomodu", "Aiwo", "Buada", "Boe"],
+        "primary_exports": ["Phosphates", "Coconut products", "Fish"],
+        "landmarks": ["Command Ridge", "Buada Lagoon", "Anibare Bay", "Moqua Well"],
+        "continent": "Oceania",
+        "population": "10,000",
+        "languages": ["English", "Nauruan"],
+        "currency": "Australian Dollar (AUD)"
+      }
+    },
+    {
+      "id": "new_zealand",
+      "name": "New Zealand",
+      "capital": "Wellington",
+      "flag": "🇳🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Northland", "Auckland", "Waikato", "Bay of Plenty", "Gisborne",
+            "Hawke's Bay", "Taranaki", "Manawatu-Whanganui", "Wellington",
+            "Tasman", "Nelson", "Marlborough", "West Coast", "Canterbury",
+            "Otago", "Southland"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga", "Dunedin"],
+        "primary_exports": ["Dairy products", "Meat", "Wood", "Fruit", "Wine"],
+        "landmarks": ["Milford Sound", "Hobbiton", "Rotorua", "Franz Josef Glacier"],
+        "continent": "Oceania",
+        "population": "5 million",
+        "languages": ["English", "Maori"],
+        "currency": "New Zealand Dollar (NZD)"
+      }
+    },
+    {
+      "id": "palau",
+      "name": "Palau",
+      "capital": "Ngerulmud",
+      "flag": "🇵🇼",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Aimeliik", "Airai", "Angaur", "Hatohobei", "Kayangel", "Koror",
+            "Melekeok", "Ngaraard", "Ngarchelong", "Ngardmau", "Ngatpang",
+            "Ngchesar", "Ngeremlengui", "Ngiwal", "Peleliu", "Sonsorol"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Koror", "Ngerulmud", "Airai", "Meyungs", "Kloulklubed"],
+        "primary_exports": ["Fish", "Shellfish", "Garments", "Coconuts"],
+        "landmarks": ["Rock Islands", "Jellyfish Lake", "Ngardmau Waterfall", "Peleliu Island"],
+        "continent": "Oceania",
+        "population": "18,000",
+        "languages": ["English", "Palauan"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "papua_new_guinea",
+      "name": "Papua New Guinea",
+      "capital": "Port Moresby",
+      "flag": "🇵🇬",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Highlands", "Islands", "Momase", "Southern"]
+        },
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Central", "Chimbu", "Eastern Highlands", "East New Britain",
+            "East Sepik", "Enga", "Gulf", "Madang", "Manus", "Milne Bay",
+            "Morobe", "New Ireland", "Northern", "Southern Highlands",
+            "Western", "Western Highlands", "West New Britain", "West Sepik",
+            "National Capital District", "Bougainville", "Hela", "Jiwaka"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Port Moresby", "Lae", "Arawa", "Mount Hagen", "Popondetta"],
+        "primary_exports": ["Gold", "Crude petroleum", "Copper ore", "Palm oil", "Coffee"],
+        "landmarks": ["Kokoda Track", "Sepik River", "Mount Wilhelm", "Tufi Fjords"],
+        "continent": "Oceania",
+        "population": "10 million",
+        "languages": ["English", "Tok Pisin", "Hiri Motu"],
+        "currency": "Papua New Guinean Kina (PGK)"
+      }
+    },
+    {
+      "id": "samoa",
+      "name": "Samoa",
+      "capital": "Apia",
+      "flag": "🇼🇸",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "A'ana", "Aiga-i-le-Tai", "Atua", "Fa'asaleleaga", "Gaga'emauga",
+            "Gagaifomauga", "Palauli", "Satupa'itea", "Tuamasaga", "Va'a-o-Fonoti",
+            "Vaisigano"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Apia", "Vaitele", "Faleula", "Siusega", "Malie"],
+        "primary_exports": ["Fish", "Coconut oil", "Nonu juice", "Taro", "Automotive parts"],
+        "landmarks": ["To Sua Ocean Trench", "Papapapaitai Falls", "Robert Louis Stevenson Museum", "Lalomanu Beach"],
+        "continent": "Oceania",
+        "population": "200,000",
+        "languages": ["Samoan", "English"],
+        "currency": "Samoan Tala (WST)"
+      }
+    },
+    {
+      "id": "solomon_islands",
+      "name": "Solomon Islands",
+      "capital": "Honiara",
+      "flag": "🇸🇧",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Central", "Choiseul", "Guadalcanal", "Isabel", "Makira-Ulawa",
+            "Malaita", "Rennell and Bellona", "Temotu", "Western"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Honiara", "Gizo", "Auki", "Noro", "Tulagi"],
+        "primary_exports": ["Wood", "Fish", "Palm oil", "Cocoa", "Copra"],
+        "landmarks": ["Marovo Lagoon", "Guadalcanal", "Kennedy Island", "Skull Island"],
+        "continent": "Oceania",
+        "population": "700,000",
+        "languages": ["English", "Pijin"],
+        "currency": "Solomon Islands Dollar (SBD)"
+      }
+    },
+    {
+      "id": "tonga",
+      "name": "Tonga",
+      "capital": "Nuku'alofa",
+      "flag": "🇹🇴",
+      "divisions": [
+        {
+          "label": "Divisions",
+          "show_all": true,
+          "list": ["'Eua", "Ha'apai", "Niuas", "Tongatapu", "Vava'u"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Nuku'alofa", "Neiafu", "Haveluloto", "Vaini", "Pangai"],
+        "primary_exports": ["Fish", "Squash", "Vanilla beans", "Root crops", "Coconut oil"],
+        "landmarks": ["Ha'amonga 'a Maui Trilithon", "Anahulu Cave", "Mapu'a 'a Vaea Blowholes", "Royal Palace"],
+        "continent": "Oceania",
+        "population": "100,000",
+        "languages": ["Tongan", "English"],
+        "currency": "Tongan Pa'anga (TOP)"
+      }
+    },
+    {
+      "id": "tuvalu",
+      "name": "Tuvalu",
+      "capital": "Funafuti",
+      "flag": "🇹🇻",
+      "divisions": [
+        {
+          "label": "Islands",
+          "show_all": true,
+          "list": ["Funafuti", "Nanumea", "Nanumaga", "Niutao", "Nui", "Nukufetau", "Nukulaelae", "Vaitupu"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Funafuti", "Asau", "Savave", "Kulia", "Tanrake"],
+        "primary_exports": ["Fish", "Coconut products", "Postage stamps", "Handicrafts"],
+        "landmarks": ["Funafuti Conservation Area", "Fongafale", "Nanumea Lagoon", "World War II sites"],
+        "continent": "Oceania",
+        "population": "12,000",
+        "languages": ["Tuvaluan", "English"],
+        "currency": "Australian Dollar (AUD) / Tuvaluan Dollar"
+      }
+    },
+    {
+      "id": "vanuatu",
+      "name": "Vanuatu",
+      "capital": "Port Vila",
+      "flag": "🇻🇺",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Malampa", "Penama", "Sanma", "Shefa", "Tafea", "Torba"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Port Vila", "Luganville", "Norsup", "Port Olry", "Isangel"],
+        "primary_exports": ["Copra", "Beef", "Cocoa", "Wood", "Kava"],
+        "landmarks": ["Mount Yasur", "Blue Holes", "Champagne Beach", "Millennium Cave"],
+        "continent": "Oceania",
+        "population": "320,000",
+        "languages": ["Bislama", "English", "French"],
+        "currency": "Vanuatu Vatu (VUV)"
+      }
+    },
+    {
+      "id": "afghanistan",
+      "name": "Afghanistan",
+      "capital": "Kabul",
+      "flag": "🇦🇫",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Badakhshan", "Badghis", "Baghlan", "Balkh", "Bamyan", "Daykundi",
+            "Farah", "Faryab", "Ghazni", "Ghor", "Helmand", "Herat", "Jowzjan",
+            "Kabul", "Kandahar", "Kapisa", "Khost", "Kunar", "Kunduz", "Laghman",
+            "Logar", "Nangarhar", "Nimroz", "Nuristan", "Paktia", "Paktika",
+            "Panjshir", "Parwan", "Samangan", "Sar-e Pol", "Takhar", "Uruzgan",
+            "Wardak", "Zabul"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kabul", "Kandahar", "Herat", "Mazar-i-Sharif", "Jalalabad", "Kunduz"],
+        "primary_exports": ["Gold", "Grapes", "Opium", "Carpets", "Dried fruits"],
+        "landmarks": ["Bamiyan Valley", "Blue Mosque", "Band-e-Amir National Park", "Citadel of Herat"],
+        "continent": "Asia",
+        "population": "40 million",
+        "languages": ["Pashto", "Dari"],
+        "currency": "Afghan Afghani (AFN)"
+      }
+    },
+    {
+      "id": "bangladesh",
+      "name": "Bangladesh",
+      "capital": "Dhaka",
+      "flag": "🇧🇩",
+      "divisions": [
+        {
+          "label": "Divisions",
+          "show_all": true,
+          "list": ["Barishal", "Chattogram", "Dhaka", "Khulna", "Mymensingh", "Rajshahi", "Rangpur", "Sylhet"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dhaka", "Chattogram", "Khulna", "Rajshahi", "Sylhet", "Rangpur"],
+        "primary_exports": ["Textiles", "Garments", "Knitwear", "Frozen fish", "Jute"],
+        "landmarks": ["Sundarbans", "Cox's Bazar", "Lalbagh Fort", "Shat Gombuj Mosque"],
+        "continent": "Asia",
+        "population": "170 million",
+        "languages": ["Bengali"],
+        "currency": "Bangladeshi Taka (BDT)"
+      }
+    },
+    {
+      "id": "bhutan",
+      "name": "Bhutan",
+      "capital": "Thimphu",
+      "flag": "🇧🇹",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Bumthang", "Chhukha", "Dagana", "Gasa", "Haa", "Lhuntse", "Mongar",
+            "Paro", "Pemagatshel", "Punakha", "Samdrup Jongkhar", "Samtse",
+            "Sarpang", "Thimphu", "Trashigang", "Trashiyangtse", "Trongsa",
+            "Tsirang", "Wangdue Phodrang", "Zhemgang"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Thimphu", "Phuntsholing", "Paro", "Punakha", "Wangdue Phodrang"],
+        "primary_exports": ["Ferro-silicon", "Electricity", "Cement", "Calcium carbide", "Cardamom"],
+        "landmarks": ["Tiger's Nest Monastery", "Punakha Dzong", "Buddha Dordenma", "Dochula Pass"],
+        "continent": "Asia",
+        "population": "780,000",
+        "languages": ["Dzongkha"],
+        "currency": "Bhutanese Ngultrum (BTN)"
+      }
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "capital": "New Delhi",
+      "flag": "🇮🇳",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+            "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+            "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+            "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+            "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
+          ]
+        },
+        {
+          "label": "Union Territories",
+          "show_all": false,
+          "list": [
+            "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu",
+            "Delhi", "Jammu and Kashmir", "Ladakh", "Lakshadweep", "Puducherry"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", "Kolkata"],
+        "primary_exports": ["Refined petroleum", "Diamonds", "Packaged medicines", "Jewelry", "IT services"],
+        "landmarks": ["Taj Mahal", "Red Fort", "Jaipur", "Varanasi", "Kerala Backwaters"],
+        "continent": "Asia",
+        "population": "1.4 billion",
+        "languages": ["Hindi", "English"],
+        "currency": "Indian Rupee (INR)"
+      }
+    },
+    {
+      "id": "kazakhstan",
+      "name": "Kazakhstan",
+      "capital": "Astana",
+      "flag": "🇰🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Akmola", "Aktobe", "Almaty Region", "Atyrau", "East Kazakhstan",
+            "Jambyl", "Karaganda", "Kostanay", "Kyzylorda", "Mangystau",
+            "North Kazakhstan", "Pavlodar", "Turkistan", "Ulytau", "West Kazakhstan"
+          ]
+        },
+        {
+          "label": "Cities of Republican Significance",
+          "show_all": true,
+          "list": ["Almaty", "Astana", "Shymkent"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Almaty", "Astana", "Shymkent", "Karaganda", "Aktobe", "Taraz"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Copper", "Uranium", "Wheat"],
+        "landmarks": ["Charyn Canyon", "Baikonur Cosmodrome", "Kolsai Lakes", "Mausoleum of Khoja Ahmed Yasawi"],
+        "continent": "Asia",
+        "population": "19 million",
+        "languages": ["Kazakh", "Russian"],
+        "currency": "Kazakhstani Tenge (KZT)"
+      }
+    },
+    {
+      "id": "kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "capital": "Bishkek",
+      "flag": "🇰🇬",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Batken", "Chuy", "Issyk-Kul", "Jalal-Abad", "Naryn", "Osh Region", "Talas"]
+        },
+        {
+          "label": "Cities",
+          "show_all": true,
+          "list": ["Bishkek", "Osh"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bishkek", "Osh", "Jalal-Abad", "Karakol", "Tokmok", "Uzgen"],
+        "primary_exports": ["Gold", "Precious metals", "Vegetables", "Cotton", "Dairy products"],
+        "landmarks": ["Issyk-Kul Lake", "Burana Tower", "Ala Archa National Park", "Tash Rabat"],
+        "continent": "Asia",
+        "population": "6.7 million",
+        "languages": ["Kyrgyz", "Russian"],
+        "currency": "Kyrgyzstani Som (KGS)"
+      }
+    },
+    {
+      "id": "maldives",
+      "name": "Maldives",
+      "capital": "Male",
+      "flag": "🇲🇻",
+      "divisions": [
+        {
+          "label": "Administrative Atolls",
+          "show_all": false,
+          "list": [
+            "Alifu Alifu", "Alifu Dhaalu", "Baa", "Dhaalu", "Faafu", "Gaafu Alifu",
+            "Gaafu Dhaalu", "Gnaviyani", "Haa Alifu", "Haa Dhaalu", "Kaafu", "Laamu",
+            "Lhaviyani", "Meemu", "Noonu", "Raa", "Seenu", "Shaviyani", "Thaa", "Vaavu"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Male", "Addu City", "Fuvahmulah", "Kulhudhuffushi", "Thinadhoo"],
+        "primary_exports": ["Fish", "Frozen fish", "Fish products", "Clothing", "Scrap metal"],
+        "landmarks": ["Underwater Cabinet Meeting Site", "Male Friday Mosque", "Banana Reef", "HP Reef"],
+        "continent": "Asia",
+        "population": "540,000",
+        "languages": ["Dhivehi"],
+        "currency": "Maldivian Rufiyaa (MVR)"
+      }
+    },
+    {
+      "id": "nepal",
+      "name": "Nepal",
+      "capital": "Kathmandu",
+      "flag": "🇳🇵",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Koshi", "Madhesh", "Bagmati", "Gandaki", "Lumbini", "Karnali", "Sudurpashchim"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kathmandu", "Pokhara", "Lalitpur", "Bharatpur", "Biratnagar", "Birgunj"],
+        "primary_exports": ["Palm oil", "Soybean oil", "Carpets", "Textiles", "Juice"],
+        "landmarks": ["Mount Everest", "Kathmandu Durbar Square", "Lumbini", "Chitwan National Park"],
+        "continent": "Asia",
+        "population": "30 million",
+        "languages": ["Nepali"],
+        "currency": "Nepalese Rupee (NPR)"
+      }
+    },
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "capital": "Islamabad",
+      "flag": "🇵🇰",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Balochistan", "Khyber Pakhtunkhwa", "Punjab", "Sindh"]
+        },
+        {
+          "label": "Territories",
+          "show_all": true,
+          "list": ["Azad Jammu and Kashmir", "Gilgit-Baltistan", "Islamabad Capital Territory"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Karachi", "Lahore", "Faisalabad", "Rawalpindi", "Islamabad", "Multan"],
+        "primary_exports": ["Textiles", "Rice", "Leather goods", "Sports goods", "Surgical instruments"],
+        "landmarks": ["Badshahi Mosque", "Mohenjo-daro", "K2", "Lahore Fort", "Hunza Valley"],
+        "continent": "Asia",
+        "population": "230 million",
+        "languages": ["Urdu", "English"],
+        "currency": "Pakistani Rupee (PKR)"
+      }
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "capital": "Moscow",
+      "flag": "🇷🇺",
+      "divisions": [
+        {
+          "label": "Federal Districts",
+          "show_all": true,
+          "list": ["Central", "Northwestern", "Southern", "North Caucasian", "Volga", "Ural", "Siberian", "Far Eastern"]
+        },
+        {
+          "label": "Federal Subjects",
+          "show_all": false,
+          "list": [
+            "Moscow", "Saint Petersburg", "Moscow Oblast", "Krasnodar Krai", "Sverdlovsk Oblast",
+            "Rostov Oblast", "Republic of Tatarstan", "Republic of Bashkortostan", "Chelyabinsk Oblast",
+            "Nizhny Novgorod Oblast", "Samara Oblast", "Republic of Dagestan", "Krasnoyarsk Krai"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Moscow", "Saint Petersburg", "Novosibirsk", "Yekaterinburg", "Kazan", "Nizhny Novgorod"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Refined petroleum", "Coal", "Wheat"],
+        "landmarks": ["Red Square", "Kremlin", "Saint Basil's Cathedral", "Hermitage Museum", "Lake Baikal"],
+        "continent": "Asia",
+        "population": "144 million",
+        "languages": ["Russian"],
+        "currency": "Russian Ruble (RUB)"
+      }
+    },
+    {
+      "id": "sri_lanka",
+      "name": "Sri Lanka",
+      "capital": "Sri Jayawardenepura Kotte",
+      "flag": "🇱🇰",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Central", "Eastern", "North Central", "Northern", "North Western", "Sabaragamuwa", "Southern", "Uva", "Western"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Colombo", "Dehiwala-Mount Lavinia", "Moratuwa", "Sri Jayawardenepura Kotte", "Negombo", "Kandy"],
+        "primary_exports": ["Tea", "Rubber", "Textiles", "Coconut products", "Spices"],
+        "landmarks": ["Sigiriya", "Temple of the Tooth", "Galle Fort", "Yala National Park", "Adam's Peak"],
+        "continent": "Asia",
+        "population": "22 million",
+        "languages": ["Sinhala", "Tamil"],
+        "currency": "Sri Lankan Rupee (LKR)"
+      }
+    },
+    {
+      "id": "tajikistan",
+      "name": "Tajikistan",
+      "capital": "Dushanbe",
+      "flag": "🇹🇯",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Sughd", "Khatlon", "Gorno-Badakhshan Autonomous Region", "Districts of Republican Subordination"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dushanbe", "Khujand", "Bokhtar", "Kulob", "Istaravshan", "Vahdat"],
+        "primary_exports": ["Gold", "Aluminum", "Cotton", "Electricity", "Dried fruits"],
+        "landmarks": ["Pamir Mountains", "Iskanderkul Lake", "Hissar Fortress", "Fann Mountains"],
+        "continent": "Asia",
+        "population": "10 million",
+        "languages": ["Tajik", "Russian"],
+        "currency": "Tajikistani Somoni (TJS)"
+      }
+    },
+    {
+      "id": "turkmenistan",
+      "name": "Turkmenistan",
+      "capital": "Ashgabat",
+      "flag": "🇹🇲",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Ahal", "Balkan", "Dashoguz", "Lebap", "Mary"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Ashgabat", "Turkmenabat", "Dashoguz", "Mary", "Balkanabat", "Bayramaly"],
+        "primary_exports": ["Natural gas", "Crude petroleum", "Refined petroleum", "Cotton", "Textiles"],
+        "landmarks": ["Darvaza Gas Crater", "Ancient Merv", "Ashgabat White Marble Buildings", "Yangykala Canyon"],
+        "continent": "Asia",
+        "population": "6.3 million",
+        "languages": ["Turkmen", "Russian"],
+        "currency": "Turkmenistan Manat (TMT)"
+      }
+    },
+    {
+      "id": "uzbekistan",
+      "name": "Uzbekistan",
+      "capital": "Tashkent",
+      "flag": "🇺🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Andijan", "Bukhara", "Fergana", "Jizzakh", "Kashkadarya", "Khorezm",
+            "Namangan", "Navoiy", "Samarkand", "Sirdaryo", "Surkhandarya", "Tashkent Region"
+          ]
+        },
+        {
+          "label": "Autonomous Republic",
+          "show_all": true,
+          "list": ["Karakalpakstan"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tashkent", "Samarkand", "Namangan", "Andijan", "Bukhara", "Fergana"],
+        "primary_exports": ["Gold", "Natural gas", "Cotton", "Copper", "Textiles"],
+        "landmarks": ["Registan Square", "Samarkand", "Bukhara Old City", "Khiva", "Aral Sea"],
+        "continent": "Asia",
+        "population": "35 million",
+        "languages": ["Uzbek", "Russian"],
+        "currency": "Uzbekistani Som (UZS)"
+      }
+    },
+    {
+      "id": "andorra",
+      "name": "Andorra",
+      "capital": "Andorra la Vella",
+      "flag": "🇦🇩",
+      "divisions": [
+        {
+          "label": "Parishes",
+          "show_all": true,
+          "list": ["Andorra la Vella", "Canillo", "Encamp", "Escaldes-Engordany", "La Massana", "Ordino", "Sant Julia de Loria"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Andorra la Vella", "Escaldes-Engordany", "Encamp", "Sant Julia de Loria", "La Massana"],
+        "primary_exports": ["Dental fittings", "Electrical equipment", "Perfumes", "Jewelry", "Clothing"],
+        "landmarks": ["Grandvalira Ski Resort", "Casa de la Vall", "Madriu-Perafita-Claror Valley", "Sant Joan de Caselles"],
+        "continent": "Europe",
+        "population": "79,000",
+        "languages": ["Catalan"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "capital": "Vienna",
+      "flag": "🇦🇹",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": true,
+          "list": ["Burgenland", "Carinthia", "Lower Austria", "Salzburg", "Styria", "Tyrol", "Upper Austria", "Vienna", "Vorarlberg"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Vienna", "Graz", "Linz", "Salzburg", "Innsbruck", "Klagenfurt"],
+        "primary_exports": ["Cars", "Packaged medicines", "Vehicle parts", "Medical instruments", "Electrical equipment"],
+        "landmarks": ["Schonbrunn Palace", "Hofburg Palace", "Salzburg Old Town", "Hallstatt"],
+        "continent": "Europe",
+        "population": "9 million",
+        "languages": ["German"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "belgium",
+      "name": "Belgium",
+      "capital": "Brussels",
+      "flag": "🇧🇪",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Brussels-Capital", "Flanders", "Wallonia"]
+        },
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": ["Antwerp", "East Flanders", "Flemish Brabant", "Hainaut", "Liege", "Limburg", "Luxembourg", "Namur", "Walloon Brabant", "West Flanders"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Brussels", "Antwerp", "Ghent", "Charleroi", "Liege", "Bruges"],
+        "primary_exports": ["Cars", "Packaged medicines", "Refined petroleum", "Diamonds", "Blood products"],
+        "landmarks": ["Grand Place", "Atomium", "Bruges Historic Centre", "Manneken Pis"],
+        "continent": "Europe",
+        "population": "11.5 million",
+        "languages": ["Dutch", "French", "German"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "cyprus",
+      "name": "Cyprus",
+      "capital": "Nicosia",
+      "flag": "🇨🇾",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": ["Famagusta", "Kyrenia", "Larnaca", "Limassol", "Nicosia", "Paphos"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Nicosia", "Limassol", "Larnaca", "Paphos", "Famagusta"],
+        "primary_exports": ["Refined petroleum", "Cheese", "Packaged medicines", "Ships", "Citrus"],
+        "landmarks": ["Paphos Archaeological Park", "Tombs of the Kings", "Troodos Mountains", "Kyrenia Castle"],
+        "continent": "Europe",
+        "population": "1.2 million",
+        "languages": ["Greek", "Turkish"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "capital": "Paris",
+      "flag": "🇫🇷",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": ["Auvergne-Rhone-Alpes", "Bourgogne-Franche-Comte", "Brittany", "Centre-Val de Loire", "Corsica", "Grand Est", "Hauts-de-France", "Ile-de-France", "Normandy", "Nouvelle-Aquitaine", "Occitanie", "Pays de la Loire", "Provence-Alpes-Cote d'Azur"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes"],
+        "primary_exports": ["Aircraft", "Packaged medicines", "Cars", "Gas turbines", "Wine"],
+        "landmarks": ["Eiffel Tower", "Louvre Museum", "Palace of Versailles", "Mont Saint-Michel"],
+        "continent": "Europe",
+        "population": "67 million",
+        "languages": ["French"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "capital": "Berlin",
+      "flag": "🇩🇪",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": ["Baden-Wurttemberg", "Bavaria", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hesse", "Lower Saxony", "Mecklenburg-Vorpommern", "North Rhine-Westphalia", "Rhineland-Palatinate", "Saarland", "Saxony", "Saxony-Anhalt", "Schleswig-Holstein", "Thuringia"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Berlin", "Hamburg", "Munich", "Cologne", "Frankfurt", "Stuttgart"],
+        "primary_exports": ["Cars", "Vehicle parts", "Packaged medicines", "Aircraft", "Medical instruments"],
+        "landmarks": ["Brandenburg Gate", "Neuschwanstein Castle", "Cologne Cathedral", "Berlin Wall Memorial"],
+        "continent": "Europe",
+        "population": "83 million",
+        "languages": ["German"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "iceland",
+      "name": "Iceland",
+      "capital": "Reykjavik",
+      "flag": "🇮🇸",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Capital Region", "Southern Peninsula", "Western Region", "Westfjords", "Northwestern Region", "Northeastern Region", "Eastern Region", "Southern Region"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Reykjavik", "Kopavogur", "Hafnarfjordur", "Akureyri", "Reykjanesbaer"],
+        "primary_exports": ["Fish fillets", "Aluminum", "Fish", "Ferroalloys", "Animal meal"],
+        "landmarks": ["Blue Lagoon", "Golden Circle", "Thingvellir National Park", "Gullfoss Waterfall"],
+        "continent": "Europe",
+        "population": "370,000",
+        "languages": ["Icelandic"],
+        "currency": "Icelandic Krona (ISK)"
+      }
+    },
+    {
+      "id": "ireland",
+      "name": "Ireland",
+      "capital": "Dublin",
+      "flag": "🇮🇪",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Connacht", "Leinster", "Munster", "Ulster"]
+        },
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": ["Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dublin", "Cork", "Limerick", "Galway", "Waterford", "Drogheda"],
+        "primary_exports": ["Packaged medicines", "Blood products", "Computers", "Medical instruments", "Orthopedic appliances"],
+        "landmarks": ["Cliffs of Moher", "Ring of Kerry", "Dublin Castle", "Giant's Causeway"],
+        "continent": "Europe",
+        "population": "5 million",
+        "languages": ["English", "Irish"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "capital": "Rome",
+      "flag": "🇮🇹",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": ["Abruzzo", "Aosta Valley", "Apulia", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli Venezia Giulia", "Lazio", "Liguria", "Lombardy", "Marche", "Molise", "Piedmont", "Sardinia", "Sicily", "Trentino-Alto Adige", "Tuscany", "Umbria", "Veneto"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Rome", "Milan", "Naples", "Turin", "Palermo", "Genoa"],
+        "primary_exports": ["Packaged medicines", "Cars", "Refined petroleum", "Vehicle parts", "Wine"],
+        "landmarks": ["Colosseum", "Leaning Tower of Pisa", "Venice Canals", "Vatican City"],
+        "continent": "Europe",
+        "population": "59 million",
+        "languages": ["Italian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "liechtenstein",
+      "name": "Liechtenstein",
+      "capital": "Vaduz",
+      "flag": "🇱🇮",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": true,
+          "list": ["Balzers", "Eschen", "Gamprin", "Mauren", "Planken", "Ruggell", "Schaan", "Schellenberg", "Triesen", "Triesenberg", "Vaduz"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Vaduz", "Schaan", "Balzers", "Triesen", "Eschen"],
+        "primary_exports": ["Dental fittings", "Prepared food", "Electric motors", "Measuring instruments", "Machinery"],
+        "landmarks": ["Vaduz Castle", "Kunstmuseum Liechtenstein", "Malbun Ski Resort", "Gutenberg Castle"],
+        "continent": "Europe",
+        "population": "39,000",
+        "languages": ["German"],
+        "currency": "Swiss Franc (CHF)"
+      }
+    },
+    {
+      "id": "luxembourg",
+      "name": "Luxembourg",
+      "capital": "Luxembourg City",
+      "flag": "🇱🇺",
+      "divisions": [
+        {
+          "label": "Cantons",
+          "show_all": true,
+          "list": ["Capellen", "Clervaux", "Diekirch", "Echternach", "Esch-sur-Alzette", "Grevenmacher", "Luxembourg", "Mersch", "Redange", "Remich", "Vianden", "Wiltz"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Luxembourg City", "Esch-sur-Alzette", "Differdange", "Dudelange", "Ettelbruck"],
+        "primary_exports": ["Iron", "Steel", "Rubber tires", "Machinery", "Plastics"],
+        "landmarks": ["Vianden Castle", "Casemates du Bock", "Grand Ducal Palace", "Mullerthal Trail"],
+        "continent": "Europe",
+        "population": "640,000",
+        "languages": ["Luxembourgish", "French", "German"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "malta",
+      "name": "Malta",
+      "capital": "Valletta",
+      "flag": "🇲🇹",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Gozo", "Malta Majjistral", "Malta Xlokk", "Northern Harbour", "Southern Harbour"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Valletta", "Birkirkara", "Mosta", "Qormi", "Sliema"],
+        "primary_exports": ["Packaged medicines", "Refined petroleum", "Integrated circuits", "Aircraft parts", "Fish"],
+        "landmarks": ["Valletta Old Town", "Megalithic Temples", "Blue Grotto", "Mdina"],
+        "continent": "Europe",
+        "population": "520,000",
+        "languages": ["Maltese", "English"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "monaco",
+      "name": "Monaco",
+      "capital": "Monaco",
+      "flag": "🇲🇨",
+      "divisions": [
+        {
+          "label": "Wards",
+          "show_all": true,
+          "list": ["Monaco-Ville", "La Condamine", "Monte Carlo", "Fontvieille"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Monaco", "Monte Carlo", "La Condamine", "Fontvieille"],
+        "primary_exports": ["Jewelry", "Perfumes", "Watches", "Clothing", "Cosmetics"],
+        "landmarks": ["Monte Carlo Casino", "Prince's Palace", "Monaco Grand Prix Circuit", "Oceanographic Museum"],
+        "continent": "Europe",
+        "population": "39,000",
+        "languages": ["French"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "capital": "Amsterdam",
+      "flag": "🇳🇱",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": ["Drenthe", "Flevoland", "Friesland", "Gelderland", "Groningen", "Limburg", "North Brabant", "North Holland", "Overijssel", "South Holland", "Utrecht", "Zeeland"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Amsterdam", "Rotterdam", "The Hague", "Utrecht", "Eindhoven", "Tilburg"],
+        "primary_exports": ["Refined petroleum", "Packaged medicines", "Computers", "Broadcasting equipment", "Flowers"],
+        "landmarks": ["Anne Frank House", "Rijksmuseum", "Keukenhof Gardens", "Windmills of Kinderdijk"],
+        "continent": "Europe",
+        "population": "17.5 million",
+        "languages": ["Dutch"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "capital": "Lisbon",
+      "flag": "🇵🇹",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": ["Aveiro", "Beja", "Braga", "Braganca", "Castelo Branco", "Coimbra", "Evora", "Faro", "Guarda", "Leiria", "Lisboa", "Portalegre", "Porto", "Santarem", "Setubal", "Viana do Castelo", "Vila Real", "Viseu"]
+        },
+        {
+          "label": "Autonomous Regions",
+          "show_all": true,
+          "list": ["Azores", "Madeira"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lisbon", "Porto", "Vila Nova de Gaia", "Amadora", "Braga", "Coimbra"],
+        "primary_exports": ["Cars", "Vehicle parts", "Refined petroleum", "Leather footwear", "Paper"],
+        "landmarks": ["Belem Tower", "Jeronimos Monastery", "Pena Palace", "Douro Valley"],
+        "continent": "Europe",
+        "population": "10 million",
+        "languages": ["Portuguese"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "san_marino",
+      "name": "San Marino",
+      "capital": "San Marino",
+      "flag": "🇸🇲",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": true,
+          "list": ["Acquaviva", "Borgo Maggiore", "Chiesanuova", "Domagnano", "Faetano", "Fiorentino", "Montegiardino", "San Marino", "Serravalle"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["San Marino", "Serravalle", "Borgo Maggiore", "Domagnano", "Fiorentino"],
+        "primary_exports": ["Washing machines", "Dental fittings", "Scrap iron", "Furniture", "Ceramics"],
+        "landmarks": ["Three Towers of San Marino", "Guaita", "Palazzo Pubblico", "Monte Titano"],
+        "continent": "Europe",
+        "population": "34,000",
+        "languages": ["Italian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "capital": "Madrid",
+      "flag": "🇪🇸",
+      "divisions": [
+        {
+          "label": "Autonomous Communities",
+          "show_all": false,
+          "list": ["Andalusia", "Aragon", "Asturias", "Balearic Islands", "Basque Country", "Canary Islands", "Cantabria", "Castile and Leon", "Castile-La Mancha", "Catalonia", "Extremadura", "Galicia", "La Rioja", "Madrid", "Murcia", "Navarre", "Valencia"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Madrid", "Barcelona", "Valencia", "Seville", "Zaragoza", "Malaga"],
+        "primary_exports": ["Cars", "Refined petroleum", "Vehicle parts", "Packaged medicines", "Citrus"],
+        "landmarks": ["Sagrada Familia", "Alhambra", "Park Guell", "Plaza Mayor"],
+        "continent": "Europe",
+        "population": "47 million",
+        "languages": ["Spanish", "Catalan", "Basque", "Galician"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "capital": "Bern",
+      "flag": "🇨🇭",
+      "divisions": [
+        {
+          "label": "Cantons",
+          "show_all": false,
+          "list": ["Aargau", "Appenzell Ausserrhoden", "Appenzell Innerrhoden", "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Geneva", "Glarus", "Graubunden", "Jura", "Lucerne", "Neuchatel", "Nidwalden", "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen", "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Zurich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur"],
+        "primary_exports": ["Gold", "Packaged medicines", "Watches", "Medical instruments", "Jewelry"],
+        "landmarks": ["Matterhorn", "Lake Geneva", "Jungfraujoch", "Chapel Bridge"],
+        "continent": "Europe",
+        "population": "8.7 million",
+        "languages": ["German", "French", "Italian", "Romansh"],
+        "currency": "Swiss Franc (CHF)"
+      }
+    },
+    {
+      "id": "united_kingdom",
+      "name": "United Kingdom",
+      "capital": "London",
+      "flag": "🇬🇧",
+      "divisions": [
+        {
+          "label": "Countries",
+          "show_all": true,
+          "list": ["England", "Scotland", "Wales", "Northern Ireland"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["London", "Birmingham", "Manchester", "Glasgow", "Liverpool", "Edinburgh"],
+        "primary_exports": ["Gold", "Cars", "Gas turbines", "Packaged medicines", "Crude petroleum"],
+        "landmarks": ["Big Ben", "Tower of London", "Stonehenge", "Edinburgh Castle"],
+        "continent": "Europe",
+        "population": "67 million",
+        "languages": ["English", "Welsh", "Scottish Gaelic"],
+        "currency": "Pound Sterling (GBP)"
+      }
+    },
+    {
+      "id": "vatican_city",
+      "name": "Vatican City",
+      "capital": "Vatican City",
+      "flag": "🇻🇦",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": ["Vatican City"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Vatican City"],
+        "primary_exports": ["Postage stamps", "Publications", "Souvenirs", "Religious items"],
+        "landmarks": ["St. Peter's Basilica", "Sistine Chapel", "Vatican Museums", "St. Peter's Square"],
+        "continent": "Europe",
+        "population": "800",
+        "languages": ["Italian", "Latin"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "albania",
+      "name": "Albania",
+      "capital": "Tirana",
+      "flag": "🇦🇱",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Berat", "Dibër", "Durrës", "Elbasan", "Fier", "Gjirokastër",
+            "Korçë", "Kukës", "Lezhë", "Shkodër", "Tirana", "Vlorë"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tirana", "Durrës", "Vlorë", "Elbasan", "Shkodër"],
+        "primary_exports": ["Leather footwear", "Crude petroleum", "Iron ore", "Chromium ore", "Textiles"],
+        "landmarks": ["Berat Old Town", "Butrint", "Albanian Riviera", "Lake Ohrid"],
+        "continent": "Europe",
+        "population": "2.8 million",
+        "languages": ["Albanian"],
+        "currency": "Albanian Lek (ALL)"
+      }
+    },
+    {
+      "id": "belarus",
+      "name": "Belarus",
+      "capital": "Minsk",
+      "flag": "🇧🇾",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Brest", "Gomel", "Grodno", "Minsk Region", "Mogilev", "Vitebsk"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Minsk", "Gomel", "Mogilev", "Vitebsk", "Grodno", "Brest"],
+        "primary_exports": ["Refined petroleum", "Potassic fertilizers", "Cheese", "Tractors", "Trucks"],
+        "landmarks": ["Mir Castle", "Nesvizh Castle", "Belovezhskaya Pushcha", "Brest Fortress"],
+        "continent": "Europe",
+        "population": "9.3 million",
+        "languages": ["Belarusian", "Russian"],
+        "currency": "Belarusian Ruble (BYN)"
+      }
+    },
+    {
+      "id": "bosnia_and_herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "capital": "Sarajevo",
+      "flag": "🇧🇦",
+      "divisions": [
+        {
+          "label": "Entities",
+          "show_all": true,
+          "list": [
+            "Federation of Bosnia and Herzegovina", "Republika Srpska", "Brčko District"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Sarajevo", "Banja Luka", "Tuzla", "Zenica", "Mostar"],
+        "primary_exports": ["Seats", "Electricity", "Leather footwear", "Wood", "Aluminum"],
+        "landmarks": ["Stari Most (Old Bridge)", "Sarajevo Old Town", "Kravice Waterfalls", "Blagaj Tekke"],
+        "continent": "Europe",
+        "population": "3.3 million",
+        "languages": ["Bosnian", "Croatian", "Serbian"],
+        "currency": "Convertible Mark (BAM)"
+      }
+    },
+    {
+      "id": "bulgaria",
+      "name": "Bulgaria",
+      "capital": "Sofia",
+      "flag": "🇧🇬",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Blagoevgrad", "Burgas", "Dobrich", "Gabrovo", "Haskovo", "Kardzhali",
+            "Kyustendil", "Lovech", "Montana", "Pazardzhik", "Pernik", "Pleven",
+            "Plovdiv", "Razgrad", "Ruse", "Shumen", "Silistra", "Sliven",
+            "Smolyan", "Sofia City", "Sofia Province", "Stara Zagora", "Targovishte",
+            "Varna", "Veliko Tarnovo", "Vidin", "Vratsa", "Yambol"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Sofia", "Plovdiv", "Varna", "Burgas", "Ruse", "Stara Zagora"],
+        "primary_exports": ["Refined petroleum", "Copper ore", "Packaged medicines", "Wheat", "Electricity"],
+        "landmarks": ["Rila Monastery", "Old Town Plovdiv", "Alexander Nevsky Cathedral", "Seven Rila Lakes"],
+        "continent": "Europe",
+        "population": "6.9 million",
+        "languages": ["Bulgarian"],
+        "currency": "Bulgarian Lev (BGN)"
+      }
+    },
+    {
+      "id": "croatia",
+      "name": "Croatia",
+      "capital": "Zagreb",
+      "flag": "🇭🇷",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Zagreb City", "Zagreb County", "Krapina-Zagorje", "Sisak-Moslavina",
+            "Karlovac", "Varaždin", "Koprivnica-Križevci", "Bjelovar-Bilogora",
+            "Primorje-Gorski Kotar", "Lika-Senj", "Virovitica-Podravina",
+            "Požega-Slavonia", "Brod-Posavina", "Zadar", "Osijek-Baranja",
+            "Šibenik-Knin", "Vukovar-Srijem", "Split-Dalmatia", "Istria",
+            "Dubrovnik-Neretva", "Međimurje"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Zagreb", "Split", "Rijeka", "Osijek", "Zadar", "Dubrovnik"],
+        "primary_exports": ["Refined petroleum", "Packaged medicines", "Cars", "Electricity", "Wood"],
+        "landmarks": ["Dubrovnik Old Town", "Plitvice Lakes", "Diocletian's Palace", "Hvar Island"],
+        "continent": "Europe",
+        "population": "4 million",
+        "languages": ["Croatian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "czech_republic",
+      "name": "Czech Republic",
+      "capital": "Prague",
+      "flag": "🇨🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Prague", "Central Bohemia", "South Bohemia", "Plzeň", "Karlovy Vary",
+            "Ústí nad Labem", "Liberec", "Hradec Králové", "Pardubice", "Vysočina",
+            "South Moravia", "Olomouc", "Zlín", "Moravia-Silesia"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Prague", "Brno", "Ostrava", "Plzeň", "Liberec", "Olomouc"],
+        "primary_exports": ["Cars", "Vehicle parts", "Computers", "Broadcasting equipment", "Office machinery"],
+        "landmarks": ["Prague Castle", "Charles Bridge", "Old Town Square", "Český Krumlov"],
+        "continent": "Europe",
+        "population": "10.5 million",
+        "languages": ["Czech"],
+        "currency": "Czech Koruna (CZK)"
+      }
+    },
+    {
+      "id": "estonia",
+      "name": "Estonia",
+      "capital": "Tallinn",
+      "flag": "🇪🇪",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Harju", "Hiiu", "Ida-Viru", "Jõgeva", "Järva", "Lääne",
+            "Lääne-Viru", "Põlva", "Pärnu", "Rapla", "Saare", "Tartu",
+            "Valga", "Viljandi", "Võru"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tallinn", "Tartu", "Narva", "Pärnu", "Kohtla-Järve"],
+        "primary_exports": ["Broadcasting equipment", "Refined petroleum", "Wood", "Electrical equipment", "Prefab buildings"],
+        "landmarks": ["Tallinn Old Town", "Kadriorg Palace", "Lahemaa National Park", "Saaremaa Island"],
+        "continent": "Europe",
+        "population": "1.3 million",
+        "languages": ["Estonian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "capital": "Athens",
+      "flag": "🇬🇷",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Attica", "Central Greece", "Central Macedonia", "Crete", "Eastern Macedonia and Thrace",
+            "Epirus", "Ionian Islands", "North Aegean", "Peloponnese", "South Aegean",
+            "Thessaly", "Western Greece", "Western Macedonia"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa", "Volos"],
+        "primary_exports": ["Refined petroleum", "Packaged medicines", "Aluminum", "Olive oil", "Fish"],
+        "landmarks": ["Acropolis of Athens", "Santorini", "Parthenon", "Meteora", "Delphi"],
+        "continent": "Europe",
+        "population": "10.4 million",
+        "languages": ["Greek"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "hungary",
+      "name": "Hungary",
+      "capital": "Budapest",
+      "flag": "🇭🇺",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Bács-Kiskun", "Baranya", "Békés", "Borsod-Abaúj-Zemplén", "Budapest",
+            "Csongrád-Csanád", "Fejér", "Győr-Moson-Sopron", "Hajdú-Bihar", "Heves",
+            "Jász-Nagykun-Szolnok", "Komárom-Esztergom", "Nógrád", "Pest", "Somogy",
+            "Szabolcs-Szatmár-Bereg", "Tolna", "Vas", "Veszprém", "Zala"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Budapest", "Debrecen", "Szeged", "Miskolc", "Pécs", "Győr"],
+        "primary_exports": ["Cars", "Vehicle parts", "Packaged medicines", "Computers", "Electrical equipment"],
+        "landmarks": ["Hungarian Parliament Building", "Buda Castle", "Széchenyi Thermal Bath", "Lake Balaton"],
+        "continent": "Europe",
+        "population": "9.7 million",
+        "languages": ["Hungarian"],
+        "currency": "Hungarian Forint (HUF)"
+      }
+    },
+    {
+      "id": "kosovo",
+      "name": "Kosovo",
+      "capital": "Pristina",
+      "flag": "🇽🇰",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Ferizaj", "Gjakova", "Gjilan", "Mitrovica", "Peja", "Pristina", "Prizren"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Pristina", "Prizren", "Ferizaj", "Peja", "Gjakova", "Gjilan"],
+        "primary_exports": ["Ferroalloys", "Scrap iron", "Seats", "Rubber tires", "Nickel ore"],
+        "landmarks": ["Gračanica Monastery", "Prizren Fortress", "Bear Sanctuary Pristina", "Rugova Canyon"],
+        "continent": "Europe",
+        "population": "1.8 million",
+        "languages": ["Albanian", "Serbian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "latvia",
+      "name": "Latvia",
+      "capital": "Riga",
+      "flag": "🇱🇻",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Kurzeme", "Latgale", "Riga", "Vidzeme", "Zemgale"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Riga", "Daugavpils", "Liepāja", "Jelgava", "Jūrmala", "Ventspils"],
+        "primary_exports": ["Wood", "Wheat", "Sawn wood", "Broadcasting equipment", "Packaged medicines"],
+        "landmarks": ["Riga Old Town", "Rundāle Palace", "Gauja National Park", "Jūrmala Beach"],
+        "continent": "Europe",
+        "population": "1.9 million",
+        "languages": ["Latvian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "lithuania",
+      "name": "Lithuania",
+      "capital": "Vilnius",
+      "flag": "🇱🇹",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Alytus", "Kaunas", "Klaipėda", "Marijampolė", "Panevėžys",
+            "Šiauliai", "Tauragė", "Telšiai", "Utena", "Vilnius"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Vilnius", "Kaunas", "Klaipėda", "Šiauliai", "Panevėžys"],
+        "primary_exports": ["Refined petroleum", "Furniture", "Wheat", "Plastic lids", "Fertilizers"],
+        "landmarks": ["Vilnius Old Town", "Trakai Island Castle", "Hill of Crosses", "Curonian Spit"],
+        "continent": "Europe",
+        "population": "2.8 million",
+        "languages": ["Lithuanian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "moldova",
+      "name": "Moldova",
+      "capital": "Chișinău",
+      "flag": "🇲🇩",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Anenii Noi", "Bălți", "Basarabeasca", "Bender", "Briceni", "Cahul",
+            "Călărași", "Cantemir", "Căușeni", "Chișinău", "Cimișlia", "Criuleni",
+            "Dondușeni", "Drochia", "Dubăsari", "Edineț", "Fălești", "Florești",
+            "Gagauzia", "Glodeni", "Hîncești", "Ialoveni", "Leova", "Nisporeni",
+            "Ocnița", "Orhei", "Rezina", "Rîșcani", "Sîngerei", "Soroca",
+            "Strășeni", "Șoldănești", "Ștefan Vodă", "Taraclia", "Telenești",
+            "Transnistria", "Ungheni"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Chișinău", "Tiraspol", "Bălți", "Bender", "Rîbnița", "Cahul"],
+        "primary_exports": ["Insulated wire", "Sunflower seeds", "Wine", "Wheat", "Corn"],
+        "landmarks": ["Orheiul Vechi", "Mileștii Mici Wine Cellar", "Cricova Winery", "Soroca Fortress"],
+        "continent": "Europe",
+        "population": "2.6 million",
+        "languages": ["Romanian", "Russian"],
+        "currency": "Moldovan Leu (MDL)"
+      }
+    },
+    {
+      "id": "montenegro",
+      "name": "Montenegro",
+      "capital": "Podgorica",
+      "flag": "🇲🇪",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": false,
+          "list": [
+            "Andrijevica", "Bar", "Berane", "Bijelo Polje", "Budva", "Cetinje",
+            "Danilovgrad", "Gusinje", "Herceg Novi", "Kolašin", "Kotor", "Mojkovac",
+            "Nikšić", "Petnjica", "Plav", "Pljevlja", "Plužine", "Podgorica",
+            "Rožaje", "Šavnik", "Tivat", "Tuzi", "Ulcinj", "Žabljak"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Podgorica", "Nikšić", "Herceg Novi", "Pljevlja", "Bijelo Polje", "Budva"],
+        "primary_exports": ["Aluminum oxide", "Raw copper", "Electricity", "Wine", "Iron ore"],
+        "landmarks": ["Bay of Kotor", "Durmitor National Park", "Sveti Stefan", "Ostrog Monastery"],
+        "continent": "Europe",
+        "population": "620,000",
+        "languages": ["Montenegrin", "Serbian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "north_macedonia",
+      "name": "North Macedonia",
+      "capital": "Skopje",
+      "flag": "🇲🇰",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Eastern", "Northeastern", "Pelagonia", "Polog", "Skopje",
+            "Southeastern", "Southwestern", "Vardar"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Skopje", "Bitola", "Kumanovo", "Prilep", "Tetovo", "Ohrid"],
+        "primary_exports": ["Catalytic converters", "Ferroalloys", "Centrifuges", "Seats", "Textiles"],
+        "landmarks": ["Lake Ohrid", "Skopje Old Bazaar", "Matka Canyon", "St. Naum Monastery"],
+        "continent": "Europe",
+        "population": "2.1 million",
+        "languages": ["Macedonian", "Albanian"],
+        "currency": "Macedonian Denar (MKD)"
+      }
+    },
+    {
+      "id": "poland",
+      "name": "Poland",
+      "capital": "Warsaw",
+      "flag": "🇵🇱",
+      "divisions": [
+        {
+          "label": "Voivodeships",
+          "show_all": false,
+          "list": [
+            "Greater Poland", "Kuyavian-Pomeranian", "Lesser Poland", "Łódź",
+            "Lower Silesian", "Lublin", "Lubusz", "Masovian", "Opole",
+            "Podkarpackie", "Podlaskie", "Pomeranian", "Silesian", "Świętokrzyskie",
+            "Warmian-Masurian", "West Pomeranian"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Warsaw", "Kraków", "Łódź", "Wrocław", "Poznań", "Gdańsk"],
+        "primary_exports": ["Cars", "Vehicle parts", "Furniture", "Computers", "Seats"],
+        "landmarks": ["Wawel Castle", "Kraków Old Town", "Auschwitz-Birkenau", "Wieliczka Salt Mine"],
+        "continent": "Europe",
+        "population": "38 million",
+        "languages": ["Polish"],
+        "currency": "Polish Złoty (PLN)"
+      }
+    },
+    {
+      "id": "romania",
+      "name": "Romania",
+      "capital": "Bucharest",
+      "flag": "🇷🇴",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Alba", "Arad", "Argeș", "Bacău", "Bihor", "Bistrița-Năsăud", "Botoșani",
+            "Brăila", "Brașov", "Bucharest", "Buzău", "Călărași", "Caraș-Severin",
+            "Cluj", "Constanța", "Covasna", "Dâmbovița", "Dolj", "Galați", "Giurgiu",
+            "Gorj", "Harghita", "Hunedoara", "Ialomița", "Iași", "Ilfov", "Maramureș",
+            "Mehedinți", "Mureș", "Neamț", "Olt", "Prahova", "Sălaj", "Satu Mare",
+            "Sibiu", "Suceava", "Teleorman", "Timiș", "Tulcea", "Vaslui", "Vâlcea", "Vrancea"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bucharest", "Cluj-Napoca", "Timișoara", "Iași", "Constanța", "Craiova"],
+        "primary_exports": ["Cars", "Vehicle parts", "Insulated wire", "Wheat", "Rubber tires"],
+        "landmarks": ["Bran Castle", "Palace of the Parliament", "Peleș Castle", "Transfăgărășan Highway"],
+        "continent": "Europe",
+        "population": "19 million",
+        "languages": ["Romanian"],
+        "currency": "Romanian Leu (RON)"
+      }
+    },
+    {
+      "id": "serbia",
+      "name": "Serbia",
+      "capital": "Belgrade",
+      "flag": "🇷🇸",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Belgrade", "Bor", "Braničevo", "Central Banat", "Jablanica", "Kolubara",
+            "Mačva", "Moravica", "Nišava", "North Bačka", "North Banat", "Pčinja",
+            "Pirot", "Podunavlje", "Pomoravlje", "Rasina", "Raška", "South Bačka",
+            "South Banat", "Srem", "Šumadija", "Toplica", "West Bačka", "Zaječar", "Zlatibor"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Belgrade", "Novi Sad", "Niš", "Kragujevac", "Subotica", "Zrenjanin"],
+        "primary_exports": ["Insulated wire", "Cars", "Rubber tires", "Corn", "Raspberries"],
+        "landmarks": ["Belgrade Fortress", "Novi Sad", "Đavolja Varoš", "Studenica Monastery"],
+        "continent": "Europe",
+        "population": "6.9 million",
+        "languages": ["Serbian"],
+        "currency": "Serbian Dinar (RSD)"
+      }
+    },
+    {
+      "id": "slovakia",
+      "name": "Slovakia",
+      "capital": "Bratislava",
+      "flag": "🇸🇰",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Bratislava", "Trnava", "Trenčín", "Nitra", "Žilina",
+            "Banská Bystrica", "Prešov", "Košice"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bratislava", "Košice", "Prešov", "Žilina", "Nitra", "Banská Bystrica"],
+        "primary_exports": ["Cars", "Vehicle parts", "Televisions", "Refined petroleum", "Tires"],
+        "landmarks": ["Bratislava Castle", "Spiš Castle", "High Tatras", "Wooden Churches of the Carpathians"],
+        "continent": "Europe",
+        "population": "5.4 million",
+        "languages": ["Slovak"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "slovenia",
+      "name": "Slovenia",
+      "capital": "Ljubljana",
+      "flag": "🇸🇮",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Carinthia", "Carniola-Littoral", "Drava", "Gorizia", "Lower Sava",
+            "Mura", "Central Sava", "Central Slovenia", "Savinja", "Southeast Slovenia",
+            "Upper Carniola", "Coastal-Karst"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Ljubljana", "Maribor", "Celje", "Kranj", "Koper", "Velenje"],
+        "primary_exports": ["Packaged medicines", "Cars", "Vehicle parts", "Refined petroleum", "Electrical equipment"],
+        "landmarks": ["Lake Bled", "Postojna Cave", "Ljubljana Castle", "Triglav National Park"],
+        "continent": "Europe",
+        "population": "2.1 million",
+        "languages": ["Slovenian"],
+        "currency": "Euro (EUR)"
+      }
+    },
+    {
+      "id": "armenia",
+      "name": "Armenia",
+      "capital": "Yerevan",
+      "flag": "🇦🇲",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Aragatsotn", "Ararat", "Armavir", "Gegharkunik", "Kotayk",
+            "Lori", "Shirak", "Syunik", "Tavush", "Vayots Dzor", "Yerevan"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Yerevan", "Gyumri", "Vanadzor", "Vagharshapat", "Hrazdan"],
+        "primary_exports": ["Copper ore", "Gold", "Ferro-alloys", "Diamonds", "Brandy"],
+        "landmarks": ["Tatev Monastery", "Lake Sevan", "Geghard Monastery", "Mount Ararat (view)"],
+        "continent": "Asia",
+        "population": "3 million",
+        "languages": ["Armenian"],
+        "currency": "Armenian Dram (AMD)"
+      }
+    },
+    {
+      "id": "azerbaijan",
+      "name": "Azerbaijan",
+      "capital": "Baku",
+      "flag": "🇦🇿",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Absheron", "Agdam", "Agdash", "Agstafa", "Agsu", "Astara", "Baku", "Balakan",
+            "Barda", "Beylagan", "Bilasuvar", "Dashkasan", "Fizuli", "Gadabay", "Ganja",
+            "Goranboy", "Goychay", "Goygol", "Hajigabul", "Imishli", "Ismayilli", "Jabrayil",
+            "Jalilabad", "Kalbajar", "Khachmaz", "Khizi", "Khojaly", "Khojavend", "Kurdamir",
+            "Lachin", "Lankaran", "Lerik", "Masally", "Mingachevir", "Naftalan", "Nakhchivan",
+            "Neftchala", "Oghuz", "Qabala", "Qakh", "Qazakh", "Quba", "Qubadli", "Qusar",
+            "Saatly", "Sabirabad", "Salyan", "Samukh", "Shabran", "Shaki", "Shamakhi",
+            "Shamkir", "Shirvan", "Shusha", "Siyazan", "Sumgait", "Tartar", "Tovuz",
+            "Ujar", "Yardimli", "Yevlakh", "Zangilan", "Zaqatala", "Zardab"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Baku", "Ganja", "Sumgait", "Mingachevir", "Lankaran"],
+        "primary_exports": ["Crude petroleum", "Petroleum gas", "Refined petroleum", "Gold", "Tomatoes"],
+        "landmarks": ["Flame Towers", "Old City Baku", "Gobustan Rock Art", "Heydar Aliyev Center"],
+        "continent": "Asia",
+        "population": "10 million",
+        "languages": ["Azerbaijani"],
+        "currency": "Azerbaijani Manat (AZN)"
+      }
+    },
+    {
+      "id": "bahrain",
+      "name": "Bahrain",
+      "capital": "Manama",
+      "flag": "🇧🇭",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": true,
+          "list": ["Capital", "Muharraq", "Northern", "Southern"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Manama", "Riffa", "Muharraq", "Hamad Town", "A'ali"],
+        "primary_exports": ["Refined petroleum", "Aluminum", "Iron ore", "Aircraft parts", "Jewelry"],
+        "landmarks": ["Bahrain World Trade Center", "Qal'at al-Bahrain", "Al Fateh Grand Mosque", "Tree of Life"],
+        "continent": "Asia",
+        "population": "1.5 million",
+        "languages": ["Arabic"],
+        "currency": "Bahraini Dinar (BHD)"
+      }
+    },
+    {
+      "id": "georgia",
+      "name": "Georgia",
+      "capital": "Tbilisi",
+      "flag": "🇬🇪",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Adjara", "Guria", "Imereti", "Kakheti", "Kvemo Kartli",
+            "Mtskheta-Mtianeti", "Racha-Lechkhumi and Kvemo Svaneti",
+            "Samegrelo-Zemo Svaneti", "Samtskhe-Javakheti", "Shida Kartli", "Tbilisi"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tbilisi", "Batumi", "Kutaisi", "Rustavi", "Zugdidi"],
+        "primary_exports": ["Copper ore", "Ferro-alloys", "Wine", "Cars", "Hazelnuts"],
+        "landmarks": ["Tbilisi Old Town", "Gergeti Trinity Church", "Vardzia", "Svaneti Towers"],
+        "continent": "Asia",
+        "population": "3.7 million",
+        "languages": ["Georgian"],
+        "currency": "Georgian Lari (GEL)"
+      }
+    },
+    {
+      "id": "iran",
+      "name": "Iran",
+      "capital": "Tehran",
+      "flag": "🇮🇷",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Alborz", "Ardabil", "Bushehr", "Chaharmahal and Bakhtiari", "East Azerbaijan",
+            "Fars", "Gilan", "Golestan", "Hamadan", "Hormozgan", "Ilam", "Isfahan",
+            "Kerman", "Kermanshah", "Khuzestan", "Kohgiluyeh and Boyer-Ahmad", "Kurdistan",
+            "Lorestan", "Markazi", "Mazandaran", "North Khorasan", "Qazvin", "Qom",
+            "Razavi Khorasan", "Semnan", "Sistan and Baluchestan", "South Khorasan",
+            "Tehran", "West Azerbaijan", "Yazd", "Zanjan"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tehran", "Mashhad", "Isfahan", "Karaj", "Shiraz", "Tabriz"],
+        "primary_exports": ["Crude petroleum", "Petroleum gas", "Ethylene polymers", "Iron ore", "Pistachios"],
+        "landmarks": ["Persepolis", "Nasir al-Mulk Mosque", "Golestan Palace", "Imam Square"],
+        "continent": "Asia",
+        "population": "87 million",
+        "languages": ["Persian"],
+        "currency": "Iranian Rial (IRR)"
+      }
+    },
+    {
+      "id": "iraq",
+      "name": "Iraq",
+      "capital": "Baghdad",
+      "flag": "🇮🇶",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Al Anbar", "Babil", "Baghdad", "Basra", "Dhi Qar", "Diyala",
+            "Duhok", "Erbil", "Halabja", "Karbala", "Kirkuk", "Maysan",
+            "Muthanna", "Najaf", "Nineveh", "Qadisiyyah", "Saladin", "Sulaymaniyah", "Wasit"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Baghdad", "Basra", "Mosul", "Erbil", "Kirkuk", "Najaf"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Gold", "Petroleum coke", "Dates"],
+        "landmarks": ["Ziggurat of Ur", "Babylon", "Al-Kadhimiya Mosque", "Erbil Citadel"],
+        "continent": "Asia",
+        "population": "43 million",
+        "languages": ["Arabic", "Kurdish"],
+        "currency": "Iraqi Dinar (IQD)"
+      }
+    },
+    {
+      "id": "israel",
+      "name": "Israel",
+      "capital": "Jerusalem",
+      "flag": "🇮🇱",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": ["Central", "Haifa", "Jerusalem", "Northern", "Southern", "Tel Aviv"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Jerusalem", "Tel Aviv", "Haifa", "Rishon LeZion", "Petah Tikva"],
+        "primary_exports": ["Diamonds", "Integrated circuits", "Medical instruments", "Packaged medicines", "Refined petroleum"],
+        "landmarks": ["Western Wall", "Dead Sea", "Masada", "Old City of Jerusalem"],
+        "continent": "Asia",
+        "population": "9.3 million",
+        "languages": ["Hebrew", "Arabic"],
+        "currency": "Israeli New Shekel (ILS)"
+      }
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "capital": "Amman",
+      "flag": "🇯🇴",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Ajloun", "Amman", "Aqaba", "Balqa", "Irbid", "Jerash",
+            "Karak", "Ma'an", "Madaba", "Mafraq", "Tafilah", "Zarqa"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Amman", "Zarqa", "Irbid", "Russeifa", "Aqaba"],
+        "primary_exports": ["Potassic fertilizers", "Calcium phosphates", "Packaged medicines", "Clothing", "Jewelry"],
+        "landmarks": ["Petra", "Wadi Rum", "Dead Sea", "Jerash", "Amman Citadel"],
+        "continent": "Asia",
+        "population": "11 million",
+        "languages": ["Arabic"],
+        "currency": "Jordanian Dinar (JOD)"
+      }
+    },
+    {
+      "id": "kuwait",
+      "name": "Kuwait",
+      "capital": "Kuwait City",
+      "flag": "🇰🇼",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": true,
+          "list": ["Al Ahmadi", "Al Asimah", "Al Farwaniyah", "Al Jahra", "Hawalli", "Mubarak Al-Kabeer"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kuwait City", "Al Ahmadi", "Hawalli", "Salmiya", "Sabah Al-Salem"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Petroleum gas", "Acyclic alcohols", "Aircraft parts"],
+        "landmarks": ["Kuwait Towers", "Grand Mosque", "Liberation Tower", "Al Shaheed Park"],
+        "continent": "Asia",
+        "population": "4.3 million",
+        "languages": ["Arabic"],
+        "currency": "Kuwaiti Dinar (KWD)"
+      }
+    },
+    {
+      "id": "lebanon",
+      "name": "Lebanon",
+      "capital": "Beirut",
+      "flag": "🇱🇧",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": true,
+          "list": [
+            "Akkar", "Baalbek-Hermel", "Beirut", "Beqaa", "Keserwan-Jbeil",
+            "Mount Lebanon", "Nabatieh", "North Lebanon", "South Lebanon"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Beirut", "Tripoli", "Sidon", "Tyre", "Jounieh"],
+        "primary_exports": ["Gold", "Diamonds", "Jewelry", "Scrap iron", "Electrical equipment"],
+        "landmarks": ["Baalbek", "Jeita Grotto", "Byblos", "Cedars of God"],
+        "continent": "Asia",
+        "population": "5.5 million",
+        "languages": ["Arabic", "French"],
+        "currency": "Lebanese Pound (LBP)"
+      }
+    },
+    {
+      "id": "oman",
+      "name": "Oman",
+      "capital": "Muscat",
+      "flag": "🇴🇲",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Ad Dakhiliyah", "Ad Dhahirah", "Al Batinah North", "Al Batinah South",
+            "Al Buraimi", "Al Wusta", "Ash Sharqiyah North", "Ash Sharqiyah South",
+            "Dhofar", "Musandam", "Muscat"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Muscat", "Salalah", "Sohar", "Nizwa", "Sur"],
+        "primary_exports": ["Crude petroleum", "Petroleum gas", "Refined petroleum", "Fertilizers", "Iron ore"],
+        "landmarks": ["Sultan Qaboos Grand Mosque", "Nizwa Fort", "Wahiba Sands", "Jebel Shams"],
+        "continent": "Asia",
+        "population": "4.5 million",
+        "languages": ["Arabic"],
+        "currency": "Omani Rial (OMR)"
+      }
+    },
+    {
+      "id": "palestine",
+      "name": "Palestine",
+      "capital": "Ramallah",
+      "flag": "🇵🇸",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Bethlehem", "Deir al-Balah", "Gaza", "Hebron", "Jenin", "Jericho and Al Aghwar",
+            "Jerusalem", "Khan Yunis", "Nablus", "North Gaza", "Qalqilya", "Rafah",
+            "Ramallah and Al-Bireh", "Salfit", "Tubas", "Tulkarm"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Gaza City", "Hebron", "Nablus", "Ramallah", "Khan Yunis", "Bethlehem"],
+        "primary_exports": ["Building stone", "Scrap iron", "Furniture", "Dates", "Olive oil"],
+        "landmarks": ["Church of the Nativity", "Al-Aqsa Mosque", "Old City of Hebron", "Jericho"],
+        "continent": "Asia",
+        "population": "5.3 million",
+        "languages": ["Arabic"],
+        "currency": "Israeli New Shekel (ILS) / Jordanian Dinar (JOD)"
+      }
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "capital": "Doha",
+      "flag": "🇶🇦",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": true,
+          "list": [
+            "Ad Dawhah", "Al Daayen", "Al Khawr", "Al Rayyan",
+            "Al Shamal", "Al Wakrah", "Ash Shihaniyah", "Umm Salal"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Doha", "Al Rayyan", "Al Wakrah", "Al Khor", "Umm Salal"],
+        "primary_exports": ["Petroleum gas", "Crude petroleum", "Refined petroleum", "Fertilizers", "Ethylene polymers"],
+        "landmarks": ["Museum of Islamic Art", "Souq Waqif", "The Pearl-Qatar", "Katara Cultural Village"],
+        "continent": "Asia",
+        "population": "2.9 million",
+        "languages": ["Arabic"],
+        "currency": "Qatari Riyal (QAR)"
+      }
+    },
+    {
+      "id": "saudi_arabia",
+      "name": "Saudi Arabia",
+      "capital": "Riyadh",
+      "flag": "🇸🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Al Bahah", "Al Jawf", "Al Madinah", "Al Qassim", "Asir",
+            "Eastern Province", "Ha'il", "Jizan", "Makkah", "Najran",
+            "Northern Borders", "Riyadh", "Tabuk"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Riyadh", "Jeddah", "Mecca", "Medina", "Dammam", "Khobar"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Petroleum gas", "Ethylene polymers", "Propylene polymers"],
+        "landmarks": ["Masjid al-Haram", "Al-Masjid an-Nabawi", "Mada'in Saleh", "Edge of the World"],
+        "continent": "Asia",
+        "population": "35 million",
+        "languages": ["Arabic"],
+        "currency": "Saudi Riyal (SAR)"
+      }
+    },
+    {
+      "id": "syria",
+      "name": "Syria",
+      "capital": "Damascus",
+      "flag": "🇸🇾",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Aleppo", "Damascus", "Daraa", "Deir ez-Zor", "Hama", "Hasakah",
+            "Homs", "Idlib", "Latakia", "Quneitra", "Raqqa", "Rif Dimashq",
+            "Suwayda", "Tartus"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Damascus", "Aleppo", "Homs", "Latakia", "Hama"],
+        "primary_exports": ["Olive oil", "Spices", "Nuts", "Fruit", "Vegetables"],
+        "landmarks": ["Umayyad Mosque", "Krak des Chevaliers", "Palmyra", "Old City of Damascus"],
+        "continent": "Asia",
+        "population": "22 million",
+        "languages": ["Arabic"],
+        "currency": "Syrian Pound (SYP)"
+      }
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "capital": "Ankara",
+      "flag": "🇹🇷",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Adana", "Adiyaman", "Afyonkarahisar", "Agri", "Aksaray", "Amasya", "Ankara",
+            "Antalya", "Ardahan", "Artvin", "Aydin", "Balikesir", "Bartin", "Batman",
+            "Bayburt", "Bilecik", "Bingol", "Bitlis", "Bolu", "Burdur", "Bursa",
+            "Canakkale", "Cankiri", "Corum", "Denizli", "Diyarbakir", "Duzce", "Edirne",
+            "Elazig", "Erzincan", "Erzurum", "Eskisehir", "Gaziantep", "Giresun", "Gumushane",
+            "Hakkari", "Hatay", "Igdir", "Isparta", "Istanbul", "Izmir", "Kahramanmaras",
+            "Karabuk", "Karaman", "Kars", "Kastamonu", "Kayseri", "Kilis", "Kirikkale",
+            "Kirklareli", "Kirsehir", "Kocaeli", "Konya", "Kutahya", "Malatya", "Manisa",
+            "Mardin", "Mersin", "Mugla", "Mus", "Nevsehir", "Nigde", "Ordu", "Osmaniye",
+            "Rize", "Sakarya", "Samsun", "Sanliurfa", "Siirt", "Sinop", "Sirnak", "Sivas",
+            "Tekirdag", "Tokat", "Trabzon", "Tunceli", "Usak", "Van", "Yalova", "Yozgat", "Zonguldak"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Istanbul", "Ankara", "Izmir", "Bursa", "Antalya", "Gaziantep"],
+        "primary_exports": ["Cars", "Vehicle parts", "Delivery trucks", "Gold", "Jewelry"],
+        "landmarks": ["Hagia Sophia", "Cappadocia", "Ephesus", "Pamukkale", "Blue Mosque"],
+        "continent": "Asia",
+        "population": "85 million",
+        "languages": ["Turkish"],
+        "currency": "Turkish Lira (TRY)"
+      }
+    },
+    {
+      "id": "united_arab_emirates",
+      "name": "United Arab Emirates",
+      "capital": "Abu Dhabi",
+      "flag": "🇦🇪",
+      "divisions": [
+        {
+          "label": "Emirates",
+          "show_all": true,
+          "list": [
+            "Abu Dhabi", "Ajman", "Dubai", "Fujairah", "Ras Al Khaimah", "Sharjah", "Umm Al Quwain"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dubai", "Abu Dhabi", "Sharjah", "Al Ain", "Ajman"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Gold", "Petroleum gas", "Diamonds"],
+        "landmarks": ["Burj Khalifa", "Sheikh Zayed Grand Mosque", "Palm Jumeirah", "Dubai Mall"],
+        "continent": "Asia",
+        "population": "9.9 million",
+        "languages": ["Arabic"],
+        "currency": "UAE Dirham (AED)"
+      }
+    },
+    {
+      "id": "yemen",
+      "name": "Yemen",
+      "capital": "Sana'a",
+      "flag": "🇾🇪",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Abyan", "Aden", "Al Bayda", "Al Dhale'e", "Al Hudaydah", "Al Jawf",
+            "Al Mahrah", "Al Mahwit", "Amanat Al Asimah", "Amran", "Dhamar", "Hadramaut",
+            "Hajjah", "Ibb", "Lahij", "Marib", "Raymah", "Sa'dah", "Sana'a",
+            "Shabwah", "Socotra", "Taiz"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Sana'a", "Aden", "Taiz", "Al Hudaydah", "Ibb"],
+        "primary_exports": ["Crude petroleum", "Gold", "Fish", "Iron ore", "Coffee"],
+        "landmarks": ["Old City of Sana'a", "Socotra Island", "Shibam", "Dar al-Hajar"],
+        "continent": "Asia",
+        "population": "33 million",
+        "languages": ["Arabic"],
+        "currency": "Yemeni Rial (YER)"
+      }
+    },
+    {
+      "id": "brunei",
+      "name": "Brunei",
+      "capital": "Bandar Seri Begawan",
+      "flag": "🇧🇳",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": ["Belait", "Brunei-Muara", "Temburong", "Tutong"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bandar Seri Begawan", "Kuala Belait", "Seria", "Tutong", "Bangar"],
+        "primary_exports": ["Crude petroleum", "Petroleum gas", "Refined petroleum", "Acyclic alcohols", "Polymers"],
+        "landmarks": ["Sultan Omar Ali Saifuddien Mosque", "Kampong Ayer", "Ulu Temburong National Park", "Jame'Asr Hassanil Bolkiah Mosque"],
+        "continent": "Asia",
+        "population": "440,000",
+        "languages": ["Malay", "English"],
+        "currency": "Brunei Dollar (BND)"
+      }
+    },
+    {
+      "id": "cambodia",
+      "name": "Cambodia",
+      "capital": "Phnom Penh",
+      "flag": "🇰🇭",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Banteay Meanchey", "Battambang", "Kampong Cham", "Kampong Chhnang", "Kampong Speu",
+            "Kampong Thom", "Kampot", "Kandal", "Kep", "Koh Kong", "Kratié", "Mondulkiri",
+            "Oddar Meanchey", "Pailin", "Preah Sihanouk", "Preah Vihear", "Prey Veng",
+            "Pursat", "Ratanakiri", "Siem Reap", "Stung Treng", "Svay Rieng", "Takéo", "Tboung Khmum"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Phnom Penh", "Siem Reap", "Battambang", "Sihanoukville", "Poipet"],
+        "primary_exports": ["Knit clothing", "Non-knit clothing", "Footwear", "Leather goods", "Electrical equipment"],
+        "landmarks": ["Angkor Wat", "Angkor Thom", "Royal Palace Phnom Penh", "Tonlé Sap Lake"],
+        "continent": "Asia",
+        "population": "17 million",
+        "languages": ["Khmer"],
+        "currency": "Cambodian Riel (KHR)"
+      }
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "capital": "Beijing",
+      "flag": "🇨🇳",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Anhui", "Fujian", "Gansu", "Guangdong", "Guizhou", "Hainan", "Hebei", "Heilongjiang",
+            "Henan", "Hubei", "Hunan", "Jiangsu", "Jiangxi", "Jilin", "Liaoning", "Qinghai",
+            "Shaanxi", "Shandong", "Shanxi", "Sichuan", "Yunnan", "Zhejiang"
+          ]
+        },
+        {
+          "label": "Autonomous Regions",
+          "show_all": false,
+          "list": ["Guangxi", "Inner Mongolia", "Ningxia", "Tibet", "Xinjiang"]
+        },
+        {
+          "label": "Municipalities",
+          "show_all": true,
+          "list": ["Beijing", "Chongqing", "Shanghai", "Tianjin"]
+        },
+        {
+          "label": "Special Administrative Regions",
+          "show_all": true,
+          "list": ["Hong Kong", "Macau"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Shanghai", "Beijing", "Guangzhou", "Shenzhen", "Chengdu", "Chongqing"],
+        "primary_exports": ["Computers", "Broadcasting equipment", "Telephones", "Integrated circuits", "Office machine parts"],
+        "landmarks": ["Great Wall of China", "Forbidden City", "Terracotta Army", "Li River"],
+        "continent": "Asia",
+        "population": "1.4 billion",
+        "languages": ["Mandarin Chinese"],
+        "currency": "Chinese Yuan Renminbi (CNY)"
+      }
+    },
+    {
+      "id": "east_timor",
+      "name": "East Timor",
+      "capital": "Dili",
+      "flag": "🇹🇱",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": false,
+          "list": [
+            "Aileu", "Ainaro", "Baucau", "Bobonaro", "Cova Lima", "Dili", "Ermera",
+            "Lautém", "Liquiçá", "Manatuto", "Manufahi", "Oecusse", "Viqueque"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dili", "Baucau", "Maliana", "Suai", "Liquiçá"],
+        "primary_exports": ["Crude petroleum", "Petroleum gas", "Coffee", "Scrap copper", "Coconut oil"],
+        "landmarks": ["Cristo Rei of Dili", "Atauro Island", "Jaco Island", "Mount Ramelau"],
+        "continent": "Asia",
+        "population": "1.3 million",
+        "languages": ["Portuguese", "Tetum"],
+        "currency": "US Dollar (USD)"
+      }
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "capital": "Jakarta",
+      "flag": "🇮🇩",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Aceh", "Bali", "Banten", "Bengkulu", "Central Java", "Central Kalimantan",
+            "Central Sulawesi", "East Java", "East Kalimantan", "East Nusa Tenggara",
+            "Gorontalo", "Jakarta", "Jambi", "Lampung", "Maluku", "North Kalimantan",
+            "North Maluku", "North Sulawesi", "North Sumatra", "Papua", "Riau",
+            "Riau Islands", "South Kalimantan", "South Sulawesi", "South Sumatra",
+            "Southeast Sulawesi", "West Java", "West Kalimantan", "West Nusa Tenggara",
+            "West Papua", "West Sulawesi", "West Sumatra", "Yogyakarta"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Jakarta", "Surabaya", "Bandung", "Medan", "Semarang", "Makassar"],
+        "primary_exports": ["Palm oil", "Coal", "Petroleum gas", "Rubber", "Nickel"],
+        "landmarks": ["Borobudur", "Bali beaches", "Komodo National Park", "Raja Ampat"],
+        "continent": "Asia",
+        "population": "275 million",
+        "languages": ["Indonesian"],
+        "currency": "Indonesian Rupiah (IDR)"
+      }
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "capital": "Tokyo",
+      "flag": "🇯🇵",
+      "divisions": [
+        {
+          "label": "Prefectures",
+          "show_all": false,
+          "list": [
+            "Aichi", "Akita", "Aomori", "Chiba", "Ehime", "Fukui", "Fukuoka", "Fukushima",
+            "Gifu", "Gunma", "Hiroshima", "Hokkaido", "Hyogo", "Ibaraki", "Ishikawa",
+            "Iwate", "Kagawa", "Kagoshima", "Kanagawa", "Kochi", "Kumamoto", "Kyoto",
+            "Mie", "Miyagi", "Miyazaki", "Nagano", "Nagasaki", "Nara", "Niigata", "Oita",
+            "Okayama", "Okinawa", "Osaka", "Saga", "Saitama", "Shiga", "Shimane", "Shizuoka",
+            "Tochigi", "Tokushima", "Tokyo", "Tottori", "Toyama", "Wakayama", "Yamagata",
+            "Yamaguchi", "Yamanashi"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tokyo", "Yokohama", "Osaka", "Nagoya", "Sapporo", "Fukuoka"],
+        "primary_exports": ["Cars", "Integrated circuits", "Vehicle parts", "Machinery", "Refined petroleum"],
+        "landmarks": ["Mount Fuji", "Fushimi Inari Shrine", "Tokyo Tower", "Hiroshima Peace Memorial"],
+        "continent": "Asia",
+        "population": "125 million",
+        "languages": ["Japanese"],
+        "currency": "Japanese Yen (JPY)"
+      }
+    },
+    {
+      "id": "laos",
+      "name": "Laos",
+      "capital": "Vientiane",
+      "flag": "🇱🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Attapeu", "Bokeo", "Bolikhamxai", "Champasak", "Houaphanh", "Khammouan",
+            "Luang Namtha", "Luang Prabang", "Oudomxai", "Phongsali", "Salavan",
+            "Savannakhet", "Sekong", "Vientiane Province", "Xaignabouli", "Xaisomboun", "Xiangkhouang"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Vientiane", "Pakse", "Savannakhet", "Luang Prabang", "Thakhek"],
+        "primary_exports": ["Gold", "Copper ore", "Rubber", "Electricity", "Wood products"],
+        "landmarks": ["Luang Prabang", "Kuang Si Falls", "Plain of Jars", "Pha That Luang"],
+        "continent": "Asia",
+        "population": "7.5 million",
+        "languages": ["Lao"],
+        "currency": "Lao Kip (LAK)"
+      }
+    },
+    {
+      "id": "malaysia",
+      "name": "Malaysia",
+      "capital": "Kuala Lumpur",
+      "flag": "🇲🇾",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang",
+            "Penang", "Perak", "Perlis", "Sabah", "Sarawak", "Selangor", "Terengganu"
+          ]
+        },
+        {
+          "label": "Federal Territories",
+          "show_all": true,
+          "list": ["Kuala Lumpur", "Labuan", "Putrajaya"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kuala Lumpur", "George Town", "Johor Bahru", "Ipoh", "Shah Alam", "Kota Kinabalu"],
+        "primary_exports": ["Integrated circuits", "Refined petroleum", "Palm oil", "Rubber products", "Petroleum gas"],
+        "landmarks": ["Petronas Twin Towers", "Batu Caves", "Mount Kinabalu", "Langkawi"],
+        "continent": "Asia",
+        "population": "34 million",
+        "languages": ["Malay", "English", "Mandarin", "Tamil"],
+        "currency": "Malaysian Ringgit (MYR)"
+      }
+    },
+    {
+      "id": "mongolia",
+      "name": "Mongolia",
+      "capital": "Ulaanbaatar",
+      "flag": "🇲🇳",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Arkhangai", "Bayan-Ölgii", "Bayankhongor", "Bulgan", "Darkhan-Uul", "Dornod",
+            "Dornogovi", "Dundgovi", "Govi-Altai", "Govisümber", "Khentii", "Khovd",
+            "Khövsgöl", "Ömnögovi", "Orkhon", "Övörkhangai", "Selenge", "Sükhbaatar",
+            "Töv", "Uvs", "Zavkhan"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Ulaanbaatar", "Erdenet", "Darkhan", "Choibalsan", "Mörön"],
+        "primary_exports": ["Copper ore", "Coal", "Gold", "Iron ore", "Crude petroleum"],
+        "landmarks": ["Gobi Desert", "Genghis Khan Statue Complex", "Khövsgöl Lake", "Erdene Zuu Monastery"],
+        "continent": "Asia",
+        "population": "3.4 million",
+        "languages": ["Mongolian"],
+        "currency": "Mongolian Tugrik (MNT)"
+      }
+    },
+    {
+      "id": "myanmar",
+      "name": "Myanmar",
+      "capital": "Naypyidaw",
+      "flag": "🇲🇲",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": ["Ayeyarwady", "Bago", "Magway", "Mandalay", "Sagaing", "Tanintharyi", "Yangon"]
+        },
+        {
+          "label": "States",
+          "show_all": false,
+          "list": ["Chin", "Kachin", "Kayah", "Kayin", "Mon", "Rakhine", "Shan"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Yangon", "Mandalay", "Naypyidaw", "Mawlamyine", "Bago"],
+        "primary_exports": ["Petroleum gas", "Non-knit clothing", "Precious stones", "Rice", "Fish"],
+        "landmarks": ["Shwedagon Pagoda", "Bagan temples", "Inle Lake", "Golden Rock"],
+        "continent": "Asia",
+        "population": "55 million",
+        "languages": ["Burmese"],
+        "currency": "Myanmar Kyat (MMK)"
+      }
+    },
+    {
+      "id": "north_korea",
+      "name": "North Korea",
+      "capital": "Pyongyang",
+      "flag": "🇰🇵",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Chagang", "North Hamgyong", "South Hamgyong", "North Hwanghae", "South Hwanghae",
+            "Kangwon", "North Pyongan", "South Pyongan", "Ryanggang"
+          ]
+        },
+        {
+          "label": "Special Cities",
+          "show_all": false,
+          "list": ["Pyongyang", "Rason", "Nampo", "Kaesong"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Pyongyang", "Hamhung", "Chongjin", "Nampo", "Wonsan"],
+        "primary_exports": ["Coal", "Watches", "Mollusks", "Iron ore", "Refined petroleum"],
+        "landmarks": ["Juche Tower", "Kumsusan Palace", "Mount Paektu", "Demilitarized Zone"],
+        "continent": "Asia",
+        "population": "26 million",
+        "languages": ["Korean"],
+        "currency": "North Korean Won (KPW)"
+      }
+    },
+    {
+      "id": "philippines",
+      "name": "Philippines",
+      "capital": "Manila",
+      "flag": "🇵🇭",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Ilocos Region", "Cagayan Valley", "Central Luzon", "Calabarzon", "Mimaropa",
+            "Bicol Region", "Western Visayas", "Central Visayas", "Eastern Visayas",
+            "Zamboanga Peninsula", "Northern Mindanao", "Davao Region", "Soccsksargen",
+            "Caraga", "Bangsamoro", "Cordillera Administrative Region", "National Capital Region"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Manila", "Quezon City", "Davao City", "Cebu City", "Zamboanga City", "Makati"],
+        "primary_exports": ["Integrated circuits", "Office machine parts", "Computers", "Insulated wire", "Semiconductors"],
+        "landmarks": ["Chocolate Hills", "Boracay", "Palawan Underground River", "Banaue Rice Terraces"],
+        "continent": "Asia",
+        "population": "115 million",
+        "languages": ["Filipino", "English"],
+        "currency": "Philippine Peso (PHP)"
+      }
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "capital": "Singapore",
+      "flag": "🇸🇬",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Central Region", "East Region", "North Region", "North-East Region", "West Region"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Singapore"],
+        "primary_exports": ["Integrated circuits", "Refined petroleum", "Turbines", "Packaged medicines", "Gold"],
+        "landmarks": ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island", "Merlion Park"],
+        "continent": "Asia",
+        "population": "5.9 million",
+        "languages": ["English", "Malay", "Mandarin", "Tamil"],
+        "currency": "Singapore Dollar (SGD)"
+      }
+    },
+    {
+      "id": "south_korea",
+      "name": "South Korea",
+      "capital": "Seoul",
+      "flag": "🇰🇷",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Gyeonggi", "Gangwon", "North Chungcheong", "South Chungcheong",
+            "North Jeolla", "South Jeolla", "North Gyeongsang", "South Gyeongsang", "Jeju"
+          ]
+        },
+        {
+          "label": "Metropolitan Cities",
+          "show_all": false,
+          "list": ["Seoul", "Busan", "Incheon", "Daegu", "Daejeon", "Gwangju", "Ulsan", "Sejong"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Seoul", "Busan", "Incheon", "Daegu", "Daejeon", "Gwangju"],
+        "primary_exports": ["Integrated circuits", "Cars", "Refined petroleum", "Ships", "Vehicle parts"],
+        "landmarks": ["Gyeongbokgung Palace", "N Seoul Tower", "Bukchon Hanok Village", "Jeju Island"],
+        "continent": "Asia",
+        "population": "52 million",
+        "languages": ["Korean"],
+        "currency": "South Korean Won (KRW)"
+      }
+    },
+    {
+      "id": "taiwan",
+      "name": "Taiwan",
+      "capital": "Taipei",
+      "flag": "🇹🇼",
+      "divisions": [
+        {
+          "label": "Special Municipalities",
+          "show_all": false,
+          "list": ["Taipei", "New Taipei", "Taoyuan", "Taichung", "Tainan", "Kaohsiung"]
+        },
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Changhua", "Chiayi County", "Hsinchu County", "Hualien", "Kinmen",
+            "Lienchiang", "Miaoli", "Nantou", "Penghu", "Pingtung", "Taitung", "Yilan", "Yunlin"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Taipei", "Kaohsiung", "Taichung", "Tainan", "New Taipei", "Taoyuan"],
+        "primary_exports": ["Integrated circuits", "Office machine parts", "Refined petroleum", "Computers", "LCDs"],
+        "landmarks": ["Taipei 101", "Taroko Gorge", "Sun Moon Lake", "Jiufen"],
+        "continent": "Asia",
+        "population": "24 million",
+        "languages": ["Mandarin Chinese"],
+        "currency": "New Taiwan Dollar (TWD)"
+      }
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "capital": "Bangkok",
+      "flag": "🇹🇭",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Amnat Charoen", "Ang Thong", "Bangkok", "Bueng Kan", "Buri Ram", "Chachoengsao",
+            "Chai Nat", "Chaiyaphum", "Chanthaburi", "Chiang Mai", "Chiang Rai", "Chon Buri",
+            "Chumphon", "Kalasin", "Kamphaeng Phet", "Kanchanaburi", "Khon Kaen", "Krabi",
+            "Lampang", "Lamphun", "Loei", "Lop Buri", "Mae Hong Son", "Maha Sarakham",
+            "Mukdahan", "Nakhon Nayok", "Nakhon Pathom", "Nakhon Phanom", "Nakhon Ratchasima",
+            "Nakhon Sawan", "Nakhon Si Thammarat", "Nan", "Narathiwat", "Nong Bua Lam Phu",
+            "Nong Khai", "Nonthaburi", "Pathum Thani", "Pattani", "Phang Nga", "Phatthalung",
+            "Phayao", "Phetchabun", "Phetchaburi", "Phichit", "Phitsanulok", "Phra Nakhon Si Ayutthaya",
+            "Phrae", "Phuket", "Prachin Buri", "Prachuap Khiri Khan", "Ranong", "Ratchaburi",
+            "Rayong", "Roi Et", "Sa Kaeo", "Sakon Nakhon", "Samut Prakan", "Samut Sakhon",
+            "Samut Songkhram", "Saraburi", "Satun", "Si Sa Ket", "Sing Buri", "Songkhla",
+            "Sukhothai", "Suphan Buri", "Surat Thani", "Surin", "Tak", "Trang", "Trat",
+            "Ubon Ratchathani", "Udon Thani", "Uthai Thani", "Uttaradit", "Yala", "Yasothon"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bangkok", "Nonthaburi", "Nakhon Ratchasima", "Chiang Mai", "Hat Yai", "Pattaya"],
+        "primary_exports": ["Computers", "Cars", "Integrated circuits", "Vehicle parts", "Rubber"],
+        "landmarks": ["Grand Palace", "Wat Pho", "Phi Phi Islands", "Ayutthaya"],
+        "continent": "Asia",
+        "population": "70 million",
+        "languages": ["Thai"],
+        "currency": "Thai Baht (THB)"
+      }
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "capital": "Hanoi",
+      "flag": "🇻🇳",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "An Giang", "Ba Ria-Vung Tau", "Bac Giang", "Bac Kan", "Bac Lieu", "Bac Ninh",
+            "Ben Tre", "Binh Dinh", "Binh Duong", "Binh Phuoc", "Binh Thuan", "Ca Mau",
+            "Cao Bang", "Dak Lak", "Dak Nong", "Dien Bien", "Dong Nai", "Dong Thap",
+            "Gia Lai", "Ha Giang", "Ha Nam", "Ha Tinh", "Hai Duong", "Hau Giang",
+            "Hoa Binh", "Hung Yen", "Khanh Hoa", "Kien Giang", "Kon Tum", "Lai Chau",
+            "Lam Dong", "Lang Son", "Lao Cai", "Long An", "Nam Dinh", "Nghe An",
+            "Ninh Binh", "Ninh Thuan", "Phu Tho", "Phu Yen", "Quang Binh", "Quang Nam",
+            "Quang Ngai", "Quang Ninh", "Quang Tri", "Soc Trang", "Son La", "Tay Ninh",
+            "Thai Binh", "Thai Nguyen", "Thanh Hoa", "Thua Thien-Hue", "Tien Giang",
+            "Tra Vinh", "Tuyen Quang", "Vinh Long", "Vinh Phuc", "Yen Bai"
+          ]
+        },
+        {
+          "label": "Municipalities",
+          "show_all": true,
+          "list": ["Hanoi", "Ho Chi Minh City", "Hai Phong", "Da Nang", "Can Tho"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Ho Chi Minh City", "Hanoi", "Hai Phong", "Da Nang", "Can Tho", "Bien Hoa"],
+        "primary_exports": ["Telephones", "Computers", "Footwear", "Textiles", "Integrated circuits"],
+        "landmarks": ["Ha Long Bay", "Hoi An Ancient Town", "Cu Chi Tunnels", "Phong Nha Cave"],
+        "continent": "Asia",
+        "population": "100 million",
+        "languages": ["Vietnamese"],
+        "currency": "Vietnamese Dong (VND)"
+      }
+    },
+    {
+      "id": "burundi",
+      "name": "Burundi",
+      "capital": "Gitega",
+      "flag": "🇧🇮",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Bubanza", "Bujumbura Mairie", "Bujumbura Rural", "Bururi", "Cankuzo",
+            "Cibitoke", "Gitega", "Karuzi", "Kayanza", "Kirundo", "Makamba",
+            "Muramvya", "Muyinga", "Mwaro", "Ngozi", "Rumonge", "Rutana", "Ruyigi"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bujumbura", "Gitega", "Muyinga", "Ngozi", "Ruyigi"],
+        "primary_exports": ["Coffee", "Gold", "Tea", "Niobium", "Rare earth metals"],
+        "landmarks": ["Lake Tanganyika", "Kibira National Park", "Rusizi National Park", "Karera Waterfalls"],
+        "continent": "Africa",
+        "population": "12 million",
+        "languages": ["Kirundi", "French", "English"],
+        "currency": "Burundian Franc (BIF)"
+      }
+    },
+    {
+      "id": "central_african_republic",
+      "name": "Central African Republic",
+      "capital": "Bangui",
+      "flag": "🇨🇫",
+      "divisions": [
+        {
+          "label": "Prefectures",
+          "show_all": false,
+          "list": [
+            "Bamingui-Bangoran", "Bangui", "Basse-Kotto", "Haute-Kotto", "Haut-Mbomou",
+            "Kemo", "Lobaye", "Mambere-Kadei", "Mbomou", "Nana-Grebizi", "Nana-Mambere",
+            "Ombella-M'Poko", "Ouaka", "Ouham", "Ouham-Pende", "Sangha-Mbaere", "Vakaga"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bangui", "Bimbo", "Mbaiki", "Berberati", "Kaga-Bandoro"],
+        "primary_exports": ["Diamonds", "Wood", "Gold", "Cotton", "Coffee"],
+        "landmarks": ["Dzanga-Sangha National Park", "Boali Falls", "Manovo-Gounda St Floris National Park", "Bangui Cathedral"],
+        "continent": "Africa",
+        "population": "5 million",
+        "languages": ["French", "Sango"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "comoros",
+      "name": "Comoros",
+      "capital": "Moroni",
+      "flag": "🇰🇲",
+      "divisions": [
+        {
+          "label": "Islands",
+          "show_all": true,
+          "list": ["Grande Comore", "Anjouan", "Moheli"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Moroni", "Mutsamudu", "Fomboni", "Domoni", "Tsimbeo"],
+        "primary_exports": ["Cloves", "Vanilla", "Ylang-ylang", "Coconuts", "Copra"],
+        "landmarks": ["Mount Karthala", "Moheli Marine Park", "Lac Sale", "Chomoni Beach"],
+        "continent": "Africa",
+        "population": "900,000",
+        "languages": ["Comorian", "Arabic", "French"],
+        "currency": "Comorian Franc (KMF)"
+      }
+    },
+    {
+      "id": "democratic_republic_of_the_congo",
+      "name": "Democratic Republic of the Congo",
+      "capital": "Kinshasa",
+      "flag": "🇨🇩",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Bas-Uele", "Equateur", "Haut-Katanga", "Haut-Lomami", "Haut-Uele",
+            "Ituri", "Kasai", "Kasai-Central", "Kasai-Oriental", "Kinshasa",
+            "Kongo Central", "Kwango", "Kwilu", "Lomami", "Lualaba", "Mai-Ndombe",
+            "Maniema", "Mongala", "Nord-Kivu", "Nord-Ubangi", "Sankuru", "Sud-Kivu",
+            "Sud-Ubangi", "Tanganyika", "Tshopo", "Tshuapa"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kinshasa", "Lubumbashi", "Mbuji-Mayi", "Kananga", "Kisangani"],
+        "primary_exports": ["Cobalt", "Copper", "Diamonds", "Gold", "Crude petroleum"],
+        "landmarks": ["Virunga National Park", "Congo River", "Nyiragongo Volcano", "Kahuzi-Biega National Park"],
+        "continent": "Africa",
+        "population": "95 million",
+        "languages": ["French", "Lingala", "Swahili", "Kikongo", "Tshiluba"],
+        "currency": "Congolese Franc (CDF)"
+      }
+    },
+    {
+      "id": "djibouti",
+      "name": "Djibouti",
+      "capital": "Djibouti City",
+      "flag": "🇩🇯",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Ali Sabieh", "Arta", "Dikhil", "Djibouti", "Obock", "Tadjoura"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Djibouti City", "Ali Sabieh", "Tadjoura", "Obock", "Dikhil"],
+        "primary_exports": ["Sheep", "Goats", "Coffee", "Scrap metal", "Hides"],
+        "landmarks": ["Lake Assal", "Lac Abbe", "Day Forest National Park", "Moucha Island"],
+        "continent": "Africa",
+        "population": "1 million",
+        "languages": ["French", "Arabic", "Somali", "Afar"],
+        "currency": "Djiboutian Franc (DJF)"
+      }
+    },
+    {
+      "id": "eritrea",
+      "name": "Eritrea",
+      "capital": "Asmara",
+      "flag": "🇪🇷",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Anseba", "Debub", "Gash-Barka", "Maekel", "Northern Red Sea", "Southern Red Sea"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Asmara", "Keren", "Massawa", "Assab", "Mendefera"],
+        "primary_exports": ["Gold", "Zinc ore", "Fish", "Copper ore", "Livestock"],
+        "landmarks": ["Asmara Art Deco Architecture", "Dahlak Archipelago", "Massawa Old Town", "Qohaito Archaeological Site"],
+        "continent": "Africa",
+        "population": "3.5 million",
+        "languages": ["Tigrinya", "Arabic", "English"],
+        "currency": "Eritrean Nakfa (ERN)"
+      }
+    },
+    {
+      "id": "eswatini",
+      "name": "Eswatini",
+      "capital": "Mbabane",
+      "flag": "🇸🇿",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Hhohho", "Lubombo", "Manzini", "Shiselweni"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Mbabane", "Manzini", "Lobamba", "Siteki", "Nhlangano"],
+        "primary_exports": ["Sugar", "Soft drink concentrates", "Wood pulp", "Cotton yarn", "Citrus"],
+        "landmarks": ["Mlilwane Wildlife Sanctuary", "Hlane Royal National Park", "Sibebe Rock", "Mantenga Falls"],
+        "continent": "Africa",
+        "population": "1.2 million",
+        "languages": ["Swazi", "English"],
+        "currency": "Swazi Lilangeni (SZL)"
+      }
+    },
+    {
+      "id": "ethiopia",
+      "name": "Ethiopia",
+      "capital": "Addis Ababa",
+      "flag": "🇪🇹",
+      "divisions": [
+        {
+          "label": "Regional States",
+          "show_all": false,
+          "list": [
+            "Afar", "Amhara", "Benishangul-Gumuz", "Gambela", "Harari",
+            "Oromia", "Sidama", "Somali", "South Ethiopia", "South West Ethiopia",
+            "Southern Nations", "Tigray"
+          ]
+        },
+        {
+          "label": "Chartered Cities",
+          "show_all": true,
+          "list": ["Addis Ababa", "Dire Dawa"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Addis Ababa", "Dire Dawa", "Gondar", "Mekelle", "Adama"],
+        "primary_exports": ["Coffee", "Gold", "Vegetables", "Oilseeds", "Cut flowers"],
+        "landmarks": ["Lalibela Rock Churches", "Simien Mountains", "Danakil Depression", "Blue Nile Falls"],
+        "continent": "Africa",
+        "population": "120 million",
+        "languages": ["Amharic", "Oromo", "Tigrinya", "Somali"],
+        "currency": "Ethiopian Birr (ETB)"
+      }
+    },
+    {
+      "id": "gabon",
+      "name": "Gabon",
+      "capital": "Libreville",
+      "flag": "🇬🇦",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": [
+            "Estuaire", "Haut-Ogooue", "Moyen-Ogooue", "Ngounie", "Nyanga",
+            "Ogooue-Ivindo", "Ogooue-Lolo", "Ogooue-Maritime", "Woleu-Ntem"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Libreville", "Port-Gentil", "Franceville", "Oyem", "Moanda"],
+        "primary_exports": ["Crude petroleum", "Manganese", "Wood", "Gold", "Refined petroleum"],
+        "landmarks": ["Lope National Park", "Ivindo National Park", "Pongara National Park", "Crystal Mountains"],
+        "continent": "Africa",
+        "population": "2.3 million",
+        "languages": ["French"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "capital": "Nairobi",
+      "flag": "🇰🇪",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Baringo", "Bomet", "Bungoma", "Busia", "Elgeyo-Marakwet", "Embu",
+            "Garissa", "Homa Bay", "Isiolo", "Kajiado", "Kakamega", "Kericho",
+            "Kiambu", "Kilifi", "Kirinyaga", "Kisii", "Kisumu", "Kitui", "Kwale",
+            "Laikipia", "Lamu", "Machakos", "Makueni", "Mandera", "Marsabit",
+            "Meru", "Migori", "Mombasa", "Murang'a", "Nairobi", "Nakuru", "Nandi",
+            "Narok", "Nyamira", "Nyandarua", "Nyeri", "Samburu", "Siaya", "Taita-Taveta",
+            "Tana River", "Tharaka-Nithi", "Trans-Nzoia", "Turkana", "Uasin Gishu",
+            "Vihiga", "Wajir", "West Pokot"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Nairobi", "Mombasa", "Kisumu", "Nakuru", "Eldoret"],
+        "primary_exports": ["Tea", "Cut flowers", "Coffee", "Vegetables", "Titanium ore"],
+        "landmarks": ["Maasai Mara", "Mount Kenya", "Amboseli National Park", "Lamu Old Town"],
+        "continent": "Africa",
+        "population": "54 million",
+        "languages": ["Swahili", "English"],
+        "currency": "Kenyan Shilling (KES)"
+      }
+    },
+    {
+      "id": "lesotho",
+      "name": "Lesotho",
+      "capital": "Maseru",
+      "flag": "🇱🇸",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": true,
+          "list": [
+            "Berea", "Butha-Buthe", "Leribe", "Mafeteng", "Maseru",
+            "Mohale's Hoek", "Mokhotlong", "Qacha's Nek", "Quthing", "Thaba-Tseka"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Maseru", "Teyateyaneng", "Mafeteng", "Hlotse", "Mohale's Hoek"],
+        "primary_exports": ["Diamonds", "Garments", "Wool", "Mohair", "Water"],
+        "landmarks": ["Maletsunyane Falls", "Sani Pass", "Sehlabathebe National Park", "Katse Dam"],
+        "continent": "Africa",
+        "population": "2.1 million",
+        "languages": ["Sesotho", "English"],
+        "currency": "Lesotho Loti (LSL)"
+      }
+    },
+    {
+      "id": "madagascar",
+      "name": "Madagascar",
+      "capital": "Antananarivo",
+      "flag": "🇲🇬",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Antananarivo", "Antsiranana", "Fianarantsoa", "Mahajanga", "Toamasina", "Toliara"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Antananarivo", "Toamasina", "Antsirabe", "Fianarantsoa", "Mahajanga"],
+        "primary_exports": ["Vanilla", "Nickel", "Cloves", "Shrimp", "Cobalt"],
+        "landmarks": ["Avenue of the Baobabs", "Tsingy de Bemaraha", "Isalo National Park", "Nosy Be"],
+        "continent": "Africa",
+        "population": "28 million",
+        "languages": ["Malagasy", "French"],
+        "currency": "Malagasy Ariary (MGA)"
+      }
+    },
+    {
+      "id": "malawi",
+      "name": "Malawi",
+      "capital": "Lilongwe",
+      "flag": "🇲🇼",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": ["Northern Region", "Central Region", "Southern Region"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lilongwe", "Blantyre", "Mzuzu", "Zomba", "Kasungu"],
+        "primary_exports": ["Tobacco", "Tea", "Sugar", "Uranium", "Peanuts"],
+        "landmarks": ["Lake Malawi", "Liwonde National Park", "Mount Mulanje", "Majete Wildlife Reserve"],
+        "continent": "Africa",
+        "population": "20 million",
+        "languages": ["English", "Chichewa"],
+        "currency": "Malawian Kwacha (MWK)"
+      }
+    },
+    {
+      "id": "mauritius",
+      "name": "Mauritius",
+      "capital": "Port Louis",
+      "flag": "🇲🇺",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Black River", "Flacq", "Grand Port", "Moka", "Pamplemousses",
+            "Plaines Wilhems", "Port Louis", "Riviere du Rempart", "Savanne"
+          ]
+        },
+        {
+          "label": "Dependencies",
+          "show_all": true,
+          "list": ["Rodrigues", "Agalega", "Saint Brandon"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Port Louis", "Beau Bassin-Rose Hill", "Vacoas-Phoenix", "Curepipe", "Quatre Bornes"],
+        "primary_exports": ["Fish", "Sugar", "Textiles", "Diamonds", "Molasses"],
+        "landmarks": ["Le Morne Brabant", "Seven Coloured Earths", "Black River Gorges", "Ile aux Cerfs"],
+        "continent": "Africa",
+        "population": "1.3 million",
+        "languages": ["English", "French", "Mauritian Creole"],
+        "currency": "Mauritian Rupee (MUR)"
+      }
+    },
+    {
+      "id": "mozambique",
+      "name": "Mozambique",
+      "capital": "Maputo",
+      "flag": "🇲🇿",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Cabo Delgado", "Gaza", "Inhambane", "Manica", "Maputo",
+            "Maputo City", "Nampula", "Niassa", "Sofala", "Tete", "Zambezia"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Maputo", "Matola", "Beira", "Nampula", "Chimoio"],
+        "primary_exports": ["Coal", "Aluminum", "Electricity", "Natural gas", "Tobacco"],
+        "landmarks": ["Bazaruto Archipelago", "Gorongosa National Park", "Ilha de Mocambique", "Quirimbas National Park"],
+        "continent": "Africa",
+        "population": "32 million",
+        "languages": ["Portuguese"],
+        "currency": "Mozambican Metical (MZN)"
+      }
+    },
+    {
+      "id": "republic_of_the_congo",
+      "name": "Republic of the Congo",
+      "capital": "Brazzaville",
+      "flag": "🇨🇬",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Bouenza", "Brazzaville", "Cuvette", "Cuvette-Ouest", "Kouilou",
+            "Lekoumou", "Likouala", "Niari", "Plateaux", "Pointe-Noire", "Pool", "Sangha"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Brazzaville", "Pointe-Noire", "Dolisie", "Nkayi", "Impfondo"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Copper ore", "Wood", "Sawn wood"],
+        "landmarks": ["Odzala-Kokoua National Park", "Lesio-Louna Gorilla Reserve", "Basilica of St. Anne", "Congo River"],
+        "continent": "Africa",
+        "population": "5.5 million",
+        "languages": ["French", "Lingala", "Kikongo"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "rwanda",
+      "name": "Rwanda",
+      "capital": "Kigali",
+      "flag": "🇷🇼",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Eastern Province", "Kigali", "Northern Province", "Southern Province", "Western Province"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Kigali", "Butare", "Gitarama", "Ruhengeri", "Gisenyi"],
+        "primary_exports": ["Gold", "Coffee", "Tea", "Tin ore", "Coltan"],
+        "landmarks": ["Volcanoes National Park", "Nyungwe Forest", "Lake Kivu", "Kigali Genocide Memorial"],
+        "continent": "Africa",
+        "population": "13 million",
+        "languages": ["Kinyarwanda", "French", "English", "Swahili"],
+        "currency": "Rwandan Franc (RWF)"
+      }
+    },
+    {
+      "id": "sao_tome_and_principe",
+      "name": "Sao Tome and Principe",
+      "capital": "Sao Tome",
+      "flag": "🇸🇹",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": ["Principe", "Sao Tome"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Sao Tome", "Santo Antonio", "Neves", "Santana", "Trindade"],
+        "primary_exports": ["Cocoa beans", "Palm oil", "Copra", "Coffee", "Coconuts"],
+        "landmarks": ["Pico Cao Grande", "Obo National Park", "Boca do Inferno", "Roca Sundy"],
+        "continent": "Africa",
+        "population": "220,000",
+        "languages": ["Portuguese"],
+        "currency": "Sao Tome and Principe Dobra (STN)"
+      }
+    },
+    {
+      "id": "seychelles",
+      "name": "Seychelles",
+      "capital": "Victoria",
+      "flag": "🇸🇨",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Anse aux Pins", "Anse Boileau", "Anse Etoile", "Anse Royale", "Au Cap",
+            "Baie Lazare", "Baie Sainte Anne", "Beau Vallon", "Bel Air", "Bel Ombre",
+            "Cascade", "English River", "Glacis", "Grand Anse Mahe", "Grand Anse Praslin",
+            "Inner Islands", "La Digue and Inner Islands", "La Riviere Anglaise", "Les Mamelles",
+            "Mont Buxton", "Mont Fleuri", "Outer Islands", "Plaisance", "Pointe Larue",
+            "Port Glaud", "Roche Caiman", "Saint Louis", "Takamaka"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Victoria", "Anse Boileau", "Beau Vallon", "Anse Royale", "Cascade"],
+        "primary_exports": ["Fish", "Refined petroleum", "Fish preparations", "Scrap iron", "Boats"],
+        "landmarks": ["Vallee de Mai", "Anse Source d'Argent", "Aldabra Atoll", "Morne Seychellois"],
+        "continent": "Africa",
+        "population": "100,000",
+        "languages": ["Seychellois Creole", "English", "French"],
+        "currency": "Seychellois Rupee (SCR)"
+      }
+    },
+    {
+      "id": "somalia",
+      "name": "Somalia",
+      "capital": "Mogadishu",
+      "flag": "🇸🇴",
+      "divisions": [
+        {
+          "label": "Federal Member States",
+          "show_all": true,
+          "list": ["Galmudug", "Hirshabelle", "Jubaland", "South West State", "Puntland"]
+        },
+        {
+          "label": "Special Status",
+          "show_all": true,
+          "list": ["Banadir (Mogadishu)", "Somaliland"]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Mogadishu", "Hargeisa", "Bosaso", "Kismayo", "Merca"],
+        "primary_exports": ["Livestock", "Bananas", "Fish", "Hides", "Charcoal"],
+        "landmarks": ["Laas Geel Cave Paintings", "Mogadishu Cathedral", "Cal Madow Mountains", "Kismayo National Park"],
+        "continent": "Africa",
+        "population": "17 million",
+        "languages": ["Somali", "Arabic"],
+        "currency": "Somali Shilling (SOS)"
+      }
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "capital": "Algiers",
+      "flag": "🇩🇿",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": false,
+          "list": [
+            "Adrar", "Aïn Defla", "Aïn Témouchent", "Algiers", "Annaba", "Batna",
+            "Béchar", "Béjaïa", "Biskra", "Blida", "Bordj Bou Arréridj", "Bouira",
+            "Boumerdès", "Chlef", "Constantine", "Djelfa", "El Bayadh", "El Oued",
+            "El Tarf", "Ghardaïa", "Guelma", "Illizi", "Jijel", "Khenchela",
+            "Laghouat", "M'Sila", "Mascara", "Médéa", "Mila", "Mostaganem",
+            "Naâma", "Oran", "Ouargla", "Oum El Bouaghi", "Relizane", "Saïda",
+            "Sétif", "Sidi Bel Abbès", "Skikda", "Souk Ahras", "Tamanrasset",
+            "Tébessa", "Tiaret", "Tindouf", "Tipaza", "Tissemsilt", "Tizi Ouzou", "Tlemcen"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Algiers", "Oran", "Constantine", "Annaba", "Blida", "Batna"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Refined petroleum", "Ammonia", "Nitrogen fertilizers"],
+        "landmarks": ["Casbah of Algiers", "Timgad", "Djémila", "Tassili n'Ajjer", "Sahara Desert"],
+        "continent": "Africa",
+        "population": "45 million",
+        "languages": ["Arabic", "Berber", "French"],
+        "currency": "Algerian Dinar (DZD)"
+      }
+    },
+    {
+      "id": "benin",
+      "name": "Benin",
+      "capital": "Porto-Novo",
+      "flag": "🇧🇯",
+      "divisions": [
+        {
+          "label": "Departments",
+          "show_all": false,
+          "list": [
+            "Alibori", "Atakora", "Atlantique", "Borgou", "Collines", "Couffo",
+            "Donga", "Littoral", "Mono", "Ouémé", "Plateau", "Zou"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Cotonou", "Porto-Novo", "Parakou", "Djougou", "Bohicon", "Abomey-Calavi"],
+        "primary_exports": ["Cotton", "Cashew nuts", "Gold", "Refined petroleum", "Coconut oil"],
+        "landmarks": ["Royal Palaces of Abomey", "Pendjari National Park", "Ganvié Lake Village", "Ouidah"],
+        "continent": "Africa",
+        "population": "13 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "burkina_faso",
+      "name": "Burkina Faso",
+      "capital": "Ouagadougou",
+      "flag": "🇧🇫",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Boucle du Mouhoun", "Cascades", "Centre", "Centre-Est", "Centre-Nord",
+            "Centre-Ouest", "Centre-Sud", "Est", "Hauts-Bassins", "Nord",
+            "Plateau-Central", "Sahel", "Sud-Ouest"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou", "Banfora", "Ouahigouya"],
+        "primary_exports": ["Gold", "Cotton", "Zinc ore", "Cashew nuts", "Sesame seeds"],
+        "landmarks": ["Ruins of Loropéni", "Sindou Peaks", "Banfora Cascades", "W National Park"],
+        "continent": "Africa",
+        "population": "22 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "cabo_verde",
+      "name": "Cabo Verde",
+      "capital": "Praia",
+      "flag": "🇨🇻",
+      "divisions": [
+        {
+          "label": "Municipalities",
+          "show_all": false,
+          "list": [
+            "Boa Vista", "Brava", "Maio", "Mosteiros", "Paul", "Porto Novo",
+            "Praia", "Ribeira Brava", "Ribeira Grande", "Ribeira Grande de Santiago",
+            "Sal", "Santa Catarina", "Santa Catarina do Fogo", "Santa Cruz",
+            "São Domingos", "São Filipe", "São Lourenço dos Órgãos", "São Miguel",
+            "São Salvador do Mundo", "São Vicente", "Tarrafal", "Tarrafal de São Nicolau"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Praia", "Mindelo", "Santa Maria", "Assomada", "Espargos"],
+        "primary_exports": ["Fish", "Crustaceans", "Clothing", "Footwear", "Beverages"],
+        "landmarks": ["Pico do Fogo", "Cidade Velha", "Santa Maria Beach", "Mindelo Harbor"],
+        "continent": "Africa",
+        "population": "590,000",
+        "languages": ["Portuguese", "Cape Verdean Creole"],
+        "currency": "Cape Verdean Escudo (CVE)"
+      }
+    },
+    {
+      "id": "cameroon",
+      "name": "Cameroon",
+      "capital": "Yaoundé",
+      "flag": "🇨🇲",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Adamawa", "Centre", "East", "Far North", "Littoral",
+            "North", "Northwest", "South", "Southwest", "West"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Douala", "Yaoundé", "Bamenda", "Bafoussam", "Garoua", "Maroua"],
+        "primary_exports": ["Crude petroleum", "Cocoa beans", "Sawn wood", "Gold", "Bananas"],
+        "landmarks": ["Mount Cameroon", "Waza National Park", "Limbe Beaches", "Dja Faunal Reserve"],
+        "continent": "Africa",
+        "population": "28 million",
+        "languages": ["French", "English"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "chad",
+      "name": "Chad",
+      "capital": "N'Djamena",
+      "flag": "🇹🇩",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Batha", "Borkou", "Chari-Baguirmi", "Ennedi-Est", "Ennedi-Ouest",
+            "Guéra", "Hadjer-Lamis", "Kanem", "Lac", "Logone Occidental",
+            "Logone Oriental", "Mandoul", "Mayo-Kebbi Est", "Mayo-Kebbi Ouest",
+            "Moyen-Chari", "N'Djamena", "Ouaddaï", "Salamat", "Sila",
+            "Tandjilé", "Tibesti", "Wadi Fira"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["N'Djamena", "Moundou", "Abéché", "Sarh", "Kélo"],
+        "primary_exports": ["Crude petroleum", "Gold", "Sesame seeds", "Cotton", "Cattle"],
+        "landmarks": ["Zakouma National Park", "Ennedi Massif", "Lake Chad", "Tibesti Mountains"],
+        "continent": "Africa",
+        "population": "17 million",
+        "languages": ["French", "Arabic"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "cote_divoire",
+      "name": "Côte d'Ivoire",
+      "capital": "Yamoussoukro",
+      "flag": "🇨🇮",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Abidjan", "Bas-Sassandra", "Comoé", "Denguélé", "Gôh-Djiboua",
+            "Lacs", "Lagunes", "Montagnes", "Sassandra-Marahoué", "Savanes",
+            "Vallée du Bandama", "Woroba", "Yamoussoukro", "Zanzan"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Abidjan", "Bouaké", "Daloa", "Yamoussoukro", "San-Pédro", "Korhogo"],
+        "primary_exports": ["Cocoa beans", "Gold", "Refined petroleum", "Rubber", "Cashew nuts"],
+        "landmarks": ["Basilica of Our Lady of Peace", "Comoé National Park", "Taï National Park", "Grand-Bassam"],
+        "continent": "Africa",
+        "population": "28 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "capital": "Cairo",
+      "flag": "🇪🇬",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Alexandria", "Aswan", "Asyut", "Beheira", "Beni Suef", "Cairo",
+            "Dakahlia", "Damietta", "Faiyum", "Gharbia", "Giza", "Ismailia",
+            "Kafr El Sheikh", "Luxor", "Matruh", "Minya", "Monufia", "New Valley",
+            "North Sinai", "Port Said", "Qalyubia", "Qena", "Red Sea", "Sharqia",
+            "Sohag", "South Sinai", "Suez"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Cairo", "Alexandria", "Giza", "Shubra El Kheima", "Port Said", "Suez"],
+        "primary_exports": ["Crude petroleum", "Refined petroleum", "Natural gas", "Gold", "Fertilizers"],
+        "landmarks": ["Pyramids of Giza", "Sphinx", "Luxor Temple", "Valley of the Kings", "Abu Simbel"],
+        "continent": "Africa",
+        "population": "104 million",
+        "languages": ["Arabic"],
+        "currency": "Egyptian Pound (EGP)"
+      }
+    },
+    {
+      "id": "equatorial_guinea",
+      "name": "Equatorial Guinea",
+      "capital": "Malabo",
+      "flag": "🇬🇶",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": [
+            "Annobón", "Bioko Norte", "Bioko Sur", "Centro Sur",
+            "Djibloho", "Kié-Ntem", "Litoral", "Wele-Nzas"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Malabo", "Bata", "Ebebiyín", "Aconibe", "Añisok"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Acyclic alcohols", "Sawn wood", "Cocoa beans"],
+        "landmarks": ["Monte Alén National Park", "Malabo Cathedral", "Pico Basile", "Arena Blanca Beach"],
+        "continent": "Africa",
+        "population": "1.5 million",
+        "languages": ["Spanish", "French", "Portuguese"],
+        "currency": "Central African CFA Franc (XAF)"
+      }
+    },
+    {
+      "id": "gambia",
+      "name": "Gambia",
+      "capital": "Banjul",
+      "flag": "🇬🇲",
+      "divisions": [
+        {
+          "label": "Divisions",
+          "show_all": true,
+          "list": [
+            "Banjul", "Central River", "Lower River", "North Bank", "Upper River", "West Coast"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Serekunda", "Brikama", "Bakau", "Banjul", "Farafenni"],
+        "primary_exports": ["Groundnuts", "Cashew nuts", "Fish", "Wood", "Palm oil"],
+        "landmarks": ["Kunta Kinteh Island", "Abuko Nature Reserve", "River Gambia National Park", "Stone Circles of Senegambia"],
+        "continent": "Africa",
+        "population": "2.5 million",
+        "languages": ["English"],
+        "currency": "Gambian Dalasi (GMD)"
+      }
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "capital": "Accra",
+      "flag": "🇬🇭",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Ahafo", "Ashanti", "Bono", "Bono East", "Central", "Eastern",
+            "Greater Accra", "North East", "Northern", "Oti", "Savannah",
+            "Upper East", "Upper West", "Volta", "Western", "Western North"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Accra", "Kumasi", "Tamale", "Sekondi-Takoradi", "Ashaiman", "Cape Coast"],
+        "primary_exports": ["Gold", "Crude petroleum", "Cocoa beans", "Manganese ore", "Coconut oil"],
+        "landmarks": ["Cape Coast Castle", "Kakum National Park", "Mole National Park", "Elmina Castle"],
+        "continent": "Africa",
+        "population": "33 million",
+        "languages": ["English"],
+        "currency": "Ghanaian Cedi (GHS)"
+      }
+    },
+    {
+      "id": "guinea",
+      "name": "Guinea",
+      "capital": "Conakry",
+      "flag": "🇬🇳",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Boké", "Conakry", "Faranah", "Kankan", "Kindia", "Labé", "Mamou", "N'Zérékoré"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Conakry", "Nzérékoré", "Kankan", "Kindia", "Labé"],
+        "primary_exports": ["Aluminum ore", "Gold", "Alumina", "Fish", "Fruits"],
+        "landmarks": ["Fouta Djallon Highlands", "Mount Nimba", "Îles de Los", "Badiar National Park"],
+        "continent": "Africa",
+        "population": "14 million",
+        "languages": ["French"],
+        "currency": "Guinean Franc (GNF)"
+      }
+    },
+    {
+      "id": "guinea_bissau",
+      "name": "Guinea-Bissau",
+      "capital": "Bissau",
+      "flag": "🇬🇼",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": [
+            "Bafatá", "Biombo", "Bissau", "Bolama-Bijagós", "Cacheu", "Gabú", "Oio", "Quinara", "Tombali"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bissau", "Bafatá", "Gabú", "Bissorã", "Bolama"],
+        "primary_exports": ["Cashew nuts", "Fish", "Peanuts", "Sawn wood", "Cotton"],
+        "landmarks": ["Bijagós Archipelago", "Orango Islands National Park", "Cacheu River", "Varela Beach"],
+        "continent": "Africa",
+        "population": "2 million",
+        "languages": ["Portuguese", "Crioulo"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "liberia",
+      "name": "Liberia",
+      "capital": "Monrovia",
+      "flag": "🇱🇷",
+      "divisions": [
+        {
+          "label": "Counties",
+          "show_all": false,
+          "list": [
+            "Bomi", "Bong", "Gbarpolu", "Grand Bassa", "Grand Cape Mount",
+            "Grand Gedeh", "Grand Kru", "Lofa", "Margibi", "Maryland",
+            "Montserrado", "Nimba", "River Cess", "River Gee", "Sinoe"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Monrovia", "Gbarnga", "Kakata", "Bensonville", "Harper"],
+        "primary_exports": ["Gold", "Iron ore", "Rubber", "Ships", "Cocoa beans"],
+        "landmarks": ["Sapo National Park", "Providence Island", "Firestone Rubber Plantation", "Kpatawee Waterfall"],
+        "continent": "Africa",
+        "population": "5.2 million",
+        "languages": ["English"],
+        "currency": "Liberian Dollar (LRD)"
+      }
+    },
+    {
+      "id": "libya",
+      "name": "Libya",
+      "capital": "Tripoli",
+      "flag": "🇱🇾",
+      "divisions": [
+        {
+          "label": "Districts",
+          "show_all": false,
+          "list": [
+            "Al Butnan", "Al Jabal al Akhdar", "Al Jabal al Gharbi", "Al Jufra",
+            "Al Kufra", "Al Marj", "Al Marqab", "Al Wahat", "An Nuqat al Khams",
+            "Az Zawiyah", "Benghazi", "Derna", "Ghat", "Misrata", "Murzuq",
+            "Nalut", "Sabha", "Sirte", "Tripoli", "Wadi al Hayaa", "Wadi ash Shati"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tripoli", "Benghazi", "Misrata", "Tarhuna", "Al Khums", "Az Zawiyah"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Gold", "Refined petroleum", "Scrap iron"],
+        "landmarks": ["Leptis Magna", "Sabratha", "Cyrene", "Ghadames Old Town", "Sahara Desert"],
+        "continent": "Africa",
+        "population": "7 million",
+        "languages": ["Arabic"],
+        "currency": "Libyan Dinar (LYD)"
+      }
+    },
+    {
+      "id": "mali",
+      "name": "Mali",
+      "capital": "Bamako",
+      "flag": "🇲🇱",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Bamako", "Gao", "Kayes", "Kidal", "Koulikoro", "Ménaka",
+            "Mopti", "Ségou", "Sikasso", "Taoudénit", "Tombouctou"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Bamako", "Sikasso", "Mopti", "Koutiala", "Ségou", "Kayes"],
+        "primary_exports": ["Gold", "Cotton", "Cattle", "Salt", "Sesame seeds"],
+        "landmarks": ["Timbuktu", "Djenné Great Mosque", "Bandiagara Escarpment", "Niger River"],
+        "continent": "Africa",
+        "population": "22 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "mauritania",
+      "name": "Mauritania",
+      "capital": "Nouakchott",
+      "flag": "🇲🇷",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Adrar", "Assaba", "Brakna", "Dakhlet Nouadhibou", "Gorgol",
+            "Guidimaka", "Hodh Ech Chargui", "Hodh El Gharbi", "Inchiri",
+            "Nouakchott-Nord", "Nouakchott-Ouest", "Nouakchott-Sud",
+            "Tagant", "Tiris Zemmour", "Trarza"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Nouakchott", "Nouadhibou", "Néma", "Kaédi", "Rosso"],
+        "primary_exports": ["Iron ore", "Gold", "Copper ore", "Fish", "Crustaceans"],
+        "landmarks": ["Banc d'Arguin National Park", "Richat Structure", "Chinguetti", "Ouadane"],
+        "continent": "Africa",
+        "population": "4.8 million",
+        "languages": ["Arabic", "French"],
+        "currency": "Mauritanian Ouguiya (MRU)"
+      }
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "capital": "Rabat",
+      "flag": "🇲🇦",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Béni Mellal-Khénifra", "Casablanca-Settat", "Drâa-Tafilalet",
+            "Fès-Meknès", "Guelmim-Oued Noun", "Laâyoune-Sakia El Hamra",
+            "Marrakech-Safi", "Oriental", "Rabat-Salé-Kénitra",
+            "Souss-Massa", "Tanger-Tétouan-Al Hoceïma", "Dakhla-Oued Ed-Dahab"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Casablanca", "Rabat", "Fès", "Marrakech", "Tangier", "Agadir"],
+        "primary_exports": ["Cars", "Phosphoric acid", "Fertilizers", "Insulated wire", "Clothing"],
+        "landmarks": ["Medina of Fès", "Jemaa el-Fnaa", "Hassan II Mosque", "Sahara Desert", "Atlas Mountains"],
+        "continent": "Africa",
+        "population": "37 million",
+        "languages": ["Arabic", "Berber", "French"],
+        "currency": "Moroccan Dirham (MAD)"
+      }
+    },
+    {
+      "id": "niger",
+      "name": "Niger",
+      "capital": "Niamey",
+      "flag": "🇳🇪",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": [
+            "Agadez", "Diffa", "Dosso", "Maradi", "Niamey", "Tahoua", "Tillabéri", "Zinder"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Niamey", "Zinder", "Maradi", "Agadez", "Tahoua"],
+        "primary_exports": ["Uranium", "Gold", "Onions", "Cattle", "Cowpeas"],
+        "landmarks": ["Aïr and Ténéré Natural Reserves", "W National Park", "Agadez Mosque", "Sahara Desert"],
+        "continent": "Africa",
+        "population": "26 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "capital": "Abuja",
+      "flag": "🇳🇬",
+      "divisions": [
+        {
+          "label": "States",
+          "show_all": false,
+          "list": [
+            "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa",
+            "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo",
+            "Ekiti", "Enugu", "Federal Capital Territory", "Gombe", "Imo",
+            "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara",
+            "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo",
+            "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lagos", "Kano", "Ibadan", "Abuja", "Port Harcourt", "Benin City"],
+        "primary_exports": ["Crude petroleum", "Natural gas", "Cocoa beans", "Rubber", "Ships"],
+        "landmarks": ["Zuma Rock", "Yankari National Park", "Olumo Rock", "Lekki Conservation Centre"],
+        "continent": "Africa",
+        "population": "220 million",
+        "languages": ["English"],
+        "currency": "Nigerian Naira (NGN)"
+      }
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "capital": "Dakar",
+      "flag": "🇸🇳",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": false,
+          "list": [
+            "Dakar", "Diourbel", "Fatick", "Kaffrine", "Kaolack", "Kédougou",
+            "Kolda", "Louga", "Matam", "Saint-Louis", "Sédhiou", "Tambacounda",
+            "Thiès", "Ziguinchor"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Dakar", "Pikine", "Touba", "Thiès", "Rufisque", "Saint-Louis"],
+        "primary_exports": ["Gold", "Refined petroleum", "Phosphoric acid", "Fish", "Groundnuts"],
+        "landmarks": ["Gorée Island", "Pink Lake", "Djoudj National Bird Sanctuary", "African Renaissance Monument"],
+        "continent": "Africa",
+        "population": "17 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "sierra_leone",
+      "name": "Sierra Leone",
+      "capital": "Freetown",
+      "flag": "🇸🇱",
+      "divisions": [
+        {
+          "label": "Provinces",
+          "show_all": true,
+          "list": [
+            "Eastern Province", "Northern Province", "North West Province", "Southern Province", "Western Area"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Freetown", "Bo", "Kenema", "Makeni", "Koidu"],
+        "primary_exports": ["Iron ore", "Diamonds", "Titanium ore", "Cocoa beans", "Coffee"],
+        "landmarks": ["Bunce Island", "Outamba-Kilimi National Park", "Tacugama Chimpanzee Sanctuary", "Banana Islands"],
+        "continent": "Africa",
+        "population": "8.5 million",
+        "languages": ["English"],
+        "currency": "Sierra Leonean Leone (SLL)"
+      }
+    },
+    {
+      "id": "togo",
+      "name": "Togo",
+      "capital": "Lomé",
+      "flag": "🇹🇬",
+      "divisions": [
+        {
+          "label": "Regions",
+          "show_all": true,
+          "list": [
+            "Centrale", "Kara", "Maritime", "Plateaux", "Savanes"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Lomé", "Sokodé", "Kara", "Kpalimé", "Atakpamé"],
+        "primary_exports": ["Gold", "Refined petroleum", "Phosphates", "Cotton", "Cocoa beans"],
+        "landmarks": ["Koutammakou", "Fazao-Malfakassa National Park", "Togoville", "Mount Agou"],
+        "continent": "Africa",
+        "population": "8.5 million",
+        "languages": ["French"],
+        "currency": "West African CFA Franc (XOF)"
+      }
+    },
+    {
+      "id": "tunisia",
+      "name": "Tunisia",
+      "capital": "Tunis",
+      "flag": "🇹🇳",
+      "divisions": [
+        {
+          "label": "Governorates",
+          "show_all": false,
+          "list": [
+            "Ariana", "Béja", "Ben Arous", "Bizerte", "Gabès", "Gafsa",
+            "Jendouba", "Kairouan", "Kasserine", "Kébili", "Kef", "Mahdia",
+            "Manouba", "Médenine", "Monastir", "Nabeul", "Sfax", "Sidi Bouzid",
+            "Siliana", "Sousse", "Tataouine", "Tozeur", "Tunis", "Zaghouan"
+          ]
+        }
+      ],
+      "facts": {
+        "major_cities": ["Tunis", "Sfax", "Sousse", "Kairouan", "Bizerte", "Gabès"],
+        "primary_exports": ["Insulated wire", "Olive oil", "Refined petroleum", "Phosphates", "Clothing"],
+        "landmarks": ["Carthage", "Medina of Tunis", "El Jem Amphitheatre", "Sahara Desert", "Sidi Bou Said"],
+        "continent": "Africa",
+        "population": "12 million",
+        "languages": ["Arabic", "French"],
+        "currency": "Tunisian Dinar (TND)"
+      }
+    }
+  ],
+  "quiz_modes": [
+    {
+      "id": "name_to_capital",
+      "label": "Name → Capital",
+      "question_field": "name",
+      "answer_field": "capital",
+      "prompt": "What is the capital of {name}?"
+    },
+    {
+      "id": "capital_to_name",
+      "label": "Capital → Name",
+      "question_field": "capital",
+      "answer_field": "name",
+      "prompt": "{capital} is the capital of which country?"
+    },
+    {
+      "id": "flag_to_name",
+      "label": "Flag → Name",
+      "question_field": "flag",
+      "answer_field": "name",
+      "prompt": "Which country has this flag?"
+    }
+  ]
+}

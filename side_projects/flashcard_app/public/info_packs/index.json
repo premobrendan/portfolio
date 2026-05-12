@@ -1,0 +1,9 @@
+{
+  "packs": [
+    {
+      "id": "countries_of_the_world",
+      "name": "Countries of the World",
+      "description": "Learn about countries, their capitals, flags, and key facts"
+    }
+  ]
+}
