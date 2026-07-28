@@ -14,7 +14,6 @@ node_modules/
 .latex-out/
 
 # Data files (large, kept local)
-working/data/
 soria_work/scripts/star ratings/data/
 soria_work/scripts/naic/data/
 soria_work/scripts/naic/clean_naic_data/
@@ -40,4 +39,10 @@ side_projects/cow-catalog/
 
 # Personal study notes (kept local)
 accounting/
+
+# Rose project (kept local)
+rose-project/
+
+# Scratch / in-progress coursework (kept local)
+working/
 
