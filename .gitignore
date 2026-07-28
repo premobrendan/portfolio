@@ -25,8 +25,7 @@ soria_work/scripts/sec_data/sec_audit/
 soria_work/scripts/sec_data/sec_filings/
 soria_work/scripts/sec_data/sec_survey/
 soria_work/scripts/sec_data/ten_q_test/
-school_work/machine_learning_practicum_s25/data/house_sales.ftr
-school_work/machine_learning_practicum_s25/data/movies
+school_work/**/data/
 school_work/machine_learning_f24/prostate_stnd.mat
 
 # Output files
