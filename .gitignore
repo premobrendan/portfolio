@@ -45,3 +45,6 @@ rose-project/
 # Scratch / in-progress coursework (kept local)
 working/
 
+# Cover letters (kept local)
+application_documents/*Cover Letter*
+
