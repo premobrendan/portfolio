@@ -39,8 +39,12 @@ side_projects/cow-catalog/
 # Personal study notes (kept local)
 accounting/
 
-# Rose project (kept local)
-rose-project/
+# Rose project — guide and notebook are published; source data is not.
+# rose_data.csv and the apheresis workbooks are clinical records, and the
+# zip bundles them, so all three stay local.
+rose-project/data/
+rose-project/converting_sheet_with_formulas.xlsx
+rose-project/rose_project.zip
 
 # Scratch / in-progress coursework (kept local)
 working/
