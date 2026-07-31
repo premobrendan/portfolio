@@ -52,3 +52,9 @@ working/
 # Cover letters (kept local)
 application_documents/*Cover Letter*
 
+
+# Scratch test data
+side_projects/palindrome_test_strings.txt
+
+# Superseded resume (kept local)
+application_documents/*Resume Old*

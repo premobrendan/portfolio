@@ -7,7 +7,7 @@ from pulse_api_package import PulseExtractor, create_medicaid_schema, create_med
 
 def main():
     # Configuration
-    API_KEY = "8gndJ2bjuApI03VJoB2YyoT7MUk5hKO8xfD6GtMH"
+    API_KEY = "REDACTED"  # credential removed for publication; script is for reading, not running
     FILE_PATH = "/Users/cameronspiller/Downloads/51301-2021-07-medicaid.pdf"
     OUTPUT_DIR = "./outputs"
     

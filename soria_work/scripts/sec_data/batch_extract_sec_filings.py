@@ -40,8 +40,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# SEC API Key
-SEC_API_KEY = "20065f397ad605187260b9de0e99c22e835f458e493dc14d1509f9e7558be60f"
+# SEC API Key — credential removed for publication; script is for reading, not running
+SEC_API_KEY = "REDACTED"
 
 # Model configuration
 STRUCTURE_MODEL = VertexAIModel.GEMINI_FLASH  # Fast, cheap for structure analysis

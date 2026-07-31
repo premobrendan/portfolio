@@ -1,11 +1,12 @@
 Introduction:
 
-My name is Brendan Premo. I was born October 21, 1998 and am a passionate nerd who loves working on data projects. This folder is my work during my time 
-as a dual graduate student in Mathematics and Data Sicence at SUNY Albany, along with some side projects I've worked on during the past decade or so. My 
-current project is updating my workbase as a student to be corrected of any mistakes and published on Github as a compentent portfolio.
+My name is Brendan Premo. I am a passionate nerd who loves working on data projects. This folder is my work during my time as a dual graduate student in
+Mathematics and Data Science at SUNY Albany, along with some side projects I've worked on during the past decade or so. My current project is updating my
+workbase as a student to be corrected of any mistakes and published on Github as a competent portfolio.
 
-I am currently employed as a Data Analyst at Soria Analytics, working with the BI tool Sigma Computing and doing some software development on the internal
-codebase. Some of the analysis work I've done is also in this portfolio.
+I worked as a Data Analyst at Soria Analytics from June 2025 to May 2026, using the BI tool Sigma Computing and doing some software development on the
+internal codebase. Some of the analysis work I've done is also in this portfolio. I am currently taking on part-time contract work while looking for my
+next full-time position.
 
 If you are reading this and have any questions or are interested in the work I've compiled here, you can reach me at premobrendan@gmail.com or (518) 588-0855.
 
@@ -20,7 +21,7 @@ Background:
 
 Ever since I was in Elementary school, I had an affinity for mathematics. I was well adept in the basics and quickly became more advanced as I grew older,
 only wishing I was given more of a push to pursue more advanced topics sooner than I was. I finished with 5's in Calculus AB and BC before my Senior year 
-and took Multivairable Calculus my Senior year at Hudson Valley Community College.
+and took Multivariable Calculus my Senior year at Hudson Valley Community College.
 
 I graduated High School in 2016, during which in my Senior year I was placed in an advanced engineering program called Questar 3: New Visions (STEM) where 
 I spent half of my days on the Rensselaer Polytechnic Institute (RPI) campus. The program required we be matriculated in Physics 1 & 2 at RPI, along with 
@@ -28,7 +29,7 @@ doing engineering projects and research. I started learning to code in Python an
 
 After being impressed with the campus, I was accepted to join the class of 2020 of RPI, pursuing a degree in Aerospace Engineering. I soon realized that this
 wasn't a good fit for me and, after switching paths numerous times, found myself seeking to return to my mathematics roots.Through many tribulations, including 
-mental health issues steming from overwork, stress and the COVID-19 epidemic, I graduated RPI in 2021 with a Bachelors in Applied Mathematics. 
+mental health issues stemming from overwork, stress and the COVID-19 epidemic, I graduated RPI in 2021 with a Bachelor's in Applied Mathematics. 
 
 I took a year off from schooling after getting the privilege to work as a Bartender in the Adirondacks, a position I've always wanted to hold. I was active
 until the winter, when commuting from my permanent address became too dangerous to be worth the decreased traffic. I found work in other places nearby,
@@ -48,14 +49,18 @@ Present:
 Since my graduation, I've been adapting all of my works from Graduate school and the side projects I've done to be compatible with Github so that employers or
 interested parties could see the work that I've done. Most of my efforts at the moment are modifying my preexisting programs to work on my offline machine, 
 as most of my work was done on the cloud-based platform Google Colab, as well as updating my older works to be more reflective of my current capabilities.
-If the project/problem was older with a correct solution, I've left my old work as a comparison to a newer implimentation that I feel is more in line with
+If the project/problem was older with a correct solution, I've left my old work as a comparison to a newer implementation that I feel is more in line with
 what I would produce as a data analyst/scientist.
 
-In the Summer of 2025, I got the opportunity to work at a pre-seed startup called Soria Analytics as a data analyst, working in a BI tool called Sigma 
+In the Summer of 2025, I got the opportunity to work at a pre-seed startup called Soria Analytics as a data analyst, working in a BI tool called Sigma
 Computing. During this time, I was taught how to use the BI tool for analysis and data cleaning, as well as some mild software development scraping data
-from API sources, doing analysis in Python and SQL, and learning as much as I could about the healthcare space. You can find the work that I've done 
-during my time in the soria_work folder. Most of the scripts will not work due to them being off the codebase, but the analysis I did for the Star Ratings
-is fully functional and has some enrollment mapping from another CMS source towards the end. 
+from API sources, doing analysis in Python and SQL, and learning as much as I could about the healthcare space. That role ran through May of 2026. You can
+find the work that I've done during my time in the soria_work folder. Most of the scripts will not work due to them being off the codebase and having had
+their API credentials stripped before publishing, but the analysis I did for the Star Ratings is fully functional and has some enrollment mapping from
+another CMS source towards the end.
+
+Since then I've been doing part-time contract work: assisting with development and testing on a financial reporting application, and building a dosage
+analysis tool for a healthcare client in both Python and Excel. I am actively looking for my next full-time role in data analysis.
 
 
 School Projects:
@@ -67,7 +72,7 @@ a summary in this document have not yet been started to be updated. All other su
 Application Documents - This is a folder with my current resume, a general cover letter and my unofficial transcript for my graduate education.
 
 Stochastic Processes F23 (*) - This folder holds a master document of the work I was required to do during Intro to Stochastic Processes, as well as any data 
-files required. I was awarded a A for my work, but much of it needed to be updated. I've conglomorated all of the interesting theory problems and most if not
+files required. I was awarded a A for my work, but much of it needed to be updated. I've conglomerated all of the interesting theory problems and most if not
 all coding questions. Topics covered in this document include: Monte Carlo Simulations, Bayesian Statistics, Markov Chains, PageRank, Natural Language 
 Processing (NLP), Beam Search and Hidden Markov Models (HMMs). This work is a Jupyter Notebook containing Python and LaTeX.
 
