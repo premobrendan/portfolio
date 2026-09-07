@@ -1,10 +1,23 @@
 import { useCallback, useEffect, useReducer, useState } from 'react'
-import type { AppState, PackMeta, Settings } from '../../shared/types'
+import type { AppState, ConfirmIntent, PackMeta, Settings } from '../../shared/types'
 import Background from '../components/Background'
+import ConfirmDialog from '../components/ConfirmDialog'
+import MakePackScreen from '../screens/MakePackScreen'
+import SettingsScreen from '../screens/SettingsScreen'
 import TitleScreen from '../screens/TitleScreen'
 import { applyTheme } from '../theme/themes'
-import { initialUI, reduce, type Screen } from './machine'
+import { keyActionFor } from './keys'
+import { initialUI, reduce, topLayer, type Screen } from './machine'
 import '../styles/screens.css'
+
+/** What Escape raises on each screen. Title has none — its leave button quits outright. */
+const LEAVE_INTENT: Record<Screen, ConfirmIntent | null> = {
+  title: null,
+  learn: { type: 'leaveLearn' },
+  packs: { type: 'leavePacks' },
+  settings: { type: 'leaveSettings' },
+  makepack: { type: 'leaveMakePack' },
+}
 
 export default function App() {
   const [ui, dispatch] = useReducer(reduce, initialUI)
@@ -34,6 +47,28 @@ export default function App() {
   // Task 6 built the theme registry but had nowhere to call it from; settings now exist.
   useEffect(() => { if (settings) applyTheme(settings.themeId) }, [settings])
 
+  const requestLeave = useCallback(() => {
+    const intent = LEAVE_INTENT[ui.screen]
+    if (intent) dispatch({ type: 'pushLayer', layer: { kind: 'confirm', intent } })
+  }, [ui.screen])
+
+  // The ONE global key listener in the app. Everything routes through keyActionFor,
+  // which only ever answers for the top of the layer stack.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const intent = keyActionFor(ui, e.key, { hasFlipped: false, card: null })
+      if (!intent) return
+      e.preventDefault()   // Tab must not move focus; Space must not scroll.
+      switch (intent.type) {
+        case 'requestLeave': requestLeave(); break
+        case 'confirmLeave': dispatch({ type: 'goto', screen: 'title' }); break
+        case 'denyLeave': dispatch({ type: 'popLayer' }); break
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [ui, requestLeave])
+
   if (!state || !settings) return <div className="app-root" data-testid="app-root" />
 
   const go = (screen: Screen) => dispatch({ type: 'goto', screen })
@@ -46,6 +81,16 @@ export default function App() {
           canLearn={packs.length > 0 && state.selectedPackIds.length > 0}
           onGo={go}
           onReload={() => void reload()}
+        />
+      )}
+      {ui.screen === 'settings' && <SettingsScreen onRequestLeave={requestLeave} />}
+      {ui.screen === 'makepack' && <MakePackScreen onRequestLeave={requestLeave} />}
+
+      {topLayer(ui)?.kind === 'confirm' && (
+        <ConfirmDialog
+          intent={(topLayer(ui) as { kind: 'confirm'; intent: ConfirmIntent }).intent}
+          onConfirm={() => dispatch({ type: 'goto', screen: 'title' })}
+          onDeny={() => dispatch({ type: 'popLayer' })}
         />
       )}
     </div>
