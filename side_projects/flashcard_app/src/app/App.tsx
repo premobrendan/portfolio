@@ -3,6 +3,7 @@ import type { AppState, ConfirmIntent, PackMeta, Settings } from '../../shared/t
 import Background from '../components/Background'
 import ConfirmDialog from '../components/ConfirmDialog'
 import MakePackScreen from '../screens/MakePackScreen'
+import PackSelectScreen from '../screens/PackSelectScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 import TitleScreen from '../screens/TitleScreen'
 import { applyTheme } from '../theme/themes'
@@ -24,6 +25,8 @@ export default function App() {
   const [packs, setPacks] = useState<PackMeta[]>([])
   const [state, setState] = useState<AppState | null>(null)
   const [settings, setSettings] = useState<Settings | null>(null)
+  // Task 13 reads this back to open the preview; for now only the setter is needed.
+  const [, setPreviewPackId] = useState<string | null>(null)
 
   const reload = useCallback(async () => {
     const [p, s, cfg] = await Promise.all([
@@ -46,6 +49,21 @@ export default function App() {
 
   // Task 6 built the theme registry but had nowhere to call it from; settings now exist.
   useEffect(() => { if (settings) applyTheme(settings.themeId) }, [settings])
+
+  /**
+   * Write-through: the new selection hits disk on every toggle, not on leaving the
+   * screen, so it survives a crash as well as a clean exit. The write is deliberately
+   * OUTSIDE a setState updater — StrictMode invokes updaters twice and would double-fire
+   * the IPC call.
+   */
+  const togglePack = useCallback(async (id: string, selected: boolean) => {
+    if (!state) return
+    const next = selected
+      ? [...state.selectedPackIds, id]
+      : state.selectedPackIds.filter(x => x !== id)
+    setState({ ...state, selectedPackIds: next })
+    await window.flashcards.state.set({ selectedPackIds: next })
+  }, [state])
 
   const requestLeave = useCallback(() => {
     const intent = LEAVE_INTENT[ui.screen]
@@ -81,6 +99,15 @@ export default function App() {
           canLearn={packs.length > 0 && state.selectedPackIds.length > 0}
           onGo={go}
           onReload={() => void reload()}
+        />
+      )}
+      {ui.screen === 'packs' && (
+        <PackSelectScreen
+          packs={packs}
+          selectedIds={state.selectedPackIds}
+          onToggle={(id, sel) => void togglePack(id, sel)}
+          onPreview={setPreviewPackId}
+          onRequestLeave={requestLeave}
         />
       )}
       {ui.screen === 'settings' && <SettingsScreen onRequestLeave={requestLeave} />}

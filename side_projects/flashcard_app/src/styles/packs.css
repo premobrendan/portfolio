@@ -1,0 +1,32 @@
+.pack-list { display: flex; flex-direction: column; gap: 0.5rem; min-width: 420px; }
+
+.pack-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius);
+}
+
+.pack-row__select {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+}
+
+.pack-row__name { flex: 1; }
+.pack-row__count { color: var(--muted); font-size: 0.85rem; }
+
+.pack-row__preview {
+  padding: 0.4rem 0.75rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pack-row__preview:hover { color: var(--fg); border-color: var(--accent); }
