@@ -1,0 +1,88 @@
+/*
+ * The flip. Rules enforced here, per spec §9:
+ *   - only `transform` is ever transitioned;
+ *   - the stage is layout+paint contained so card work cannot invalidate the tree;
+ *   - `will-change: transform` is set by Card.tsx while animating and removed after.
+ */
+
+.card-stage {
+  --card-w: min(620px, 84vw);
+  --card-h: min(400px, 52vh);
+  /*
+   * Paint containment clips to this element's padding box. A 620px card under 1400px
+   * perspective projects up to ~57px past its own edge while it turns (the near half
+   * scales by 1400 / (1400 - 310) = 1.28), so the stage carries a bleed: padding grows
+   * the clip box, an equal negative margin keeps the layout footprint at the card size.
+   */
+  --card-bleed: 64px;
+
+  position: relative;
+  z-index: 1;
+  width: calc(var(--card-w) + 2 * var(--card-bleed));
+  height: calc(var(--card-h) + 2 * var(--card-bleed));
+  padding: var(--card-bleed);
+  margin: calc(-1 * var(--card-bleed));
+  perspective: 1400px;
+  /* Card work cannot invalidate the rest of the tree. */
+  contain: layout paint;
+  /* Double-clicking to flip twice must not select the text. */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* transform ONLY — never a layout or paint property. */
+  transition: transform var(--flip-ms) var(--ease);
+  transition-property: transform;
+  cursor: pointer;
+}
+
+.card-inner[data-flipped='true'] { transform: rotateY(180deg); }
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+  /* `clip`, not `hidden`: no scroll container, and it does not flatten 3D. */
+  overflow: clip;
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-face--back { transform: rotateY(180deg); }
+.card-face__front-text { font-size: 1.9rem; font-weight: 600; }
+.card-face__primary { font-size: 1.15rem; }
+
+.card-face__more {
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card-face__more:hover { border-color: var(--accent); }
+
+/* Offscreen preload of the next card — never visible, never interactive. */
+.card-preload {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
