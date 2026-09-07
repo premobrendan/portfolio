@@ -1,8 +1,19 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { registerIpc } from './ipc'
+import { seedIfEmpty } from './seed'
+import { setStorageRoot } from './storage'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+/** Bundled packs: alongside the app when packaged, else `<repo>/resources/packs`
+ *  relative to the emitted `dist-electron/` directory. */
+function resourcesDir() {
+  return app.isPackaged
+    ? path.join(process.resourcesPath, 'packs')
+    : path.join(__dirname, '../resources/packs')
+}
 
 let win: BrowserWindow | null = null
 
@@ -32,7 +43,13 @@ function createWindow() {
 if (!app.requestSingleInstanceLock()) {
   app.quit()
 } else {
-  app.whenReady().then(createWindow)
+  app.whenReady().then(async () => {
+    // FLASHCARDS_USER_DATA is what gives each test an isolated profile.
+    setStorageRoot(process.env.FLASHCARDS_USER_DATA ?? app.getPath('userData'))
+    await seedIfEmpty(resourcesDir())
+    registerIpc()
+    createWindow()
+  })
 }
 
 app.on('window-all-closed', () => app.quit())
