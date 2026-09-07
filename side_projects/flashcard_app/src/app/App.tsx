@@ -34,12 +34,12 @@ export default function App() {
   // Task 6 built the theme registry but had nowhere to call it from; settings now exist.
   useEffect(() => { if (settings) applyTheme(settings.themeId) }, [settings])
 
-  if (!state || !settings) return <div data-testid="app-root" />
+  if (!state || !settings) return <div className="app-root" data-testid="app-root" />
 
   const go = (screen: Screen) => dispatch({ type: 'goto', screen })
 
   return (
-    <div data-testid="app-root">
+    <div className="app-root" data-testid="app-root">
       <Background mode={settings.themeMode} />
       {ui.screen === 'title' && (
         <TitleScreen

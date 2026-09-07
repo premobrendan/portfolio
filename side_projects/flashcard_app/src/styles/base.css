@@ -14,6 +14,10 @@
 
 html, body, #root { height: 100%; margin: 0; }
 
+/* The app shell sits between #root and .screen; without a height here the
+   screens' `height: 100%` resolves against auto and centering silently fails. */
+.app-root { height: 100%; }
+
 body {
   background: var(--bg);
   color: var(--fg);
