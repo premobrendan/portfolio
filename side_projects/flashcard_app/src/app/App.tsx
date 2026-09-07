@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useReducer, useState } from 'react'
-import type { AppState, ConfirmIntent, PackMeta, Settings } from '../../shared/types'
+import type { AppState, Card as CardType, ConfirmIntent, PackMeta, Settings } from '../../shared/types'
 import Background from '../components/Background'
 import ConfirmDialog from '../components/ConfirmDialog'
+import LearnScreen from '../screens/LearnScreen'
 import MakePackScreen from '../screens/MakePackScreen'
 import PackSelectScreen from '../screens/PackSelectScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 import TitleScreen from '../screens/TitleScreen'
 import { applyTheme } from '../theme/themes'
-import { keyActionFor } from './keys'
+import { keyActionFor, type KeyContext } from './keys'
 import { initialUI, reduce, topLayer, type Screen } from './machine'
 import '../styles/screens.css'
 
@@ -70,14 +71,40 @@ export default function App() {
     if (intent) dispatch({ type: 'pushLayer', layer: { kind: 'confirm', intent } })
   }, [ui.screen])
 
+  // Keyboard flip/advance reach the Learn screen as bumped counters, so flip state can
+  // stay inside Card and nothing here re-renders mid-flip.
+  const [flipSignal, setFlipSignal] = useState(0)
+  const [advanceSignal, setAdvanceSignal] = useState(0)
+  // What Learn currently shows: answers the Enter/Tab gate in keyActionFor, and gives
+  // the More Info layer its Markdown.
+  const [cardCtx, setCardCtx] = useState<KeyContext>({ card: null, hasFlipped: false })
+
+  // Stable identity — LearnScreen calls this from an effect, so an inline arrow would
+  // re-run that effect every render and spin. Bail out when nothing changed so a repeat
+  // call cannot trigger another render either.
+  const handleCardContext = useCallback((card: CardType | null, hasFlipped: boolean) => {
+    setCardCtx(prev =>
+      prev.card === card && prev.hasFlipped === hasFlipped ? prev : { card, hasFlipped },
+    )
+  }, [])
+
+  const openMoreInfo = useCallback(
+    () => dispatch({ type: 'pushLayer', layer: { kind: 'moreInfo' } }),
+    [],
+  )
+
   // The ONE global key listener in the app. Everything routes through keyActionFor,
   // which only ever answers for the top of the layer stack.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const intent = keyActionFor(ui, e.key, { hasFlipped: false, card: null })
+      const intent = keyActionFor(ui, e.key, cardCtx)
       if (!intent) return
       e.preventDefault()   // Tab must not move focus; Space must not scroll.
       switch (intent.type) {
+        case 'flip': setFlipSignal(n => n + 1); break
+        case 'advance': setAdvanceSignal(n => n + 1); break
+        case 'openMoreInfo': openMoreInfo(); break
+        case 'closeMoreInfo': dispatch({ type: 'popLayer' }); break
         case 'requestLeave': requestLeave(); break
         case 'confirmLeave': dispatch({ type: 'goto', screen: 'title' }); break
         case 'denyLeave': dispatch({ type: 'popLayer' }); break
@@ -85,7 +112,7 @@ export default function App() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [ui, requestLeave])
+  }, [ui, cardCtx, requestLeave, openMoreInfo])
 
   if (!state || !settings) return <div className="app-root" data-testid="app-root" />
 
@@ -107,6 +134,16 @@ export default function App() {
           selectedIds={state.selectedPackIds}
           onToggle={(id, sel) => void togglePack(id, sel)}
           onPreview={setPreviewPackId}
+          onRequestLeave={requestLeave}
+        />
+      )}
+      {ui.screen === 'learn' && (
+        <LearnScreen
+          packIds={state.selectedPackIds}
+          flipSignal={flipSignal}
+          advanceSignal={advanceSignal}
+          onCardContext={handleCardContext}
+          onOpenMoreInfo={openMoreInfo}
           onRequestLeave={requestLeave}
         />
       )}

@@ -1,0 +1,58 @@
+.learn {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/*
+ * Bottom-right, out of flow: mounting it cannot shift the card. The entrance is
+ * opacity + transform only, so it never triggers layout or paint on anything else.
+ */
+.advance {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 5;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  color: var(--fg);
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: 50%;
+  cursor: pointer;
+  animation: advance-in 260ms var(--ease);
+}
+
+@keyframes advance-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.advance:hover { border-color: var(--accent); }
+
+.session-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.session-end h2 { margin: 0; }
+
+.session-end__actions { display: flex; gap: 0.75rem; justify-content: center; }
+
+.session-end__actions button {
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.session-end__actions button:hover { border-color: var(--accent); }
