@@ -1,0 +1,26 @@
+:root {
+  --bg: #05060f;
+  --fg: #e8ecf8;
+  --muted: #9aa3c0;
+  --card-face: #10132a;
+  --card-edge: #262b4d;
+  --accent: #7aa2ff;
+  --radius: 16px;
+  --flip-ms: 420ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

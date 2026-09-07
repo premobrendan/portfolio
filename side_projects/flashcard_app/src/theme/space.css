@@ -1,0 +1,33 @@
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* Own stacking context + own layer: frames dropped here cannot reach the card. */
+  isolation: isolate;
+  contain: strict;
+  background:
+    radial-gradient(1200px 800px at 70% 20%, #131a3d 0%, transparent 60%),
+    radial-gradient(900px 700px at 20% 80%, #1a1230 0%, transparent 55%),
+    var(--bg);
+}
+
+.bg__stars {
+  position: absolute;
+  inset: -50%;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent 50%),
+    radial-gradient(1px 1px at 70% 60%, #cfe0ff 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 45% 15%, #fff 50%, transparent 50%),
+    radial-gradient(1px 1px at 85% 40%, #9fb8ff 50%, transparent 50%);
+  background-size: 320px 320px, 420px 420px, 560px 560px, 300px 300px;
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.bg__stars--dynamic { animation: drift 140s linear infinite; }
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-160px, -120px, 0); }
+}
