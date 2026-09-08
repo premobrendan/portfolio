@@ -23,7 +23,7 @@ type LeavePolicy =
   | { kind: 'ifDirty'; intent: ConfirmIntent }
 
 const LEAVE_POLICY: Record<Screen, LeavePolicy> = {
-  // TitleScreen's own leave button quits; nothing routed through here raises it.
+  // Escape, the leave button and the Quit button all close the app outright.
   title: { kind: 'quit' },
   // Leaving mid-deck loses your place, so this one asks unconditionally.
   learn: { kind: 'always', intent: { type: 'leaveLearn' } },
@@ -103,8 +103,9 @@ export default function App() {
   const requestLeave = useCallback(() => {
     const policy = LEAVE_POLICY[ui.screen]
     switch (policy.kind) {
-      // Escape on the title screen does nothing; its leave button owns the quit.
-      case 'quit': return
+      // Escape quits, matching the Quit button and the leave button beside it — three
+      // routes to the same door, none of them worth a confirmation.
+      case 'quit': return window.flashcards.app.quit()
       case 'immediate': return go('title')
       case 'always': return confirmLeave(policy.intent)
       case 'ifDirty': return dirty[ui.screen] ? confirmLeave(policy.intent) : go('title')

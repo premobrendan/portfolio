@@ -23,6 +23,36 @@ async function confirmEverAppeared(win: Page): Promise<boolean> {
   return win.evaluate(() => (window as Watched).__confirmSeen === true)
 }
 
+// ------------------------------------------------------------------ Title: quits outright
+
+test('Escape on the title screen quits the app', async () => {
+  const { app } = await launchApp()
+  const win = await app.firstWindow()
+  await expect(win.getByTestId('title-menu')).toBeVisible()
+
+  // `press` is a key-down plus a key-up: the app is already closing when the up is sent,
+  // so the down is dispatched on its own and the close event is awaited instead.
+  const closed = app.waitForEvent('close')
+  await win.keyboard.down('Escape')
+  await closed
+})
+
+test('a third Escape out of Learn quits: confirm, land on Title, quit', async () => {
+  const { app } = await launchWithFixture()
+  const win = await app.firstWindow()
+
+  await win.getByRole('button', { name: 'Learn' }).click()
+  await expect(win.getByTestId('card')).toBeVisible()
+
+  await win.keyboard.press('Escape')                      // raises the confirmation
+  await expect(win.getByTestId('confirm-dialog')).toBeVisible()
+  await win.keyboard.press('Escape')                      // confirms — back to Title
+  await expect(win.getByTestId('title-menu')).toBeVisible()
+  const closed = app.waitForEvent('close')
+  await win.keyboard.down('Escape')                       // Title policy: quit
+  await closed
+})
+
 // ---------------------------------------------------------------- Learn: always asks
 
 test('Learn confirms on Escape, and a second Escape returns to the menu', async () => {
