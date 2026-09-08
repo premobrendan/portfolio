@@ -14,7 +14,13 @@ export function makeUserDataDir(): string {
 export async function launchApp(userData = makeUserDataDir()): Promise<Session> {
   const app = await electron.launch({
     args: ['.'],
-    env: { ...process.env, FLASHCARDS_USER_DATA: userData, NODE_ENV: 'test' },
+    env: {
+      ...process.env,
+      FLASHCARDS_USER_DATA: userData,
+      NODE_ENV: 'test',
+      // Never show the window during a test run — see electron/main.ts.
+      FLASHCARDS_HIDDEN: '1',
+    },
   })
   return { app, userData }
 }

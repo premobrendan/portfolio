@@ -94,7 +94,10 @@ function CardStage({ card, flipSignal = 0, onFirstFlip, onOpenMoreInfo, preload 
             <button
               type="button"
               className="card-face__more"
-              data-testid="more-info-btn"
+              // The preload instance must not collide with the live card's id, and a
+              // focusable button inside an aria-hidden subtree is a tab trap.
+              data-testid={preload ? 'more-info-btn-preload' : 'more-info-btn'}
+              tabIndex={preload ? -1 : undefined}
               onClick={e => {
                 // The one click on the card that does not flip it.
                 e.stopPropagation()

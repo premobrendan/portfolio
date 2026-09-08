@@ -17,6 +17,9 @@ function resourcesDir() {
 
 let win: BrowserWindow | null = null
 
+/** Set by the Playwright harness. Keeps a test run off-screen and out of the dock. */
+const HIDDEN = process.env.FLASHCARDS_HIDDEN === '1'
+
 function createWindow() {
   win = new BrowserWindow({
     width: 1100,
@@ -26,12 +29,19 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
       contextIsolation: true,
+      // A hidden window would otherwise have its timers throttled, which stalls
+      // animations and makes test timing unreliable.
+      backgroundThrottling: false,
       nodeIntegration: false,
       sandbox: true,
     },
   })
 
-  win.once('ready-to-show', () => win?.show())
+  // Tests run the app headless-ish: the window is never shown and the dock icon is
+  // hidden, so a suite run cannot steal focus or flash windows over your work.
+  // The renderer still loads and paints (paintWhenInitiallyHidden defaults true, and
+  // backgroundThrottling is off), so Playwright drives and screenshots it normally.
+  win.once('ready-to-show', () => { if (!HIDDEN) win?.show() })
 
   if (process.env.VITE_DEV_SERVER_URL) {
     win.loadURL(process.env.VITE_DEV_SERVER_URL)
@@ -44,6 +54,7 @@ if (!app.requestSingleInstanceLock()) {
   app.quit()
 } else {
   app.whenReady().then(async () => {
+  if (HIDDEN) app.dock?.hide()
     // FLASHCARDS_USER_DATA is what gives each test an isolated profile.
     setStorageRoot(process.env.FLASHCARDS_USER_DATA ?? app.getPath('userData'))
     await seedIfEmpty(resourcesDir())
