@@ -50,13 +50,18 @@ function createWindow() {
   }
 }
 
+// FLASHCARDS_USER_DATA is what gives each test an isolated profile. It has to move
+// Electron's own userData too, not just our storage root: the single-instance lock lives
+// there, so otherwise every test instance shares one lock with the dev app and with each
+// other, and the suite dies the moment a second window is up.
+if (process.env.FLASHCARDS_USER_DATA) app.setPath('userData', process.env.FLASHCARDS_USER_DATA)
+
 if (!app.requestSingleInstanceLock()) {
   app.quit()
 } else {
   app.whenReady().then(async () => {
-  if (HIDDEN) app.dock?.hide()
-    // FLASHCARDS_USER_DATA is what gives each test an isolated profile.
-    setStorageRoot(process.env.FLASHCARDS_USER_DATA ?? app.getPath('userData'))
+    if (HIDDEN) app.dock?.hide()
+    setStorageRoot(app.getPath('userData'))
     await seedIfEmpty(resourcesDir())
     registerIpc()
     createWindow()

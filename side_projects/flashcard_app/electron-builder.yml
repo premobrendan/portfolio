@@ -1,0 +1,27 @@
+appId: com.premo.flashcards
+productName: Flashcards
+directories:
+  output: release
+files:
+  - dist/**
+  - dist-electron/**
+# Bundled packs travel outside the asar so main.ts can read them with plain fs on first
+# run: `process.resourcesPath/packs` when packaged (see resourcesDir() in electron/main.ts).
+extraResources:
+  - from: resources/packs
+    to: packs
+mac:
+  target: dmg
+  category: public.app-category.education
+# Windows and Linux are pinned to x64: electron-builder otherwise defaults to the HOST
+# arch, so cross-building from an Apple Silicon Mac silently produced arm64 installers
+# that most Windows and Linux machines cannot run. Add `arm64` to the list if needed.
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+linux:
+  target:
+    - target: AppImage
+      arch: [x64]
+  category: Education
