@@ -6,7 +6,7 @@
   --card-edge: #262b4d;
   --accent: #7aa2ff;
   --radius: 16px;
-  --flip-ms: 420ms;
+  --flip-ms: 525ms;   /* 80% of the previous speed — 420ms felt too quick */
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
