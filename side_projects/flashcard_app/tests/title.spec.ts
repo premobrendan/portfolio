@@ -4,8 +4,11 @@ import { launchApp } from './helpers'
 test('title screen shows all five buttons in order', async () => {
   const { app } = await launchApp()
   const win = await app.firstWindow()
-  const labels = await win.getByTestId('title-menu').getByRole('button').allInnerTexts()
-  expect(labels).toEqual(['Learn', 'Pack Selection', 'Make a Pack', 'Settings', 'Quit'])
+  // toHaveText retries; allInnerTexts() is a one-shot read that returns [] if
+  // first-run seeding has not resolved and App is still rendering its empty shell.
+  await expect(win.getByTestId('title-menu').getByRole('button')).toHaveText(
+    ['Learn', 'Pack Selection', 'Make a Pack', 'Settings', 'Quit'],
+  )
   await app.close()
 })
 

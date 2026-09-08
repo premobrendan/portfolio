@@ -89,8 +89,10 @@ function CardStage({ card, flipSignal = 0, onFirstFlip, onOpenMoreInfo, preload 
         <div className="card-face card-face--back">
           <div className="card-face__primary">{card.primary}</div>
 
-          {/* Rendered only when there is actually something to show. */}
-          {card.moreInfo ? (
+          {/* Rendered only when there is something to show AND somewhere to show it:
+              pack preview reuses this card without a handler, and a control that
+              silently does nothing is worse than no control. */}
+          {card.moreInfo && onOpenMoreInfo ? (
             <button
               type="button"
               className="card-face__more"
