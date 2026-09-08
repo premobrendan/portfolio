@@ -40,8 +40,8 @@ export default function App() {
   const [packs, setPacks] = useState<PackMeta[]>([])
   const [state, setState] = useState<AppState | null>(null)
   const [settings, setSettings] = useState<Settings | null>(null)
-  // Task 13 reads this back to open the preview; for now only the setter is needed.
-  const [, setPreviewPackId] = useState<string | null>(null)
+  /** Which pack Pack Selection is previewing, or null for the list. */
+  const [previewPackId, setPreviewPackId] = useState<string | null>(null)
 
   const reload = useCallback(async () => {
     const [p, s, cfg] = await Promise.all([
@@ -90,6 +90,8 @@ export default function App() {
   /** Every navigation clears it: one screen is live at a time, and it arrives clean. */
   const go = useCallback((screen: Screen) => {
     setDirty({})
+    // An open preview belongs to the screen you are leaving, not the one you arrive at.
+    setPreviewPackId(null)
     dispatch({ type: 'goto', screen })
   }, [])
 
@@ -103,6 +105,18 @@ export default function App() {
   }, [])
 
   const requestLeave = useCallback(() => {
+    /**
+     * Escape pops exactly ONE thing. A pack preview is not in the `Layer` union — it has
+     * no keyboard grammar of its own and nothing renders underneath it — but it is still
+     * something the user opened, so leaving must close it before it leaves the screen.
+     * Without this, `packs`' `immediate` policy would jump from an open preview all the
+     * way to Title, skipping the list entirely. This is a refinement of the leave policy,
+     * which is why it lives here and not in `keys.ts`.
+     */
+    if (ui.screen === 'packs' && previewPackId !== null) {
+      setPreviewPackId(null)
+      return
+    }
     const policy = LEAVE_POLICY[ui.screen]
     switch (policy.kind) {
       // Escape quits, matching the Quit button and the leave button beside it — three
@@ -112,7 +126,7 @@ export default function App() {
       case 'always': return confirmLeave(policy.intent)
       case 'ifDirty': return dirty[ui.screen] ? confirmLeave(policy.intent) : go('title')
     }
-  }, [ui.screen, dirty, go, confirmLeave])
+  }, [ui.screen, previewPackId, dirty, go, confirmLeave])
 
   // Keyboard flip/advance reach the Learn screen as bumped counters, so flip state can
   // stay inside Card and nothing here re-renders mid-flip.
@@ -197,6 +211,8 @@ export default function App() {
           selectedIds={state.selectedPackIds}
           onToggle={(id, sel) => void togglePack(id, sel)}
           onPreview={setPreviewPackId}
+          previewPackId={previewPackId}
+          onClosePreview={() => setPreviewPackId(null)}
           onRequestLeave={requestLeave}
         />
       )}
