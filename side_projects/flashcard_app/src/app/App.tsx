@@ -1,12 +1,14 @@
-import { useCallback, useEffect, useReducer, useState } from 'react'
+import { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
 import type { AppState, Card as CardType, ConfirmIntent, PackMeta, Settings } from '../../shared/types'
 import Background from '../components/Background'
 import ConfirmDialog from '../components/ConfirmDialog'
+import MoreInfoPanel, { NO_SCROLL, type ScrollRequest } from '../components/MoreInfoPanel'
 import LearnScreen from '../screens/LearnScreen'
 import MakePackScreen from '../screens/MakePackScreen'
 import PackSelectScreen from '../screens/PackSelectScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 import TitleScreen from '../screens/TitleScreen'
+import { renderMarkdown } from '../lib/markdown'
 import { applyTheme } from '../theme/themes'
 import { keyActionFor, repeatable, type KeyContext } from './keys'
 import { initialUI, reduce, topLayer, type Screen } from './machine'
@@ -134,6 +136,20 @@ export default function App() {
     [],
   )
 
+  /**
+   * Parsed when the card becomes current, NOT when the panel opens: Markdown parsing plus
+   * sanitizing is the one expensive thing this layer does, and paying for it on Tab would
+   * put it in the middle of an interaction. This runs off the card-context change, which
+   * has already committed by then, so opening the panel costs a render and nothing more.
+   */
+  const moreInfoHtml = useMemo(
+    () => renderMarkdown(cardCtx.card?.moreInfo ?? ''),
+    [cardCtx.card],
+  )
+
+  /** Scroll requests reach the panel as a bumped counter, the same way flips reach Card. */
+  const [scroll, setScroll] = useState<ScrollRequest>(NO_SCROLL)
+
   // The ONE global key listener in the app. Everything routes through keyActionFor,
   // which only ever answers for the top of the layer stack.
   useEffect(() => {
@@ -149,6 +165,11 @@ export default function App() {
         case 'advance': setAdvanceSignal(n => n + 1); break
         case 'openMoreInfo': openMoreInfo(); break
         case 'closeMoreInfo': dispatch({ type: 'popLayer' }); break
+        // The one intent auto-repeat is allowed to drive; `continuous` tells the panel to
+        // take a smaller instant step so a held key glides instead of stuttering.
+        case 'scrollMoreInfo':
+          setScroll(r => ({ n: r.n + 1, dir: intent.direction, continuous: e.repeat }))
+          break
         case 'requestLeave': requestLeave(); break
         case 'confirmLeave': go('title'); break
         case 'denyLeave': dispatch({ type: 'popLayer' }); break
@@ -199,6 +220,14 @@ export default function App() {
         <MakePackScreen
           onRequestLeave={requestLeave}
           onDirtyChange={d => setScreenDirty('makepack', d)}
+        />
+      )}
+
+      {topLayer(ui)?.kind === 'moreInfo' && moreInfoHtml && (
+        <MoreInfoPanel
+          html={moreInfoHtml}
+          onClose={() => dispatch({ type: 'popLayer' })}
+          scroll={scroll}
         />
       )}
 

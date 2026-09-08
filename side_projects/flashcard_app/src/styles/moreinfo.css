@@ -1,0 +1,66 @@
+.moreinfo {
+  position: fixed;
+  inset: 0;
+  z-index: 12;
+  display: grid;
+  place-items: center;
+  background: rgba(3, 4, 12, 0.78);
+  animation: fade-in 160ms var(--ease);
+}
+
+/* The panel frames; the body scrolls. Splitting the two is what keeps the X pinned to
+   the corner instead of scrolling away with the content. */
+.moreinfo__panel {
+  position: relative;
+  display: flex;
+  width: min(700px, 88vw);
+  max-height: 74vh;
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius);
+  /* Clips the scrolling body to the rounded corners. */
+  overflow: hidden;
+}
+
+.moreinfo__body {
+  flex: 1;
+  /* Without this a flex item refuses to shrink below its content, so max-height on the
+     panel would grow instead of scroll. */
+  min-height: 0;
+  padding: 2rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.moreinfo__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  color: var(--muted);
+  /* Opaque, so scrolling content passes behind it rather than through it. */
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.moreinfo__close:hover { color: var(--fg); border-color: var(--accent); }
+
+.moreinfo__body > :first-child { margin-top: 0; }
+.moreinfo__body > :last-child { margin-bottom: 0; }
+
+.moreinfo__body table { width: 100%; border-collapse: collapse; }
+.moreinfo__body th, .moreinfo__body td {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--card-edge);
+}
+.moreinfo__body img { max-width: 100%; }
+.moreinfo__body code {
+  padding: 0.1rem 0.35rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+}
+.moreinfo__body pre { overflow-x: auto; }
+.moreinfo__body a { color: var(--accent); }
