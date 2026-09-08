@@ -16,6 +16,18 @@ export type KeyIntent =
 export type KeyContext = { hasFlipped: boolean; card: Card | null }
 
 /**
+ * Whether holding the key down should keep firing this intent. Continuous scrolling is
+ * the only place auto-repeat is the point; everywhere else leaning on a key is either
+ * dangerous or meaningless — held Escape would walk confirm → leave → quit, held Space
+ * would flip the card over and over, held Enter would race through the deck, and held
+ * Tab would toggle More Info open and shut. Kept here beside `keyActionFor` so the
+ * scroll keys stay enumerated in exactly one file.
+ */
+export function repeatable(intent: KeyIntent): boolean {
+  return intent?.type === 'scrollMoreInfo'
+}
+
+/**
  * Maps a key to an intent for the TOP layer only. Anything not listed for the
  * active layer is swallowed, which is what stops Space flipping the card
  * underneath an open dialog.

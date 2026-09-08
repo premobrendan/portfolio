@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { initialUI, reduce, topLayer } from './machine'
-import { keyActionFor } from './keys'
+import { keyActionFor, repeatable } from './keys'
 
 describe('screens', () => {
   it('starts on the title screen with no layers', () => {
@@ -91,5 +91,24 @@ describe('key dispatch', () => {
     expect(keyActionFor(ui, 'Escape', ctx)).toEqual({ type: 'confirmLeave' })
     expect(keyActionFor(ui, ' ', ctx)).toEqual({ type: 'denyLeave' })
     expect(keyActionFor(ui, 'Enter', ctx)).toEqual({ type: 'denyLeave' })
+  })
+})
+
+describe('key auto-repeat', () => {
+  it('is meaningful only for scrolling More Info', () => {
+    expect(repeatable({ type: 'scrollMoreInfo', direction: 'up' })).toBe(true)
+    expect(repeatable({ type: 'scrollMoreInfo', direction: 'down' })).toBe(true)
+  })
+
+  it('is refused by every intent a held key could otherwise abuse', () => {
+    // Held Escape would walk confirm -> leave -> quit; the rest are merely meaningless.
+    expect(repeatable({ type: 'requestLeave' })).toBe(false)
+    expect(repeatable({ type: 'confirmLeave' })).toBe(false)
+    expect(repeatable({ type: 'denyLeave' })).toBe(false)
+    expect(repeatable({ type: 'flip' })).toBe(false)
+    expect(repeatable({ type: 'advance' })).toBe(false)
+    expect(repeatable({ type: 'openMoreInfo' })).toBe(false)
+    expect(repeatable({ type: 'closeMoreInfo' })).toBe(false)
+    expect(repeatable(null)).toBe(false)
   })
 })

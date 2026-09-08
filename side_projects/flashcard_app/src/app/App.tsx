@@ -8,7 +8,7 @@ import PackSelectScreen from '../screens/PackSelectScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 import TitleScreen from '../screens/TitleScreen'
 import { applyTheme } from '../theme/themes'
-import { keyActionFor, type KeyContext } from './keys'
+import { keyActionFor, repeatable, type KeyContext } from './keys'
 import { initialUI, reduce, topLayer, type Screen } from './machine'
 import '../styles/screens.css'
 
@@ -140,7 +140,10 @@ export default function App() {
     const onKey = (e: KeyboardEvent) => {
       const intent = keyActionFor(ui, e.key, cardCtx)
       if (!intent) return
-      e.preventDefault()   // Tab must not move focus; Space must not scroll.
+      // Repeats included: a held Tab must not move focus, a held Space must not scroll.
+      e.preventDefault()
+      // Auto-repeat drives More Info scrolling and nothing else.
+      if (e.repeat && !repeatable(intent)) return
       switch (intent.type) {
         case 'flip': setFlipSignal(n => n + 1); break
         case 'advance': setAdvanceSignal(n => n + 1); break

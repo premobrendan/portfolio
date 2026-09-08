@@ -37,6 +37,29 @@ test('Escape on the title screen quits the app', async () => {
   await closed
 })
 
+test('holding Escape in Learn does not walk out of the session', async () => {
+  const { app } = await launchWithFixture()
+  const win = await app.firstWindow()
+
+  await win.getByRole('button', { name: 'Learn' }).click()
+  await expect(win.getByTestId('card')).toBeVisible()
+
+  // A press plus two auto-repeats: Playwright marks the 2nd and later `down` on a held
+  // key as repeat:true, the same shape the OS delivers. Before the repeat gate this
+  // sequence confirmed the dialog and then quit the app.
+  await win.keyboard.down('Escape')
+  await win.keyboard.down('Escape')
+  await win.keyboard.down('Escape')
+  await win.keyboard.up('Escape')
+
+  expect(win.isClosed()).toBe(false)
+  await expect(win.getByTestId('confirm-dialog')).toBeVisible()
+  await expect(win.getByTestId('card')).toBeVisible()
+
+  await app.close()
+})
+
+// Discrete presses — the deliberate gesture — must still walk all the way out.
 test('a third Escape out of Learn quits: confirm, land on Title, quit', async () => {
   const { app } = await launchWithFixture()
   const win = await app.firstWindow()
