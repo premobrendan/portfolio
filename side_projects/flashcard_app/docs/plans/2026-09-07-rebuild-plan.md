@@ -64,7 +64,7 @@ Every task's requirements implicitly include this section.
 ## Task 1: Project scaffold
 
 **Files:**
-- Create: `package.json`, `tsconfig.json`, `tsconfig.node.json`, `vite.config.ts`, `index.html`, `.gitignore`
+- Create: `package.json`, `tsconfig.json`, `vite.config.ts`, `index.html`, `.gitignore`
 - Create: `electron/main.ts`, `electron/preload.ts`, `src/main.tsx`, `src/app/App.tsx`
 - Create: `playwright.config.ts`, `tests/launch.spec.ts`
 
@@ -79,7 +79,7 @@ The old React app is being replaced, not extended. `_legacy/` is preserved.
 ```bash
 cd /Users/premob/code/portfolio/side_projects/flashcard_app
 rm -rf src node_modules package-lock.json package.json vite.config.js index.html __pycache__
-ls   # expect: _legacy  docs
+ls   # expect: docs  resources
 ```
 
 - [ ] **Step 2: Create `package.json`**
@@ -716,7 +716,7 @@ Expected: `presidents 45 false`
 - [ ] **Step 1b: Add fixture seeding to `tests/helpers.ts`**
 
 ```ts
-import type { Card, Pack } from '../shared/types'
+import type { Pack } from '../shared/types'
 
 /** A pack with known shape: two cards WITH moreInfo, one deliberately without. */
 export const FIXTURE: Pack = {
@@ -906,7 +906,7 @@ Expected: 2 passed.
 - [ ] **Step 9: Commit**
 
 ```bash
-git add electron resources tests/bridge.spec.ts
+git add electron resources tests/helpers.ts tests/bridge.spec.ts
 git commit -m "feat(flashcards): add first-run seeding and the contextBridge IPC surface"
 ```
 
@@ -1344,7 +1344,8 @@ test('Learn is disabled when no packs are selected', async () => {
 test('the Quit button closes the app', async () => {
   const { app } = await launchApp()
   const win = await app.firstWindow()
-  await win.getByRole('button', { name: 'Quit' }).click()
+  // `exact` — otherwise this also matches the leave button's aria-label "Quit application".
+  await win.getByRole('button', { name: 'Quit', exact: true }).click()
   await app.waitForEvent('close')
 })
 ```
@@ -1501,7 +1502,7 @@ export default function App() {
       <Background mode={settings.themeMode} />
       {ui.screen === 'title' && (
         <TitleScreen
-          canLearn={state.selectedPackIds.length > 0}
+          canLearn={packs.length > 0 && state.selectedPackIds.length > 0}
           onGo={go}
           onReload={() => void reload()}
         />
@@ -1746,7 +1747,9 @@ useEffect(() => {
   }
   window.addEventListener('keydown', onKey)
   return () => window.removeEventListener('keydown', onKey)
-}, [ui, requestLeave])
+  // `cardCtx` MUST be in the deps once Task 11 feeds real card context in — the handler
+  // reads cardCtx.hasFlipped, and a stale `false` would gate Enter permanently.
+}, [ui, requestLeave, cardCtx])
 ```
 
 And render the screens plus the layer host:
@@ -1857,6 +1860,7 @@ Expected: FAIL — no pack screen.
   border-radius: var(--radius);
 }
 
+.pack-row__select { display: flex; align-items: center; gap: 0.9rem; flex: 1; }
 .pack-row__name { flex: 1; }
 .pack-row__count { color: var(--muted); font-size: 0.85rem; }
 
@@ -1898,15 +1902,20 @@ export default function PackSelectScreen(
 
       <div className="pack-list">
         {packs.map(p => (
-          <label className="pack-row" key={p.id}>
-            <input
-              type="checkbox"
-              data-testid={`pack-toggle-${p.id}`}
-              checked={selectedIds.includes(p.id)}
-              onChange={e => onToggle(p.id, e.target.checked)}
-            />
-            <span className="pack-row__name">{p.name}</span>
-            <span className="pack-row__count">{p.cardCount} cards</span>
+          {/* The Preview button is a SIBLING of the label, not inside it: <label>'s
+              content model forbids nested labelable elements, and nesting folds
+              "Preview" into the checkbox's accessible name. */}
+          <div className="pack-row" key={p.id}>
+            <label className="pack-row__select">
+              <input
+                type="checkbox"
+                data-testid={`pack-toggle-${p.id}`}
+                checked={selectedIds.includes(p.id)}
+                onChange={e => onToggle(p.id, e.target.checked)}
+              />
+              <span className="pack-row__name">{p.name}</span>
+              <span className="pack-row__count">{p.cardCount} cards</span>
+            </label>
             <button
               type="button"
               className="pack-row__preview"
@@ -1915,7 +1924,7 @@ export default function PackSelectScreen(
             >
               Preview
             </button>
-          </label>
+          </div>
         ))}
       </div>
     </div>
@@ -1928,16 +1937,16 @@ export default function PackSelectScreen(
 Selection writes through immediately so it survives a crash as well as a clean exit.
 
 ```tsx
+// The IPC write stays OUTSIDE the setState updater — StrictMode invokes updaters
+// twice, which would double-fire the disk write.
 const togglePack = useCallback(async (id: string, selected: boolean) => {
-  setState(prev => {
-    if (!prev) return prev
-    const next = selected
-      ? [...prev.selectedPackIds, id]
-      : prev.selectedPackIds.filter(x => x !== id)
-    void window.flashcards.state.set({ selectedPackIds: next })
-    return { ...prev, selectedPackIds: next }
-  })
-}, [])
+  if (!state) return
+  const next = selected
+    ? [...state.selectedPackIds, id]
+    : state.selectedPackIds.filter(x => x !== id)
+  setState({ ...state, selectedPackIds: next })
+  await window.flashcards.state.set({ selectedPackIds: next })
+}, [state])
 ```
 
 ```tsx
@@ -1952,7 +1961,14 @@ const togglePack = useCallback(async (id: string, selected: boolean) => {
 )}
 ```
 
-Add `const [previewPackId, setPreviewPackId] = useState<string | null>(null)` alongside the other state. Task 12 consumes it.
+Add the preview state alongside the other state. Only the setter is destructured —
+`previewPackId` itself has no reader until Task 13, and `noUnusedLocals` rejects an unused
+binding:
+
+```tsx
+// Task 13 puts `previewPackId` back in the hole and reads it.
+const [, setPreviewPackId] = useState<string | null>(null)
+```
 
 - [ ] **Step 6: Run the tests**
 
@@ -2394,11 +2410,14 @@ export default function LearnScreen({
   }, [packIds])
 
   // Reshuffle on entry and on every explicit reshuffle.
+  //
+  // IMPORTANT: deck, index and hasFlipped must change in ONE commit. If they are separate
+  // state updated from an effect, there is a render where allCards is set but deck is
+  // still [] — and `index >= deck.length` is `0 >= 0`, which flashes the END SCREEN for a
+  // frame before the first card appears. Hold them in a single session object.
   useEffect(() => {
     if (!allCards) return
-    setDeck(shuffle(allCards))
-    setIndex(0)
-    setHasFlipped(false)
+    setSession({ deck: shuffle(allCards), index: 0, hasFlipped: false })
   }, [allCards, seed])
 
   const current = deck[index] ?? null
@@ -2415,8 +2434,13 @@ export default function LearnScreen({
   }, [hasFlipped])
 
   // Parent signals drive keyboard advance without lifting flip state out of Card.
+  // Baseline against the value at mount, the same pattern Card uses for flipSignal:
+  // App's counter persists across Learn sessions, so a `> 0` test would fire an advance
+  // on every re-entry into the screen.
+  const advanceBaseline = useRef(advanceSignal)
   useEffect(() => {
-    if (advanceSignal > 0) advance()
+    if (advanceSignal === advanceBaseline.current) return
+    advance()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [advanceSignal])
 
@@ -2441,8 +2465,12 @@ export default function LearnScreen({
     <div className="learn" data-testid="screen-learn">
       <LeaveButton onLeave={onRequestLeave} label="Return to main menu" />
 
+      {/* `key={index}` guards the merged deck: card ids are unique only WITHIN a pack,
+          so two selected packs can both contain "c1". Keying on position guarantees a
+          remount (and therefore a front-face reset) on every advance regardless. */}
       {current && (
         <CardView
+          key={index}
           card={current}
           flipSignal={flipSignal}
           onFirstFlip={() => setHasFlipped(true)}
@@ -2450,10 +2478,13 @@ export default function LearnScreen({
         />
       )}
 
-      {/* Pre-mounted so advancing swaps an element rather than mounting one. */}
+      {/* Pre-mounted so advancing swaps an element rather than mounting one.
+          `preload` is REQUIRED: it renames the test ids to card-preload/-inner and sets
+          aria-hidden. Without it there are two data-testid="card" nodes in the DOM and
+          every card/learn locator fails with a Playwright strict-mode violation. */}
       {next && (
         <div className="card-preload" aria-hidden="true">
-          <CardView card={next} />
+          <CardView card={next} preload />
         </div>
       )}
 
@@ -2477,10 +2508,11 @@ const [cardCtx, setCardCtx] = useState<{ card: CardType | null; hasFlipped: bool
 // Stable identity — see the note in LearnScreen. Bail out when nothing changed so
 // a repeat call cannot trigger another render.
 const handleCardContext = useCallback((card: CardType | null, hasFlipped: boolean) => {
+  // Reference equality, NOT id equality: two selected packs can both contain "c1",
+  // and an id compare would leave cardCtx pointing at the previous pack's card
+  // (and therefore the wrong moreInfo). Deck elements are stable objects.
   setCardCtx(prev =>
-    prev.card?.id === card?.id && prev.hasFlipped === hasFlipped
-      ? prev
-      : { card, hasFlipped },
+    prev.card === card && prev.hasFlipped === hasFlipped ? prev : { card, hasFlipped },
   )
 }, [])
 ```
@@ -2967,6 +2999,13 @@ if (previewPackId) {
 ```
 
 - [ ] **Step 4: Pass the props from `src/app/App.tsx`**
+
+First restore the state binding Task 9 left setter-only:
+
+```tsx
+const [previewPackId, setPreviewPackId] = useState<string | null>(null)
+```
+
 
 ```tsx
 previewPackId={previewPackId}

@@ -162,11 +162,19 @@ Every screen has a top-left leave button. What it does depends on the screen:
 
 | Screen | Leave button does | Confirmation |
 |---|---|---|
-| Title | Quits the app | — |
-| Learn | Returns to main menu | "Return to Main Menu?" (Escape confirms, Space/Enter denies) |
-| Pack Selection | Returns to main menu | Confirmation |
-| Settings | Returns to main menu | Asks whether to **save settings** before leaving |
-| Make a Pack | Returns to main menu | Asks **"are you sure you want to leave?"** — but all changes to the pack are **saved on leave regardless** |
+| Title | Quits the app | — (`Escape` quits too, matching both buttons) |
+| Learn | Returns to main menu | **Always** asks "Return to Main Menu?" (Escape confirms, Space/Enter denies) |
+| Pack Selection | Returns to main menu | **None.** Selection is written to disk on every toggle, so there is nothing to lose. |
+| Settings | Returns to main menu | **Only if settings have changed.** Clean settings leave immediately. |
+| Make a Pack | Returns to main menu | **Only if the pack has changed.** An untouched pack leaves immediately. Changes still save on leave. |
+
+**The rule: never ask a question that has only one sensible answer.** A confirmation on a
+screen with nothing to lose is friction, not safety. Pack Selection has nothing to lose by
+construction. Settings and Make a Pack have something to lose only once the user has
+actually changed something, so they track a dirty state and ask only then.
+
+Learn is the exception and asks unconditionally — leaving a study session mid-deck is
+losing your place, and the Escape-Escape gesture is deliberate.
 
 ---
 
@@ -310,6 +318,10 @@ untouched until the new app works, then it goes.
 | Q5 | Card back click | Click always flips, unless it lands on More Info. |
 | — | Scoring | **None.** Cut entirely. |
 | — | Shuffle timing | Deck reshuffles on every entry into Learn. |
+| — | Leave confirmations | Only when something can be lost. See §5. |
+| — | Flip duration | 525ms — 80% of the original speed. |
+| — | Escape on Title | Quits the app outright. |
+| — | Key auto-repeat | Honoured only for More Info scrolling. |
 | — | More Info format | **Markdown**, to allow tables/images/charts later. |
 | — | Visual default | Minimal and customizable; **space theme** by default. |
 | — | Theme kinds | Static or dynamic, distinguished in Settings. |
@@ -351,8 +363,12 @@ the pack file format is designed now so MCP can write to it without a migration.
   a **directory per pack** (`packs/<id>/v3.json` + a `current` pointer) rather than
   `packs/<id>.json`. This changes what the MCP server writes into, so it should be settled
   before the storage layer is built.
-- **Q9 — Make a Pack confirmation.** Leaving asks "are you sure?" but saves everything
-  regardless. If nothing is lost either way, what is the confirmation protecting against?
+- **Q12 — Settings' confirmation wording.** Now only fires when settings are actually
+  dirty, so the three-way ambiguity is narrower — but "Save settings before leaving?" still
+  reads as save/discard/cancel while the dialog offers two answers. Reword to
+  "Leave without saving?" when Settings gains real content.
+- **Q9 — Make a Pack confirmation.** *Resolved:* it now asks only when the pack has
+  actually changed. An untouched pack leaves silently.
 
 ---
 
@@ -385,3 +401,27 @@ worth, and the less Tauri's smaller footprint buys — since footprint is not th
 from the card. A dynamic background that cannot hold framerate on weak hardware drops its
 own frames without touching the card's. This is what makes "jittery background, smooth
 flip" an achievable combination rather than a contradiction.
+
+---
+
+## 16. Known gaps at the end of the first build
+
+Found by the final review. None blocks the app running; all are recorded so they are not
+rediscovered later.
+
+- **A failed disk write is silent.** Spec §5.4 calls for a non-blocking message when a
+  write fails. In-memory state is kept (so nothing is lost mid-session), but the rejection
+  is unhandled and the user is told nothing.
+- **Seeding is gated on `hasLaunchedBefore`, not on `packs/` being absent.** If
+  `state.json` is corrupted, the seed re-runs and appends an identical second version of
+  each bundled pack. Harmless, but it is not what §5.3 describes.
+- **No end-to-end test that re-entering Learn reshuffles.** The shuffle itself is unit
+  tested with a fixed RNG; the "fresh order on every entry" promise is not covered by a
+  Playwright test.
+- **Packaging polish.** `react`, `marked` and `dompurify` are bundled by Vite *and*
+  shipped again inside the asar — they belong in `devDependencies`. `package.json` has no
+  `description`, `author`, or icon, so the build carries the default Electron icon.
+- **Windows and Linux installers are built but untested.** They were cross-built from
+  macOS and only checked for the presence of the bundled pack.
+- **The presidents pack carries test scaffolding.** Every card's More Info is its answer
+  repeated 100 times. Run `node scripts/fill-more-info.mjs --clear` to strip it.

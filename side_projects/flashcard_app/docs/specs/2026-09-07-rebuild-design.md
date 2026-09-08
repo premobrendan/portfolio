@@ -143,7 +143,10 @@ type Card = {
 }
 
 type Pack = { id: string; name: string; schemaVersion: 1; cards: Card[] }
-type PackMeta = { id: string; name: string; cardCount: number; currentVersion: number }
+type PackMeta = {
+  id: string; name: string; cardCount: number
+  currentVersion: number; schemaVersion: 1
+}
 type AppState = { selectedPackIds: string[]; hasLaunchedBefore: boolean }
 type Settings = { themeId: string; themeMode: 'static' | 'dynamic' }
 ```
@@ -213,11 +216,26 @@ per-component instead would reintroduce that bug on every new overlay.
 
 ```ts
 type ConfirmIntent =
-  | { type: 'leaveLearn' }      // "Return to Main Menu?"
-  | { type: 'leavePacks' }
-  | { type: 'leaveSettings' }   // "Save settings before leaving?"
-  | { type: 'leaveMakePack' }   // "Are you sure you want to leave?" (saves regardless)
+  | { type: 'leaveLearn' }      // "Return to Main Menu?"     — always
+  | { type: 'leaveSettings' }   // "Save settings before leaving?" — only when dirty
+  | { type: 'leaveMakePack' }   // "Are you sure you want to leave?" — only when dirty
 ```
+
+**Leave policy per screen.** A confirmation is only raised when leaving could lose
+something:
+
+```ts
+type LeavePolicy =
+  | { kind: 'quit' }                            // title
+  | { kind: 'immediate' }                       // packs — writes through on every toggle
+  | { kind: 'always'; intent: ConfirmIntent }   // learn
+  | { kind: 'ifDirty'; intent: ConfirmIntent }  // settings, makepack
+```
+
+`ifDirty` screens report their dirty state up to `App`; while a screen is clean, `Escape`
+and the leave button return to Title directly. Both such screens are placeholders today
+and are never dirty, so both currently leave immediately — the machinery exists so that
+adding real content does not require rethinking navigation.
 
 ---
 
@@ -242,7 +260,8 @@ through to `state.json` immediately, so it survives a crash as well as a clean e
 session. Preview reuses `Card.tsx` and its flip; it does not advance through a deck, gate
 on flips, or touch session state.
 
-Leave button → confirm → Title.
+Leave button → Title, **with no confirmation**. Every toggle is already on disk, so there
+is nothing a confirmation could protect.
 
 ### 7.3 Learn
 
@@ -278,8 +297,7 @@ ever."
 Reachable screens with the correct leave behavior wired up and no other content. Settings
 confirms save-before-leave; Make a Pack confirms leave and saves regardless.
 
-> **Carried open question (Q9):** Make a Pack's confirmation guards nothing, since leaving
-> saves. Built as specified; likely wants to become a validation warning later.
+Make a Pack confirms only when the pack is dirty; leaving still saves regardless.
 
 ---
 
@@ -304,6 +322,15 @@ The complete matrix. Rows are the active top layer.
 Mouse parity: every action above has a click target. More Info additionally has an **X** in
 a top corner.
 
+**Auto-repeat drives More Info scrolling and nothing else.** A held key delivers repeated
+keydown events, and every other action in this matrix is dangerous or meaningless when
+repeated: held `Escape` would walk confirm → leave → quit in about half a second, held
+`Space` would flip the card over and over, held `Enter` would race through the deck, held
+`Tab` would toggle the panel open and shut. `keys.ts` exports `repeatable(intent)`, true
+only for `scrollMoreInfo`; the listener drops repeats for everything else. `preventDefault`
+runs *before* that gate — a suppressed repeat is still a key the app owns, so a held `Tab`
+must not walk focus and a held `Space` must not scroll the document.
+
 **Escape is strictly "pop one layer."** With More Info open, the first Escape closes the
 panel and a *second* Escape raises the leave confirmation. This falls out of §6.1 for free
 rather than needing special-casing.
@@ -326,6 +353,17 @@ The flip is the one thing that never degrades. Five rules, all enforced in build
    parsing all happen before the animation starts. More Info Markdown is parsed when the
    card becomes current, not when the panel opens.
 5. **`contain: layout paint` on the card**, so its work cannot invalidate the rest of the tree.
+
+**Reset by remount, not by effect.** The card resets to its front face by being keyed on
+identity, not by an effect setting `flipped = false` after commit. An effect runs
+post-commit, so the new card's text would land while the inner is still rotated 180°, and
+the reset would then *animate* back — briefly showing the next card's answer before its
+question. A keyed remount resets state and DOM together and never runs a transition.
+
+**Paint containment needs a bleed.** `contain: paint` clips to the padding box, but a card
+turning under 1400px perspective projects past its own edges (the near half scales by
+~1.28). The stage carries padding plus an equal negative margin, so the clip box is larger
+while the layout footprint stays the card's size.
 
 **Background isolation.** `Background.tsx` renders on its own compositor layer with its own
 stacking context, entirely separate from the card. A dynamic theme that cannot hold
