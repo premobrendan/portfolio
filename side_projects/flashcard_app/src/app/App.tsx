@@ -12,13 +12,25 @@ import { keyActionFor, type KeyContext } from './keys'
 import { initialUI, reduce, topLayer, type Screen } from './machine'
 import '../styles/screens.css'
 
-/** What Escape raises on each screen. Title has none — its leave button quits outright. */
-const LEAVE_INTENT: Record<Screen, ConfirmIntent | null> = {
-  title: null,
-  learn: { type: 'leaveLearn' },
-  packs: { type: 'leavePacks' },
-  settings: { type: 'leaveSettings' },
-  makepack: { type: 'leaveMakePack' },
+/**
+ * What leaving a screen costs, and therefore whether it is worth a question.
+ * The rule (vision §5): never ask a question that has only one sensible answer.
+ */
+type LeavePolicy =
+  | { kind: 'quit' }
+  | { kind: 'immediate' }
+  | { kind: 'always'; intent: ConfirmIntent }
+  | { kind: 'ifDirty'; intent: ConfirmIntent }
+
+const LEAVE_POLICY: Record<Screen, LeavePolicy> = {
+  // TitleScreen's own leave button quits; nothing routed through here raises it.
+  title: { kind: 'quit' },
+  // Leaving mid-deck loses your place, so this one asks unconditionally.
+  learn: { kind: 'always', intent: { type: 'leaveLearn' } },
+  // Every toggle is already written to disk — a confirmation could protect nothing.
+  packs: { kind: 'immediate' },
+  settings: { kind: 'ifDirty', intent: { type: 'leaveSettings' } },
+  makepack: { kind: 'ifDirty', intent: { type: 'leaveMakePack' } },
 }
 
 export default function App() {
@@ -66,10 +78,38 @@ export default function App() {
     await window.flashcards.state.set({ selectedPackIds: next })
   }, [state])
 
+  /**
+   * Which screens currently have unsaved work. Settings and Make a Pack are placeholders
+   * with nothing to change, so nothing sets a flag here yet — the map exists so that
+   * giving them real content is a screen change, not a navigation redesign.
+   */
+  const [dirty, setDirty] = useState<Partial<Record<Screen, boolean>>>({})
+
+  /** Every navigation clears it: one screen is live at a time, and it arrives clean. */
+  const go = useCallback((screen: Screen) => {
+    setDirty({})
+    dispatch({ type: 'goto', screen })
+  }, [])
+
+  /** An `ifDirty` screen reports its own state up; the policy itself stays here. */
+  const setScreenDirty = useCallback((screen: Screen, isDirty: boolean) => {
+    setDirty(prev => (prev[screen] === isDirty ? prev : { ...prev, [screen]: isDirty }))
+  }, [])
+
+  const confirmLeave = useCallback((intent: ConfirmIntent) => {
+    dispatch({ type: 'pushLayer', layer: { kind: 'confirm', intent } })
+  }, [])
+
   const requestLeave = useCallback(() => {
-    const intent = LEAVE_INTENT[ui.screen]
-    if (intent) dispatch({ type: 'pushLayer', layer: { kind: 'confirm', intent } })
-  }, [ui.screen])
+    const policy = LEAVE_POLICY[ui.screen]
+    switch (policy.kind) {
+      // Escape on the title screen does nothing; its leave button owns the quit.
+      case 'quit': return
+      case 'immediate': return go('title')
+      case 'always': return confirmLeave(policy.intent)
+      case 'ifDirty': return dirty[ui.screen] ? confirmLeave(policy.intent) : go('title')
+    }
+  }, [ui.screen, dirty, go, confirmLeave])
 
   // Keyboard flip/advance reach the Learn screen as bumped counters, so flip state can
   // stay inside Card and nothing here re-renders mid-flip.
@@ -106,17 +146,15 @@ export default function App() {
         case 'openMoreInfo': openMoreInfo(); break
         case 'closeMoreInfo': dispatch({ type: 'popLayer' }); break
         case 'requestLeave': requestLeave(); break
-        case 'confirmLeave': dispatch({ type: 'goto', screen: 'title' }); break
+        case 'confirmLeave': go('title'); break
         case 'denyLeave': dispatch({ type: 'popLayer' }); break
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [ui, cardCtx, requestLeave, openMoreInfo])
+  }, [ui, cardCtx, requestLeave, openMoreInfo, go])
 
   if (!state || !settings) return <div className="app-root" data-testid="app-root" />
-
-  const go = (screen: Screen) => dispatch({ type: 'goto', screen })
 
   return (
     <div className="app-root" data-testid="app-root">
@@ -147,13 +185,23 @@ export default function App() {
           onRequestLeave={requestLeave}
         />
       )}
-      {ui.screen === 'settings' && <SettingsScreen onRequestLeave={requestLeave} />}
-      {ui.screen === 'makepack' && <MakePackScreen onRequestLeave={requestLeave} />}
+      {ui.screen === 'settings' && (
+        <SettingsScreen
+          onRequestLeave={requestLeave}
+          onDirtyChange={d => setScreenDirty('settings', d)}
+        />
+      )}
+      {ui.screen === 'makepack' && (
+        <MakePackScreen
+          onRequestLeave={requestLeave}
+          onDirtyChange={d => setScreenDirty('makepack', d)}
+        />
+      )}
 
       {topLayer(ui)?.kind === 'confirm' && (
         <ConfirmDialog
           intent={(topLayer(ui) as { kind: 'confirm'; intent: ConfirmIntent }).intent}
-          onConfirm={() => dispatch({ type: 'goto', screen: 'title' })}
+          onConfirm={() => go('title')}
           onDeny={() => dispatch({ type: 'popLayer' })}
         />
       )}

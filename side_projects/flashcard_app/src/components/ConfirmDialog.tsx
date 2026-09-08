@@ -3,7 +3,6 @@ import '../styles/overlay.css'
 
 export const CONFIRM_COPY: Record<ConfirmIntent['type'], string> = {
   leaveLearn: 'Return to Main Menu?',
-  leavePacks: 'Return to Main Menu?',
   leaveSettings: 'Save settings before leaving?',
   leaveMakePack: 'Are you sure you want to leave?',
 }

@@ -21,7 +21,6 @@ export type Settings = { themeId: string; themeMode: 'static' | 'dynamic' }
 
 export type ConfirmIntent =
   | { type: 'leaveLearn' }
-  | { type: 'leavePacks' }
   | { type: 'leaveSettings' }
   | { type: 'leaveMakePack' }
 
