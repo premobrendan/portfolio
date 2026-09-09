@@ -1,0 +1,21 @@
+1. Install Python (skip if "python3 --version" already prints 3.11 or higher)
+
+   Mac:       brew install python          (Homebrew: https://brew.sh)
+   Windows:   download from https://www.python.org/downloads/ and tick
+              "Add python.exe to PATH" during the install
+
+2. Install the packages
+
+   pip install pandas openpyxl msoffcrypto-tool matplotlib
+
+   openpyxl is not imported anywhere in the code, but pandas needs it to open
+   .xlsx files, so it does have to be installed.
+
+3. Run it, from this folder
+
+   cd path/to/rose-project
+   python3 dosages_batch.py
+
+   It reads every .xlsx in raw_data/ and writes the decrypted export to data/
+   and the totals to output/, one set of files per workbook. It will ask you
+   for the workbook password, just type it in normally.
