@@ -109,9 +109,9 @@ Email: bdanp1998@gmail.com
     \item How do you optimize SQL queries for performance?
     \answer{Breaking apart large chunks with nested \texttt{SELECT} subqueries is a good place to start. Being as precise as you
     can with column names, i.e., not using \texttt{SELECT *} but instead \texttt{SELECT column\_name1, column\_name2 ...}, and
-    ranges of data, i.e., using \texttt{LIMIT} when testing and using conditional \texttt{WHERE} statements instead of deterministic ones
-    (\texttt{WHERE date >= 2020-01-01 AND date < 2021-01-01} vs. \texttt{WHERE date = 2020}) are another two places you can save on
-    processing time.}
+    ranges of data, i.e., using \texttt{LIMIT} when testing and using range predicates such as
+    \texttt{WHERE date >= 2020-01-01 AND date < 2021-01-01} instead of \texttt{WHERE date = 2020},
+    are another two places you can save on processing time.}
 
     \item What certifications or training have you received in data analysis?
     \answer{I have a master's degree in Data Science from SUNY Albany and I was trained in Sigma Computing on the job at 
