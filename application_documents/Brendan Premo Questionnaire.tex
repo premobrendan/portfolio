@@ -1,0 +1,166 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\pagestyle{empty}
+
+% Uniform answer block: same indent and spacing under every question.
+% Indents the whole block, so wrapped lines stay aligned with the first.
+% Leave the argument empty for questions that are not yet answered.
+\newcommand{\answer}[1]{%
+  \par\vspace{0.35em}%
+  \begin{itemize}[label={},leftmargin=1.5em,topsep=0pt,partopsep=0pt,parsep=0pt,itemsep=0pt]
+    \item #1
+  \end{itemize}%
+  \vspace{0.35em}%
+}
+
+\begin{document}
+
+\noindent
+Candidate's Name: Brendan Premo\\
+Phone Number: (518) 588-0855\\
+Email: bdanp1998@gmail.com
+
+\vspace{1em}
+
+\begin{enumerate}[leftmargin=*]
+    \item Are you currently employed?
+    \answer{No, but I am working freelance on some small projects that I am being compensated for by the clients in question.}
+
+    \item How do you ensure data visualization accuracy and integrity?
+    \answer{In general, one must be cognizant of the source one is getting the data from and be perceptive enough during an 
+    exploratory data analysis (EDA) to find any outliers before making the visualization in the first place. They would 
+    also need to double- and triple-check that the calculations were correct (as I've seen a few typos in some of the work
+    I had to look over at Soria Analytics) and finally personally consider whether the display is proper for the data, as well
+    as get an outsider's opinion on the display to rectify any lack of clarity. For me, if I look at a visualization and
+    it doesn't \textit{feel} right, I'll give this list another once-over to see if I missed anything. If I still can't 
+    remedy my unease, I'll ask someone to check it over, just to make sure I'm not being overly critical of the work.}
+
+    \item What data visualization tools have you used (e.g., Tableau, Power BI, D3.js)?
+    \answer{I primarily used Python and its packages in my schooling (pyplot, seaborn, etc.) and Sigma Computing during my time at 
+    Soria Analytics. I've also used many recreationally, such as Tableau, Power BI, Databricks, and, to a lesser extent, Excel for 
+    data visualization.}
+
+    \item Can you describe the differences between parametric and non-parametric tests?
+    \answer{Parametric and non-parametric tests differ based on the existence of an assumable distribution, for example, a
+    normal distribution given by the Central Limit Theorem (CLT) when a sample has size $n\geq30$. Parametric tests rely on a 
+    distribution, most commonly a normal distribution, for their tests to work, whereas non-parametric tests don't have the 
+    luxury of an underlying distribution and therefore require more nuanced approaches. Metrics are also considered differently; 
+    for example, we care a lot about means and standard deviations in parametric tests, but care more about medians and 
+    ranks for non-parametric tests. In general, parametric tests have greater statistical power than non-parametric tests, but require 
+    assumptions and thus cannot be used on all datasets. Additionally, parametric tests require just the raw data, whereas
+    non-parametric tests look at the \textit{ranks} of the data for a proper analysis.}
+
+    \item How do you communicate data findings and recommendations to stakeholders?
+    \answer{I think visualization should be doing most of the work; if a chart needs a paragraph of
+    explanation before it makes any sense, that's usually a sign the chart needs another pass. There's a school of thought
+    that the visual should be the entire deliverable, since anything you write on top of it risks pushing your own
+    bias onto whoever is looking at it, and I think that's a fair concern worth designing around. However, I don't think
+    the visual can always carry all the understanding an analyst wants to unload. Living in the data day to day means we
+    turn up things that aren't obvious at a glance, and there's only ever time to build so many charts, so leaving the whole
+    story to whichever visuals happened to get made has its own kind of bias baked into it. Our job is to hand a client 
+    actionable insights, and sometimes no amount of polish on a chart is going to get an unseasoned reader to what our
+    trained eyes are seeing. So in practice I lead with the visualization and keep a short synopsis next to it: what the
+    data shows, what it doesn't, and what I'd want to look at next. I try to keep the wording to what the data actually
+    supports and flag where I'm inferring rather than measuring, so a stakeholder can follow the reasoning and push back on
+    it instead of just taking my word for it. That saves them time without taking the decision out of their hands.}
+
+    \item Can you explain your experience with machine learning or predictive modeling?
+    \answer{During my master's Data Science program, on top of learning and proving the theory mathematically, we were pushed from 
+    write the algorithm by hand rather than using prebuilt packages such as scikit learn. This process, while taxing, gave me a 
+    deeper understanding of the models I use: both how they work and what use cases they have. After I had finished assignments, 
+    I would do them again using the analysis packages to enrich myself further, focusing more on the analysis than the algorithm. 
+    Many of my assignments in the Data Science program involved making some kind of predictive model, from EDA to 
+    cross-validation to tuning, and a large number of these assignments were in the machine learning curriculum, so I'd say
+    I have a lot of experience in my educational background. At Soria Analytics, I made a model to predict the release of new 
+    data using Seasonal Autoregressive Integrated Moving Average (SARIMA) that we used for our calendar and newsletter, notifying
+    our customers of upcoming data releases.}
+
+    \item How do you handle data confidentiality and security?
+    \answer{I try to work inside whatever environment the client already has set up for their data instead of pulling it
+    somewhere more convenient for me. At Soria Analytics most of what I touched was government sourced public health data, though some
+    of it came to us under a confidentiality agreement, and in those cases the rule of thumb was that the data lives where
+    the client says it lives; I'm not making my own copies on my laptop just to make my life easier. If it does have to
+    move, it moves encrypted, both on the way there and once it's sitting somewhere. The rest of it is really just habit: I
+    only pull the columns I actually need, I don't talk about what I'm finding with anyone outside the client and whoever
+    else is on the project with me, and if I'm not sure whether I'm allowed to send something, I ask first rather than
+    after. At the end of the day the client is the one on the hook if their data gets out, so their rules beat whatever I
+    would have preferred to do.}
+
+    \item How would you approach a complex data analysis problem?
+    \answer{I try to break apart big problems into bite-sized pieces, usually by writing up a flow chart or outline on a 
+    whiteboard. If I'm working in Python, I like to use Jupyter notebooks and work one cell at a time to check the analysis as I go.
+    The notebooks incidentally serve as a paper trail of my work for me or others to later validate the script, and I personally
+    feel more comfortable in an environment where I can easily see what's going on with the data.}
+
+    \item How do you handle data security and access control?
+    \answer{Generally, people should have the least access they can get away with while still being able to do their job, 
+    and that access should come from what role someone has rather than being handed out one person at a time, so when they switch 
+    projects or leave you can take it back cleanly instead of hunting around for everything they were given. In practice that 
+    means an analyst gets the tables they need and not a blanket admin login, nobody is sharing credentials, and there's a log of who 
+    looked at what. At Soria Analytics, this mattered most for our own tooling, i.e. who could edit a pipeline or a dashboard and who 
+    could only look at it. With patient data the same idea holds with a lot more on the line, so role-based permissions, two-factor on
+    anything touching protected health information, and someone actually going back through the list every so often to see who still 
+    needs access, since permissions have a way of piling up if nobody is checking.}
+
+    \item How do you optimize SQL queries for performance?
+    \answer{Breaking apart large chunks with nested \texttt{SELECT} subqueries is a good place to start. Being as precise as you
+    can with column names, i.e., not using \texttt{SELECT *} but instead \texttt{SELECT column\_name1, column\_name2 ...}, and
+    ranges of data, i.e., using \texttt{LIMIT} when testing and using conditional \texttt{WHERE} statements instead of deterministic ones
+    (\texttt{WHERE date >= 2020-01-01 AND date < 2021-01-01} vs. \texttt{WHERE date = 2020}) are another two places you can save on
+    processing time.}
+
+    \item What certifications or training have you received in data analysis?
+    \answer{I have a master's degree in Data Science from SUNY Albany and I was trained in Sigma Computing on the job at 
+    Soria Analytics. Most of my experience in other programs is recreational, though I am in the process of getting
+    certifications online through LinkedIn Learning.}
+
+    \item What statistical methods have you used in your analysis (e.g., regression, hypothesis testing)?
+    \answer{During my schooling, I used everything under the sun: ridge regression, principal component analysis, 
+    stochastic gradient descent, Hidden Markov Models and neural networks, to name a few. I have taken courses covering 
+    Bayesian statistics, non-parametric methods and other advanced statistical tests, including hypothesis testing
+    with various distributions.}
+
+    \item Will you be able to dedicate 20-40 hours a week to the company?
+    \answer{Yes. I'd happily work part-time but would prefer a full-time position.}
+
+    \item How long would you expect to work for us if hired and how much will you request per hour if you are hired?
+    \answer{My goal after leaving Soria Analytics was to find a stable work environment to fully establish my career
+    as a data analyst, and I have a vast love for healthcare data, so I can see myself working here for years. My
+    salary expectations are currently within the ballpark of \$75,000, so around \$36 an hour at full-time.}
+
+    \item Can you walk me through a recent data analysis project you worked on?
+    \answer{My pride and joy at Soria Analytics was an analysis I did on the Centers for Medicare \& Medicaid Services
+    (CMS) Star Ratings of Medicare contracts. The goal was to take the raw data files CMS uploads outlining every contract's 
+    rating for each measure of their plan and construct the final star rating for each contract from scratch. Since 
+    each measure has varying levels of importance, each measure has varying sway over the contract's overall rating. There 
+    were also bonuses given to a contract's rating based on the mean and variance of the measure scores, for example a plan 
+    with a high average measure score and a low variance earned a 0.4 boost to the contract's star rating, a middling average 
+    and middling variance gave a bonus of 0.1, etc. The contracts were also boosted or penalized by an adjustment called the Categorical Adjustment 
+    Index (CAI), which is based on a contract's share of members who are low-income subsidy / dual-eligible or disabled. A 
+    contract with a high population of enrollees who meet the above conditions sees their rating increase, whereas a low
+    population sees their rating decrease. From these metrics, I needed to calculate the individual measure rating from the 
+    raw data files into its proper star using the specialized cut points for each measure, then get each
+    contract's raw star rating, add the bonuses, and finally round to the nearest half star for each contract.
+    CMS doesn't release all of its methods of calculating the star ratings of contracts, so it isn't feasible to get
+    full accuracy on every contract's star rating, but my accuracy was over 92\%, which the client who asked for this
+    analysis stated was better than his internal team could get.
+    
+    The visualizations I used for this analysis were two different Waterfall charts: one for a parent company and one for an 
+    individual contract. The contract waterfalls showed the year-to-year change between star ratings of that contract by 
+    displaying the major movers of the rating so one could see what made that contract's rating go up or down. The 
+    company waterfalls showed which \textit{contracts} caused the most movement in the company's enrollment-weighted
+    star rating. This was the real motivation for this analysis, as the files for contract measure data are 
+    released prior to CMS's final determination on every contract's star rating, so one can theoretically figure out 
+    a parent company's enrollment-weighted average star rating before the official CMS release. To give an example,
+    when Humana's H5216 contract, which was roughly 45\% of its Medicare Advantage membership, fell from 4.5 to 3.5 
+    stars for 2025, the share of members in 4+ star plans went from 94\% to 25\%, and the stock dropped as much as 22\% in 
+    a day, which was a \$4 billion loss of market value. This analysis allows investors to make informed decisions on
+    which companies will have a good or bad day at the stock exchange, so it was both rewarding to get an accurate
+    result and to create something readily useful for investors.}
+\end{enumerate}
+
+\end{document}
