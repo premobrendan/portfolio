@@ -49,7 +49,9 @@ rose-project/rose_project.zip
 # Scratch / in-progress coursework (kept local)
 working/
 
-# Cover letters (kept local)
+# Cover letters (kept local). The lowercase directory is the real one — the pattern
+# below it only ever matched a differently-named file.
+application_documents/cover letters/
 application_documents/*Cover Letter*
 
 
@@ -58,3 +60,6 @@ side_projects/palindrome_test_strings.txt
 
 # Superseded resume (kept local)
 application_documents/*Resume Old*
+
+# Legacy flashcard pack data, superseded by side_projects/flashcard_app (kept local)
+flashcard_legacy_packs/
