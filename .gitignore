@@ -53,6 +53,9 @@ working/
 # below it only ever matched a differently-named file.
 application_documents/cover letters/
 application_documents/*Cover Letter*
+# ...except the general-purpose one, which names no company and is published.
+!application_documents/Brendan Premo Cover Letter.tex
+!application_documents/Brendan Premo Cover Letter.pdf
 
 
 # Scratch test data
