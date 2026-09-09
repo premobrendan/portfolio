@@ -1,19 +1,24 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { Card as CardType } from '../../shared/types'
-import CardView from '../components/Card'
+import type { BackView, CardDirection } from '../../shared/types'
+import FlashCard from '../components/Card'
 import AdvanceArrow from '../components/AdvanceArrow'
 import LeaveButton from '../components/LeaveButton'
+import { buildDeck, type CardView } from '../lib/deck'
 import { shuffle } from '../lib/shuffle'
 import '../styles/learn.css'
 
 type Props = {
   packIds: string[]
+  /** Which way round to study. Applied when the pool is built, never on reshuffle. */
+  cardDirection: CardDirection
+  /** Which back a card with several shows. Same timing as direction. */
+  backView: BackView
   /** Bumped by the parent when Space is pressed. Forwarded to the card. */
   flipSignal: number
   /** Bumped by the parent when Enter is pressed after a flip. */
   advanceSignal: number
   /** MUST be a stable callback in the parent — it is called from an effect. */
-  onCardContext: (card: CardType | null, hasFlipped: boolean) => void
+  onCardContext: (view: CardView | null, hasFlipped: boolean) => void
   onOpenMoreInfo: () => void
   onRequestLeave: () => void
 }
@@ -24,13 +29,14 @@ type Props = {
  * commit per transition and never a render where the deck exists but the index does
  * not yet point into it. Flip state itself stays inside `Card`.
  */
-type Session = { deck: CardType[]; index: number; hasFlipped: boolean }
+type Session = { deck: CardView[]; index: number; hasFlipped: boolean }
 
-const freshSession = (cards: CardType[]): Session =>
-  ({ deck: shuffle(cards), index: 0, hasFlipped: false })
+const freshSession = (views: CardView[]): Session =>
+  ({ deck: shuffle(views), index: 0, hasFlipped: false })
 
 export default function LearnScreen({
-  packIds, flipSignal, advanceSignal, onCardContext, onOpenMoreInfo, onRequestLeave,
+  packIds, cardDirection, backView, flipSignal, advanceSignal, onCardContext, onOpenMoreInfo,
+  onRequestLeave,
 }: Props) {
   const [session, setSession] = useState<Session | null>(null)
 
@@ -43,11 +49,16 @@ export default function LearnScreen({
     let cancelled = false
     void (async () => {
       const packs = await Promise.all(packIds.map(id => window.flashcards.packs.read(id)))
-      if (!cancelled) setSession(freshSession(packs.flatMap(p => p.cards)))
+      // Direction is applied HERE, where the pool is built, and nowhere else. Doing it
+      // inside `freshSession` would re-expand the deck on every reshuffle — a mixed deck
+      // would double each time.
+      if (!cancelled) {
+        setSession(freshSession(buildDeck(packs.flatMap(p => p.cards), cardDirection, backView)))
+      }
     })()
     return () => { cancelled = true }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- keyed on content, see above
-  }, [packKey])
+  }, [packKey, cardDirection, backView])
 
   const current = session?.deck[session.index] ?? null
   const next = session?.deck[session.index + 1] ?? null
@@ -106,9 +117,9 @@ export default function LearnScreen({
       {/* `key={index}` guards the merged deck: card ids are unique only WITHIN a pack,
           so two selected packs can both contain "c1". Keying on position guarantees a
           remount (and therefore a front-face reset) on every advance regardless. */}
-      <CardView
+      <FlashCard
         key={session.index}
-        card={current}
+        view={current}
         flipSignal={flipSignal}
         onFirstFlip={markFlipped}
         onOpenMoreInfo={onOpenMoreInfo}
@@ -119,7 +130,7 @@ export default function LearnScreen({
           `getByTestId('card')` resolves to exactly one node. */}
       {next && (
         <div className="card-preload" aria-hidden="true">
-          <CardView card={next} preload />
+          <FlashCard view={next} preload />
         </div>
       )}
 

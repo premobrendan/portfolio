@@ -14,5 +14,5 @@
     "noEmit": true,
     "types": ["vite/client"]
   },
-  "include": ["src", "electron", "shared", "tests"]
+  "include": ["src", "electron", "shared", "tests", "mcp"]
 }

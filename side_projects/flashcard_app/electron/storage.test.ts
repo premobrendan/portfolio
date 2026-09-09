@@ -4,7 +4,7 @@ import os from 'node:os'
 import path from 'node:path'
 import {
   setStorageRoot, listPacks, readPack, writePackVersion,
-  readState, writeState, readSettings,
+  readState, writeState, readSettings, writeSettings,
 } from './storage'
 
 let root: string
@@ -66,7 +66,60 @@ describe('packs', () => {
 })
 
 describe('settings', () => {
-  it('defaults to the dynamic space theme', async () => {
-    expect(await readSettings()).toEqual({ themeId: 'space', themeMode: 'dynamic' })
+  it('defaults to the dynamic space theme, studied front-first', async () => {
+    expect(await readSettings()).toEqual({
+      themeId: 'space', themeMode: 'dynamic', cardDirection: 'forward', backView: 'primary',
+    })
+  })
+
+  it('gives a settings file written before card direction existed the default', async () => {
+    // DEFAULT_SETTINGS is spread under whatever is on disk, so an old profile gains the
+    // new key on read rather than needing a migration.
+    await writeSettings({ themeId: 'space' })
+    expect((await readSettings()).cardDirection).toBe('forward')
+  })
+})
+
+describe('migrating older data', () => {
+  it('folds a legacy single `secondary` into the secondaries list', async () => {
+    // Cards written before secondaries existed — the presidents pack was 45 of them.
+    const dir = path.join(root, 'packs', 'legacy')
+    fs.mkdirSync(dir, { recursive: true })
+    fs.writeFileSync(path.join(dir, 'v1.json'), JSON.stringify({
+      name: 'Legacy',
+      cards: [{ id: 'x', front: 'Lincoln', primary: '16th', secondary: 'Freed the slaves.' }],
+    }))
+    fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify({
+      id: 'legacy', name: 'Legacy', cardCount: 1, currentVersion: 1, schemaVersion: 1,
+    }))
+
+    const [card] = (await readPack('legacy')).cards
+    expect(card.secondaries).toEqual(['Freed the slaves.'])
+    // The old key does not survive alongside the new one.
+    expect(card).not.toHaveProperty('secondary')
+  })
+
+  it('leaves a card that already uses secondaries alone', async () => {
+    const dir = path.join(root, 'packs', 'modern')
+    fs.mkdirSync(dir, { recursive: true })
+    fs.writeFileSync(path.join(dir, 'v1.json'), JSON.stringify({
+      name: 'Modern',
+      cards: [{ id: 'y', front: 'a', primary: 'b', secondaries: ['c', 'd'] }],
+    }))
+    fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify({
+      id: 'modern', name: 'Modern', cardCount: 1, currentVersion: 1, schemaVersion: 1,
+    }))
+
+    expect((await readPack('modern')).cards[0].secondaries).toEqual(['c', 'd'])
+  })
+
+  it('maps a retired `mixed` direction onto random rather than breaking', async () => {
+    await writeSettings({ cardDirection: 'mixed' as never })
+    expect((await readSettings()).cardDirection).toBe('random')
+  })
+
+  it('defaults backView for a profile written before it existed', async () => {
+    await writeSettings({ themeId: 'space' })
+    expect((await readSettings()).backView).toBe('primary')
   })
 })

@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState, type TransitionEvent } from 'react'
-import type { Card as CardType } from '../../shared/types'
+import { useEffect, useMemo, useRef, useState, type TransitionEvent } from 'react'
+import { backText, frontText, viewKey, type CardView } from '../lib/deck'
+import { renderMarkdown } from '../lib/markdown'
 import '../styles/card.css'
 
 type Props = {
-  card: CardType
+  /** Which card, which way round, and which of its facts. See lib/deck.ts. */
+  view: CardView
   /** Bumped by the parent to request a flip from the keyboard. */
   flipSignal?: number
   onFirstFlip?: () => void
@@ -20,17 +22,33 @@ type Props = {
  * Flip state is LOCAL — it never enters the app reducer, so flipping does not
  * re-render the screen tree.
  *
- * Keying the stage on the card id makes React throw the whole stage away when the
+ * Keying the stage on the VIEW makes React throw the whole stage away when the
  * card changes: flip state, first-flip tracking, and the DOM node reset together.
+ * It must be the view rather than the card id, because one card can appear twice in a
+ * session (mixed mode) and a shared key would reuse the instance — arriving already
+ * flipped, showing its answer.
  * A freshly created element never runs a transition, so the next card appears
  * front-up instantly. (Resetting `flipped` in an effect instead would commit the
  * new card's text first and then animate the back face — its answer — into hiding.)
  */
 export default function Card(props: Props) {
-  return <CardStage key={props.card.id} {...props} />
+  return <CardStage key={viewKey(props.view)} {...props} />
 }
 
-function CardStage({ card, flipSignal = 0, onFirstFlip, onOpenMoreInfo, preload = false }: Props) {
+function CardStage({ view, flipSignal = 0, onFirstFlip, onOpenMoreInfo, preload = false }: Props) {
+  const card = view.card
+  /**
+   * Faces are Markdown, so a card can ask a question with a picture or a table — a flag
+   * on the front and the country on the back. Parsed here and memoised per face: it is a
+   * few microseconds for the plain-text cards that are the overwhelming majority, but it
+   * must not run again mid-flip.
+   *
+   * Sanitised by `renderMarkdown`, the same gate More Info uses. Card content is
+   * untrusted — a pack can be written by the MCP server, i.e. by a model.
+   */
+  const frontHtml = useMemo(() => renderMarkdown(frontText(view)), [view])
+  const backHtml = useMemo(() => renderMarkdown(backText(view)), [view])
+
   const [flipped, setFlipped] = useState(false)
   const innerRef = useRef<HTMLDivElement>(null)
   const hasFlippedRef = useRef(false)
@@ -83,11 +101,11 @@ function CardStage({ card, flipSignal = 0, onFirstFlip, onOpenMoreInfo, preload 
         onClick={flip}
       >
         <div className="card-face">
-          <div className="card-face__front-text">{card.front}</div>
+          <div className="card-face__front-text" dangerouslySetInnerHTML={{ __html: frontHtml }} />
         </div>
 
         <div className="card-face card-face--back">
-          <div className="card-face__primary">{card.primary}</div>
+          <div className="card-face__primary" dangerouslySetInnerHTML={{ __html: backHtml }} />
 
           {/* Rendered only when there is something to show AND somewhere to show it:
               pack preview reuses this card without a handler, and a control that

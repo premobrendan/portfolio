@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test'
 import type { Pack } from '../shared/types'
-import { launchWithFixture } from './helpers'
+import { launchApp, launchWithFixture, makeUserDataDir, seedPack } from './helpers'
 
 // Shipped pack content changes, so nothing here asserts against it. The three-card
 // FIXTURE is used only where the deck itself is the point — f1/f2 carry moreInfo and f3
@@ -187,6 +187,44 @@ test('holding a scroll key keeps scrolling the panel', async () => {
   // And holding W walks back up.
   await holdKey(win, 'w', 8)
   await expect.poll(() => scrollTop(win)).toBeLessThan(afterHold)
+
+  await app.close()
+})
+
+test('a source link does not navigate the app away from itself', async () => {
+  // A card whose More Info carries a link, the way source citations do.
+  const linked = {
+    id: 'linked',
+    name: 'Linked Pack',
+    schemaVersion: 1 as const,
+    cards: [{
+      id: 'L1',
+      front: 'Q-Learning',
+      primary: 'Learns action values from experience.',
+      moreInfo: '**Sources:** [Wikipedia](https://en.wikipedia.org/wiki/Q-learning)',
+    }],
+  }
+  const { app } = await launchApp(seedPack(makeUserDataDir(), linked))
+  const win = await app.firstWindow()
+
+  await win.getByRole('button', { name: 'Learn' }).click()
+  await win.keyboard.press('Space')
+  await expect(win.getByTestId('more-info-btn')).toBeVisible()
+  await win.keyboard.press('Tab')
+
+  const link = win.getByTestId('more-info-panel').getByRole('link')
+  // Marked for the main process to intercept and hand to the OS browser.
+  await expect(link).toHaveAttribute('target', '_blank')
+  await expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+
+  await link.click()
+  await win.waitForTimeout(700)
+
+  // The app is still the app: no address bar, no back button, so navigating away would
+  // strand the user permanently.
+  await expect(win.getByTestId('app-root')).toBeVisible()
+  await expect(win.getByTestId('more-info-panel')).toBeVisible()
+  expect(win.url()).not.toContain('wikipedia.org')
 
   await app.close()
 })

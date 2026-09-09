@@ -86,3 +86,52 @@
   pointer-events: none;
   visibility: hidden;
 }
+
+/*
+ * Card faces are Markdown (see Card.tsx), so they can carry an image or a table — a flag
+ * on the front, the country on the back.
+ *
+ * Everything here is sized in advance. An image that resolves its own dimensions after
+ * paint would shift layout, and a shift landing mid-flip is exactly the jank §9 forbids;
+ * the next card is already pre-mounted offscreen, so its images are fetched before it is
+ * ever shown, and these bounds mean the box does not move when they arrive.
+ */
+.card-face__front-text > :first-child,
+.card-face__primary > :first-child { margin-top: 0; }
+.card-face__front-text > :last-child,
+.card-face__primary > :last-child { margin-bottom: 0; }
+
+.card-face img {
+  display: block;
+  max-width: 100%;
+  /* Leaves room for the More Info button and the face's padding at the smallest card. */
+  max-height: min(230px, 34vh);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/*
+ * A card face is a FIXED box with `overflow: clip` — there is no scrolling here, so
+ * anything taller than the card is simply cut off. A table therefore has to be sized to
+ * fit rather than left to its natural height.
+ */
+.card-face table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.card-face th, .card-face td { padding: 0.25rem 0.6rem; border: 1px solid var(--card-edge); }
+
+/*
+ * An image in a table cell is a thumbnail, not the subject. Without this it inherits the
+ * face's 230px bound and a three-row table stacks to ~690px inside a 400px card, clipping
+ * silently at both ends.
+ */
+.card-face table img { max-height: 46px; border-radius: 3px; }
+
+/* A face whose only content is a picture should not also be 1.9rem tall for its alt text. */
+.card-face__front-text p { margin: 0; }
+.card-face__primary p { margin: 0; }

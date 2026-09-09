@@ -13,5 +13,5 @@ export default defineConfig({
   ],
   build: { outDir: 'dist' },
   // DOMPurify needs a DOM, so unit tests run under jsdom.
-  test: { environment: 'jsdom', include: ['src/**/*.test.ts', 'electron/**/*.test.ts'] },
+  test: { environment: 'jsdom', include: ['src/**/*.test.ts', 'electron/**/*.test.ts', 'shared/**/*.test.ts', 'mcp/**/*.test.ts'] },
 })

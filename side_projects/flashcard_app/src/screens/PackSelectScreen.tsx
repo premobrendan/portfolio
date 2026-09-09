@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Card as CardType, PackMeta } from '../../shared/types'
-import CardView from '../components/Card'
+import FlashCard from '../components/Card'
 import LeaveButton from '../components/LeaveButton'
 import '../styles/packs.css'
 
@@ -43,7 +43,7 @@ function PackPreview({ packId, onClose }: { packId: string; onClose: () => void 
       {/* Rendered even while the read is in flight, and even for an empty pack, so Close
           is always reachable — the preview must never become a screen with no way out. */}
       {card
-        ? <CardView card={card} />
+        ? <FlashCard view={{ card, direction: 'forward', textIndex: 0 }} />
         : <p className="hint">{cards ? 'This pack has no cards.' : ''}</p>}
 
       <div className="dialog__actions">

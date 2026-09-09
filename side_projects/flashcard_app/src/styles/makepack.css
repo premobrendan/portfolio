@@ -1,0 +1,274 @@
+/* ---------------------------------------------------------------- pack list (Make a Pack) */
+
+.makepack-new,
+.makepack-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  font: inherit;
+  text-align: left;
+  color: var(--fg);
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 160ms var(--ease), transform 160ms var(--ease);
+}
+.makepack-new:hover,
+.makepack-row:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+.makepack-new { justify-content: center; color: var(--muted); background: transparent; }
+.makepack-new:hover { color: var(--fg); }
+
+.makepack-row__name { flex: 1; }
+.makepack-row__count { color: var(--muted); font-size: 0.85rem; }
+.makepack-row__flag { color: var(--muted); opacity: 0.7; }
+
+/* ------------------------------------------------------------------------------ editor */
+
+/*
+ * `.screen` centres its children; the editor needs the full width and height instead.
+ * Doubled class deliberately: `.screen` and `.screen--wide` are equally specific, and
+ * screens.css loads after this file, so a single class would lose on source order.
+ */
+.screen.screen--wide {
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 3rem 2rem 1.5rem;
+}
+
+.editor-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 3rem;   /* clears the fixed leave button */
+}
+
+.editor-name {
+  flex: 1;
+  min-width: 0;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 1.25rem;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.editor-name:hover { border-color: var(--card-edge); }
+.editor-name:focus { outline: none; border-color: var(--accent); }
+
+.editor-status { color: var(--muted); font-size: 0.85rem; min-width: 9ch; text-align: right; }
+
+.editor-save {
+  padding: 0.55rem 1.2rem;
+  font: inherit;
+  color: var(--fg);
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.editor-save:hover { border-color: var(--accent); }
+
+.editor-problems {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+  color: #ffd9d9;
+  background: rgba(120, 30, 40, 0.35);
+  border: 1px solid rgba(200, 90, 100, 0.5);
+  border-radius: 10px;
+}
+
+.editor {
+  flex: 1;
+  min-height: 0;          /* lets the list scroll instead of stretching the page */
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: 1rem;
+}
+
+.editor-list,
+.editor-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--card-face);
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius);
+}
+
+.editor-list__head,
+.editor-list__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.editor-list__head { border-bottom: 1px solid var(--card-edge); }
+.editor-list__foot { border-top: 1px solid var(--card-edge); }
+
+.editor-list__head button {
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.editor-list__head button:hover { color: var(--fg); border-color: var(--accent); }
+
+.editor-list__scroll { flex: 1; overflow-y: auto; padding: 0.4rem; }
+
+.editor-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  text-align: left;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.editor-row:hover { border-color: var(--card-edge); }
+.editor-row.is-selected { background: rgba(122, 162, 255, 0.12); border-color: var(--accent); }
+
+.editor-row__front {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.editor-row__warn { color: #ffc98a; font-size: 0.8rem; }
+
+.editor-detail { padding: 1.1rem; gap: 0.9rem; overflow-y: auto; }
+
+.editor-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.editor-field--grow { flex: 1; min-height: 120px; }
+
+.editor-field__label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.editor-field__label em { font-style: normal; opacity: 0.6; text-transform: none; }
+
+.editor-field input,
+.editor-field textarea {
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  resize: none;
+}
+.editor-field textarea { flex: 1; line-height: 1.55; }
+.editor-field input:focus,
+.editor-field textarea:focus { outline: none; border-color: var(--accent); }
+
+.editor-detail__foot { display: flex; justify-content: flex-end; }
+.editor-detail__foot button {
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 9px;
+  cursor: pointer;
+}
+.editor-detail__foot button:hover { color: var(--fg); border-color: var(--accent); }
+
+/* The one irreversible action on the screen, so it is also the smallest. */
+.editor-danger {
+  align-self: center;
+  padding: 0.3rem 0.6rem;
+  font: inherit;
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  opacity: 0.65;
+}
+.editor-danger:hover { color: #ff9a9a; opacity: 1; border-bottom-color: currentColor; }
+
+/* --------------------------------------------------------------- delete confirmation */
+
+.dialog--danger { max-width: 380px; }
+.dialog__note { color: var(--muted); font-size: 0.85rem; }
+
+.dialog__prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.dialog__prompt input {
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  letter-spacing: 0.12em;
+  text-align: center;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+}
+.dialog__prompt input:focus { outline: none; border-color: var(--accent); }
+
+.dialog__actions button.is-danger:not(:disabled) { color: #ff9a9a; border-color: rgba(200, 90, 100, 0.6); }
+.dialog__actions button.is-danger:not(:disabled):hover { border-color: #ff9a9a; }
+.dialog__actions button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* A Secondary Text row: the input with its remove button beside it. */
+.editor-secondary { display: flex; gap: 0.4rem; margin-bottom: 0.35rem; }
+.editor-secondary input { flex: 1; min-width: 0; }
+
+.editor-secondary button {
+  width: 32px;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--card-edge);
+  border-radius: 9px;
+  cursor: pointer;
+}
+.editor-secondary button:hover { color: #ff9a9a; border-color: #ff9a9a; }
+
+.editor-secondary__add {
+  align-self: flex-start;
+  margin-top: 0.15rem;
+  padding: 0.35rem 0.7rem;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed var(--card-edge);
+  border-radius: 9px;
+  cursor: pointer;
+}
+.editor-secondary__add:hover { color: var(--fg); border-color: var(--accent); }

@@ -1,9 +1,11 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, shell } from 'electron'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { registerIpc } from './ipc'
+import { recordLibraryPointer } from './library'
 import { seedIfEmpty } from './seed'
 import { setStorageRoot } from './storage'
+import { isSafeExternalUrl } from '../shared/externalLink'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -43,6 +45,33 @@ function createWindow() {
   // backgroundThrottling is off), so Playwright drives and screenshots it normally.
   win.once('ready-to-show', () => { if (!HIDDEN) win?.show() })
 
+  /**
+   * Source links in a card's More Info belong in the user's browser, not in this window.
+   * The renderer marks every link `target="_blank"`, which arrives here as a window-open
+   * request; we hand it to the OS and always deny the popup.
+   *
+   * `isSafeExternalUrl` gates it because card content is untrusted — packs can be written
+   * by the MCP server, i.e. by a model — and `shell.openExternal` will happily hand a
+   * `file:` or custom-scheme URL to whatever the OS has registered for it.
+   */
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (isSafeExternalUrl(url)) void shell.openExternal(url)
+    return { action: 'deny' }
+  })
+
+  /**
+   * The belt to that braces: anything that still tries to navigate this window away from
+   * the app is stopped and sent to the browser instead. Without this, one link that slipped
+   * the handler above would replace the app with a web page and there is no way back —
+   * no address bar, no back button.
+   */
+  win.webContents.on('will-navigate', (event, url) => {
+    const here = process.env.VITE_DEV_SERVER_URL
+    if (here && url.startsWith(here)) return   // dev server reloads are legitimate
+    event.preventDefault()
+    if (isSafeExternalUrl(url)) void shell.openExternal(url)
+  })
+
   if (process.env.VITE_DEV_SERVER_URL) {
     win.loadURL(process.env.VITE_DEV_SERVER_URL)
   } else {
@@ -62,6 +91,9 @@ if (!app.requestSingleInstanceLock()) {
   app.whenReady().then(async () => {
     if (HIDDEN) app.dock?.hide()
     setStorageRoot(app.getPath('userData'))
+    // Record where the library lives so the MCP server can find it without Electron.
+    // Skipped when the profile was overridden — see recordLibraryPointer.
+    await recordLibraryPointer(app.getPath('userData'))
     await seedIfEmpty(resourcesDir())
     registerIpc()
     createWindow()

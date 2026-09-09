@@ -48,37 +48,40 @@ describe('layer stack', () => {
 })
 
 const learn = { screen: 'learn' as const, layers: [] }
-const cardWith = { id: 'c', front: 'f', primary: 'p', moreInfo: '# hi' }
-const cardWithout = { id: 'c', front: 'f', primary: 'p' }
+/** Key gates read the VIEW now, so the fixtures are views over a card. */
+const forward = (card: { id: string; front: string; primary: string; moreInfo?: string }) =>
+  ({ card, direction: 'forward' as const, textIndex: 0 })
+const cardWith = forward({ id: 'c', front: 'f', primary: 'p', moreInfo: '# hi' })
+const cardWithout = forward({ id: 'c', front: 'f', primary: 'p' })
 
 describe('key dispatch', () => {
   it('Space flips on the card layer', () => {
-    expect(keyActionFor(learn, ' ', { hasFlipped: false, card: cardWith }))
+    expect(keyActionFor(learn, ' ', { hasFlipped: false, view: cardWith, editingField: false }))
       .toEqual({ type: 'flip' })
   })
 
   it('Enter does nothing before a flip and advances after', () => {
-    expect(keyActionFor(learn, 'Enter', { hasFlipped: false, card: cardWith })).toBeNull()
-    expect(keyActionFor(learn, 'Enter', { hasFlipped: true, card: cardWith }))
+    expect(keyActionFor(learn, 'Enter', { hasFlipped: false, view: cardWith, editingField: false })).toBeNull()
+    expect(keyActionFor(learn, 'Enter', { hasFlipped: true, view: cardWith, editingField: false }))
       .toEqual({ type: 'advance' })
   })
 
   it('Tab needs both a prior flip and non-empty More Info', () => {
-    expect(keyActionFor(learn, 'Tab', { hasFlipped: false, card: cardWith })).toBeNull()
-    expect(keyActionFor(learn, 'Tab', { hasFlipped: true, card: cardWithout })).toBeNull()
-    expect(keyActionFor(learn, 'Tab', { hasFlipped: true, card: cardWith }))
+    expect(keyActionFor(learn, 'Tab', { hasFlipped: false, view: cardWith, editingField: false })).toBeNull()
+    expect(keyActionFor(learn, 'Tab', { hasFlipped: true, view: cardWithout, editingField: false })).toBeNull()
+    expect(keyActionFor(learn, 'Tab', { hasFlipped: true, view: cardWith, editingField: false }))
       .toEqual({ type: 'openMoreInfo' })
   })
 
   it('swallows Space and Enter beneath an open More Info panel', () => {
     const ui = { screen: 'learn' as const, layers: [{ kind: 'moreInfo' as const }] }
-    expect(keyActionFor(ui, ' ', { hasFlipped: true, card: cardWith })).toBeNull()
-    expect(keyActionFor(ui, 'Enter', { hasFlipped: true, card: cardWith })).toBeNull()
+    expect(keyActionFor(ui, ' ', { hasFlipped: true, view: cardWith, editingField: false })).toBeNull()
+    expect(keyActionFor(ui, 'Enter', { hasFlipped: true, view: cardWith, editingField: false })).toBeNull()
   })
 
   it('closes More Info on Escape without leaving the screen', () => {
     const ui = { screen: 'learn' as const, layers: [{ kind: 'moreInfo' as const }] }
-    expect(keyActionFor(ui, 'Escape', { hasFlipped: true, card: cardWith }))
+    expect(keyActionFor(ui, 'Escape', { hasFlipped: true, view: cardWith, editingField: false }))
       .toEqual({ type: 'closeMoreInfo' })
   })
 
@@ -87,7 +90,7 @@ describe('key dispatch', () => {
       screen: 'learn' as const,
       layers: [{ kind: 'confirm' as const, intent: { type: 'leaveLearn' as const } }],
     }
-    const ctx = { hasFlipped: true, card: cardWith }
+    const ctx = { hasFlipped: true, view: cardWith, editingField: false }
     expect(keyActionFor(ui, 'Escape', ctx)).toEqual({ type: 'confirmLeave' })
     expect(keyActionFor(ui, ' ', ctx)).toEqual({ type: 'denyLeave' })
     expect(keyActionFor(ui, 'Enter', ctx)).toEqual({ type: 'denyLeave' })

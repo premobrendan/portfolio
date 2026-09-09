@@ -1,4 +1,4 @@
-import type { Card } from '../../shared/types'
+import type { CardView } from '../lib/deck'
 import type { UI } from './machine'
 import { topLayer } from './machine'
 
@@ -8,12 +8,23 @@ export type KeyIntent =
   | { type: 'openMoreInfo' }
   | { type: 'closeMoreInfo' }
   | { type: 'scrollMoreInfo'; direction: 'up' | 'down' }
+  | { type: 'savePack' }
+  | { type: 'blurField' }
   | { type: 'requestLeave' }
   | { type: 'confirmLeave' }
   | { type: 'denyLeave' }
   | null
 
-export type KeyContext = { hasFlipped: boolean; card: Card | null }
+/**
+ * What the active screen knows that the key grammar needs. `hasFlipped`/`card` answer
+ * Learn's gates; `editingField` answers the editor's — Escape means "leave this text
+ * field" while typing and "leave this screen" otherwise.
+ */
+export type KeyContext = {
+  hasFlipped: boolean
+  view: CardView | null
+  editingField: boolean
+}
 
 /**
  * Whether holding the key down should keep firing this intent. Continuous scrolling is
@@ -32,7 +43,13 @@ export function repeatable(intent: KeyIntent): boolean {
  * active layer is swallowed, which is what stops Space flipping the card
  * underneath an open dialog.
  */
-export function keyActionFor(ui: UI, key: string, ctx: KeyContext): KeyIntent {
+export function keyActionFor(
+  ui: UI,
+  key: string,
+  ctx: KeyContext,
+  /** Cmd on macOS, Ctrl elsewhere. Only the editor's save gesture reads it. */
+  mod = false,
+): KeyIntent {
   const layer = topLayer(ui)
 
   if (layer?.kind === 'confirm') {
@@ -50,12 +67,20 @@ export function keyActionFor(ui: UI, key: string, ctx: KeyContext): KeyIntent {
     return null
   }
 
+  if (ui.screen === 'makepackEdit') {
+    if (mod) return key === 's' || key === 'S' ? { type: 'savePack' } : null
+    // Escape pops exactly one thing here too: the field first, the screen second.
+    if (key === 'Escape') return ctx.editingField ? { type: 'blurField' } : { type: 'requestLeave' }
+    // Everything else is a character the user is typing.
+    return null
+  }
+
   if (ui.screen === 'learn') {
     if (key === ' ') return { type: 'flip' }
     if (key === 'Enter') return ctx.hasFlipped ? { type: 'advance' } : null
     // Gated on BOTH a prior flip and the card actually having More Info.
     if (key === 'Tab')
-      return ctx.hasFlipped && ctx.card?.moreInfo ? { type: 'openMoreInfo' } : null
+      return ctx.hasFlipped && ctx.view?.card.moreInfo ? { type: 'openMoreInfo' } : null
     if (key === 'Escape') return { type: 'requestLeave' }
     return null
   }

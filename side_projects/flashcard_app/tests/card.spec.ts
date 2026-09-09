@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test'
 import type { Pack } from '../shared/types'
-import { launchWithFixture } from './helpers'
+import { launchApp, launchWithFixture, makeUserDataDir, seedPack } from './helpers'
 
 async function enterLearn(win: Page) {
   await win.getByRole('button', { name: 'Learn' }).click()
@@ -103,6 +103,65 @@ test('the next card arrives front-up', async () => {
 
   await expect(win.getByTestId('card')).not.toHaveAttribute('data-card-id', first!)
   await expect(win.getByTestId('card')).toHaveAttribute('data-flipped', 'false')
+
+  await app.close()
+})
+
+test('a card face can be a picture, not just text', async () => {
+  // The flags-of-the-world case: the question IS the image.
+  const flags = {
+    id: 'flags',
+    name: 'Flags',
+    schemaVersion: 1 as const,
+    cards: [{
+      id: 'usa',
+      front: '![Flag of the United States](https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg)',
+      primary: 'United States of America',
+    }],
+  }
+  const { app } = await launchApp(seedPack(makeUserDataDir(), flags))
+  const win = await app.firstWindow()
+
+  await win.getByRole('button', { name: 'Learn' }).click()
+  await expect(win.getByTestId('card')).toBeVisible()
+
+  // Rendered as a real image element, not printed as literal Markdown.
+  await expect(win.getByTestId('card').locator('img')).toHaveCount(1)
+  await expect(win.getByTestId('card')).not.toContainText('![Flag')
+
+  // The answer side is ordinary text, and the flip still reveals it.
+  await win.keyboard.press('Space')
+  await expect(win.getByTestId('advance-arrow')).toBeVisible()
+  await expect(win.getByTestId('card')).toContainText('United States of America')
+
+  await app.close()
+})
+
+test('a card face cannot smuggle a script through', async () => {
+  // Pack content is untrusted — the MCP server lets a model write these files.
+  const nasty = {
+    id: 'nasty',
+    name: 'Nasty',
+    schemaVersion: 1 as const,
+    cards: [{
+      id: 'x',
+      front: '<script>window.__pwned = true</script>Front side',
+      primary: '<img src=x onerror="window.__pwned = true">Back side',
+    }],
+  }
+  const { app } = await launchApp(seedPack(makeUserDataDir(), nasty))
+  const win = await app.firstWindow()
+
+  await win.getByRole('button', { name: 'Learn' }).click()
+  await expect(win.getByTestId('card')).toBeVisible()
+  await win.keyboard.press('Space')
+  await win.waitForTimeout(700)
+
+  expect(await win.evaluate(() => (window as unknown as { __pwned?: boolean }).__pwned))
+    .toBeUndefined()
+  const html = await win.getByTestId('card').innerHTML()
+  expect(html).not.toContain('<script')
+  expect(html).not.toContain('onerror')
 
   await app.close()
 })
