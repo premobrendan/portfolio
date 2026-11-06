@@ -1,7 +1,7 @@
 \documentclass[10pt,letterpaper]{article}
 
 % Packages
-\usepackage[margin=0.5in]{geometry} % Narrower margins to fit everything on 1 page
+\usepackage[margin=0.5in]{geometry} % Narrow margins
 \usepackage{titlesec} % For section formatting
 \usepackage{enumitem} % For list formatting
 \usepackage{hyperref} % For links
@@ -10,6 +10,7 @@
 % Formatting Settings
 \pagestyle{empty} % No header, footer, or page number
 \urlstyle{same} % Makes URLs look like normal text
+\hypersetup{hidelinks} % No colored boxes around links in PDF viewers
 
 % Section Formatting
 \titleformat{\section}
@@ -36,6 +37,26 @@
 \end{center}
 
 %---------------------------------------------------
+%   SUMMARY
+%---------------------------------------------------
+\section*{Summary}
+\noindent Data analyst with graduate degrees in Data Science and Mathematics and a year of building healthcare
+reporting and data pipelines at Soria Analytics. I like building tools that take repetitive work off people's plates,
+and I am motivated by complex problems that I can utilize my education and intuition to solve. Currently consulting 
+independently on analytics and AI projects.
+
+%---------------------------------------------------
+%   TECHNICAL SKILLS
+%---------------------------------------------------
+\section*{Technical Skills}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item \textbf{Languages:} Python (Pandas, Scikit-Learn, PyTorch), SQL, R, Excel, \LaTeX
+    \item \textbf{Tools:} Sigma Computing, Databricks, Power BI, Git/GitHub, Jupyter, Web Scraping, Pivot Tables, XLOOKUP, Agentic LLMs (Claude Code, MCP servers)
+    \item \textbf{Modeling \& Statistics:} Regression (Multivariate, Logistic, Time Series), Gradient Descent, Feature Engineering, ANOVA, Monte Carlo Simulation, Bayesian Inference, Non-parametric Tests, Topological Data Analysis
+    \item \textbf{Healthcare:} Claims, Readmissions, Length of Stay, Utilization, Fee-for-Service, Medicaid/Medicare/Commercial Plans, EMR/EHR, Medical Loss Ratio (MLR), CMS Star Ratings
+\end{itemize}
+
+%---------------------------------------------------
 %   PROFESSIONAL EXPERIENCE
 %---------------------------------------------------
 \section*{Professional Experience}
@@ -43,10 +64,9 @@
 \noindent \textbf{Independent Contractor} \hfill \textit{Data \& Analytics Consultant} \\
 \textit{June 2026 -- Present} \hfill \textit{Troy, NY}
 \begin{itemize}[noitemsep, topsep=2pt]
-        \item \textbf{Chatham Oaks:} Part-time contributor to a production financial reporting application, working in an existing team codebase on the layer that maps imported accounting records into internal reporting categories.
-        \item \textbf{Rose Project:} Built a Python program to classify and total drug dosage records for a healthcare client and wrote a guide for reproducing the same analysis in Excel, letting the client rerun and extend the work without writing code.
-        \item \textbf{Changelog Systems:} Shipped an MCP server exposing a multi-tenant app's data to agentic LLM clients behind OAuth 2.1 and per-tenant row-level isolation, with batched writes committing all-or-nothing behind a dry-run preview.
-        \item \textbf{Elder Owl:} Head of quality assurance on a state-of-the-art AI tool with smart task deliberation between different thinking and context level LLMs.
+        \item \textbf{Pharmaceutical Accounting:} Built a Python script and Excel workbook that classify and total drug dosage records for a local hospital's pharmacy department, driven by reference tables and XLOOKUP so staff can add new drugs without code changes.
+        \item \textbf{Elder Owl:} Lead QA for an AI assistant that routes each task to the LLM best suited to its reasoning depth and context size; reproduce, document, and triage bugs against the staging environment.
+        \item \textbf{Changelog Systems:} Performed quality assurance and bug reporting on a multi-tenant changelog application, with commit access to publish fixes directly to the repository.
 \end{itemize}
 
 \vspace{2pt}
@@ -63,29 +83,29 @@
 %---------------------------------------------------
 \section*{Soria Projects}
 
-\noindent \textbf{Star Ratings (Soria Analytics Script, Python)} \hfill \textit{Fall 2025 -- Winter 2025}
+\noindent \textbf{CMS Star Ratings (Python)} \hfill \textit{Fall 2025 -- Winter 2025}
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item Developed a script that reconciles the annual CMS Star Ratings tables for healthcare contracts, attributing each year-over-year rating change to the specific measures driving it and incorporating enrollment-weighted to best predict shifts in NYSE tickers; shifts correlate 5-10\% on the low-end, upwards of 25\% in market value on major rating shifts.
+    \item Developed a script that reconciles the annual CMS Star Ratings tables for Medicare contracts, attributing each year-over-year rating change to the measures driving it and rolling contracts up by enrollment weight to anticipate moves in NYSE-listed payers; rating shifts tracked with 5--10\% swings in market value, and up to 25\% on major shifts.
 \end{itemize}
 
 \vspace{1pt}
 
-\noindent \textbf{Hospital Cost Report (Soria Analytics Dashboard, Sigma)} \hfill \textit{Winter 2025 -- Spring 2026}
+\noindent \textbf{Hospital Cost Report (Sigma Dashboard)} \hfill \textit{Winter 2025 -- Spring 2026}
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item Created an interactive dashboard for the annual CMS Hospital Provider Cost Report dataset, breaking down national and provider-specific metrics (Revenue, Costs, Margins, Occupancy and Discharges) in a single dynamic view.
-    \item Set up a pipeline including a web crawler to automatically detect RSS feed updates for data, a scraper for automatic download, schema detection protocols to find deviations in formatting, and a system to incorporate the newly uploaded data directly into the dashboard, saving hours of manual monitoring and processing time.
+    \item Created an interactive dashboard for the annual CMS Hospital Provider Cost Report, breaking down national and provider-level revenue, costs, margins, occupancy, and discharges in a single dynamic view.
+    \item Automated the refresh pipeline: an RSS monitor detects new releases, a scraper downloads them, schema checks flag format changes, and validated data loads straight into the dashboard, replacing hours of manual monitoring.
 \end{itemize}
 
 \vspace{1pt}
 
-\noindent \textbf{CDC Weekly Hospital Inpatient/ICU Occupancy (Soria Analytics Dashboard, Sigma)} \hfill \textit{Fall 2025}
+\noindent \textbf{CDC Influenza-like Illness Hospital Occupancy (Sigma Dashboard)} \hfill \textit{Fall 2025}
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item Designed a dashboard tracking Influenza-like Illness over time, supporting season-to-season comparison across variable timeframes with optional breakdowns by age group and by region (Census and HHS), backed by a full end-to-end data pipeline that refreshes the dashboard when new data is released.
+    \item Designed a dashboard tracking hospital inpatient and ICU occupancy by patients with influenza-like illness (ILI), with season-to-season comparison over adjustable timeframes and optional breakdowns by age group and region (Census and HHS), backed by an end-to-end pipeline that refreshes the dashboard on each CDC release.
 \end{itemize}
 
 \vspace{1pt}
 
-\noindent \textbf{SEC Filing Extraction (Soria Analytics Script, Python)} \hfill \textit{Winter 2025 -- Spring 2026}
+\noindent \textbf{SEC Filing Extraction (Python)} \hfill \textit{Winter 2025 -- Spring 2026}
 \begin{itemize}[noitemsep, topsep=2pt]
     \item Created a batch pipeline that locates SEC filings by ticker, quarter, and year, retrieves them, and extracts financial table data into typed schemas that retain the source page for every value.
 \end{itemize}
@@ -95,25 +115,18 @@
 %---------------------------------------------------
 \section*{Education}
 
-\noindent \textbf{University at Albany} \hfill Albany, NY \\
+\noindent\begin{minipage}{\linewidth} % Keeps this entry on one page
+\textbf{University at Albany} \hfill Albany, NY \\
 \textit{Master of Science in Data Science, Master of Arts in Mathematics} \hfill \textit{Fall 2023 -- Spring 2025} \\
 \textit{Thesis: Four-Part Lecture Series on the Riemann Hypothesis}
 \begin{itemize}[noitemsep, topsep=2pt]
-    \item Designed and delivered a four-part lecture series to an audience of graduate students and faculty, pacing each session so attendees outside the specialty could grasp the content and fielding questions of varying levels of experience.
+    \item Designed and delivered a four-part lecture series to graduate students and faculty, pacing each session so attendees outside the specialty could follow the material, and fielding questions from audience members at every level of experience.
 \end{itemize}
+\end{minipage}\par
 
-\vspace{4pt}
+\vspace{6pt}
 
 \noindent \textbf{Rensselaer Polytechnic Institute (RPI)} \hfill Troy, NY \\
 \textit{Bachelor of Science in Applied Mathematics} \hfill \textit{Fall 2016 -- Fall 2020}
-
-%---------------------------------------------------
-%   TECHNICAL SKILLS
-%---------------------------------------------------
-\section*{Technical Skills}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Languages \& Tools:} Python (Pandas, Scikit-Learn, PyTorch), SQL, R, Excel, Jupyter, Git/GitHub, Sigma Computing, \LaTeX, Databricks, PowerBI, Claude Code, MCP servers, agentic LLM tooling
-    \item \textbf{Modeling:} Regression (Multivariate, Logistic, Time Series), Random Forest, Feature Engineering, Monte Carlo Simulations, Topological Data Analysis (TDA), Pivot Tables, XLOOKUP
-\end{itemize}
 
 \end{document}

@@ -49,6 +49,9 @@ rose-project/rose_project.zip
 # Scratch / in-progress coursework (kept local)
 working/
 
+# Sample cover letter from coworker
+cover_letter_text/
+
 # Cover letters (kept local). The lowercase directory is the real one — the pattern
 # below it only ever matched a differently-named file.
 application_documents/cover letters/
@@ -66,3 +69,9 @@ application_documents/*Resume Old*
 
 # Legacy flashcard pack data, superseded by side_projects/flashcard_app (kept local)
 flashcard_legacy_packs/
+
+# Rose project outputs (derived from the client's clinical records, kept local)
+rose-project/output/
+
+# Scratch notebook (kept local)
+random.ipynb
